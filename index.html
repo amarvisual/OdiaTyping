@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା | Free Odia Typing Tutor Online | Learn Odia Typing</title>
+<meta name="description" content="Learn Odia typing online for free using Akruti English Phonetic keyboard. 36 lessons from beginner to expert. No software needed. Practice touch typing in Odia."/>
+<meta name="keywords" content="Odia typing, ଓଡ଼ିଆ ଟାଇପିଂ, Odia typing tutor, Akruti keyboard, learn Odia typing online free"/>
+<meta name="author" content="Amar Visual Studio"/>
+<meta property="og:title" content="ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା - Free Odia Typing Tutor"/>
+<meta property="og:description" content="Learn Odia typing free with Akruti layout. 36 lessons, finger guide, track WPM."/>
+<meta property="og:type" content="website"/>
+<link rel="sitemap" type="application/xml" href="sitemap.xml"/>
+<link rel="canonical" href="index.html"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--saffron:#FF6B00;--deep-red:#C0392B;--gold:#F0A500;--dark-red:#8B1A1A;--cream:#FFF8F0;--text:#2C1810;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+/* NAV */
+nav{background:linear-gradient(135deg,var(--dark-red),var(--deep-red));padding:0 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 16px rgba(0,0,0,0.4);position:sticky;top:0;z-index:200;}
+.nav-brand{display:flex;align-items:center;gap:10px;padding:10px 0;text-decoration:none;}
+.nav-logo{width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.nav-title h1{font-size:15px;font-weight:700;color:var(--white);}
+.nav-title p{font-size:9px;color:rgba(255,255,255,0.65);}
+.nav-links{display:flex;gap:4px;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padding:8px 12px;border-radius:6px;font-size:12px;font-weight:500;transition:all .2s;display:flex;align-items:center;gap:5px;}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,0.15);color:var(--white);}
+.nav-links a.guide-link{background:rgba(240,165,0,0.2);color:var(--gold);}
+.nav-cta{background:var(--gold)!important;color:var(--dark-red)!important;font-weight:700!important;border-radius:8px!important;}
+.nav-cta:hover{background:#FFB800!important;transform:translateY(-1px);}
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:22px;cursor:pointer;}
+@media(max-width:767px){
+  .hamburger{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark-red);flex-direction:column;padding:8px;gap:2px;z-index:300;box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:10px 14px;}
+}
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--dark-red) 0%,var(--deep-red) 40%,var(--saffron) 100%);color:var(--white);padding:60px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");}
+/* Floating circles animation */
+.hero-circle{position:absolute;border-radius:50%;opacity:0.06;animation:float 6s infinite ease-in-out;}
+.hc1{width:200px;height:200px;background:var(--gold);top:-50px;left:-60px;animation-delay:0s;}
+.hc2{width:150px;height:150px;background:var(--white);bottom:-40px;right:-30px;animation-delay:2s;}
+.hc3{width:80px;height:80px;background:var(--gold);top:30%;right:10%;animation-delay:4s;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+.hero-content{position:relative;z-index:1;max-width:800px;margin:0 auto;}
+.hero-odia{font-size:44px;font-family:serif;margin-bottom:8px;text-shadow:2px 2px 12px rgba(0,0,0,0.3);animation:fadeInDown .8s ease;}
+.hero-sub{font-size:20px;font-weight:600;margin-bottom:12px;opacity:.95;animation:fadeInDown .8s ease .2s both;}
+.hero-desc{font-size:14px;opacity:.85;margin-bottom:30px;line-height:1.8;max-width:580px;margin-left:auto;margin-right:auto;animation:fadeInUp .8s ease .4s both;}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;animation:fadeInUp .8s ease .5s both;}
+.btn{padding:13px 28px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;transition:all .25s;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary{background:var(--gold);color:var(--dark-red);box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+.btn-primary:hover{background:#FFB800;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+.btn-secondary{background:rgba(255,255,255,0.15);color:var(--white);border:2px solid rgba(255,255,255,0.4);backdrop-filter:blur(4px);}
+.btn-secondary:hover{background:rgba(255,255,255,0.25);transform:translateY(-3px);}
+.hero-stats{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;animation:fadeInUp .8s ease .6s both;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-size:30px;font-weight:800;color:var(--gold);}
+.hero-stat .lbl{font-size:10px;opacity:.8;text-transform:uppercase;letter-spacing:1px;}
+/* SECTION */
+.section{padding:50px 20px;max-width:1020px;margin:0 auto;}
+.sec-title{font-size:26px;font-weight:700;color:var(--dark-red);text-align:center;margin-bottom:6px;font-family:serif;}
+.sec-title::after{content:'';display:block;width:60px;height:3px;background:var(--saffron);margin:10px auto 0;border-radius:2px;}
+.sec-sub{font-size:13px;color:#666;text-align:center;margin-bottom:32px;margin-top:14px;}
+/* FEATURES */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.feature-card{background:var(--white);border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,0.07);border-top:4px solid var(--saffron);transition:all .25s;cursor:default;}
+.feature-card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(139,26,26,0.13);}
+.fi{font-size:36px;margin-bottom:12px;}
+.feature-card h3{font-size:16px;font-weight:700;color:var(--dark-red);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.feature-card p{font-size:13px;color:#555;line-height:1.7;}
+/* LEVELS */
+.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.level-card{border-radius:14px;padding:24px;color:var(--white);position:relative;overflow:hidden;transition:transform .25s;}
+.level-card:hover{transform:translateY(-4px);}
+.level-card.beginner{background:linear-gradient(135deg,#047857,#34d399);}
+.level-card.intermediate{background:linear-gradient(135deg,#b45309,#fbbf24);}
+.level-card.expert{background:linear-gradient(135deg,var(--dark-red),var(--saffron));}
+.level-card h3{font-size:20px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.level-card .lc-count{font-size:12px;opacity:.85;margin-bottom:12px;}
+.level-card ul{list-style:none;font-size:13px;}
+.level-card ul li{padding:3px 0;opacity:.92;display:flex;align-items:center;gap:6px;}
+.level-card .lv-num{position:absolute;right:16px;top:12px;font-size:56px;font-weight:900;opacity:.12;}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.step{text-align:center;padding:20px;position:relative;}
+.step-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--gold));color:var(--white);font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(255,107,0,0.3);}
+.step h3{font-size:15px;font-weight:700;color:var(--dark-red);margin-bottom:6px;}
+.step p{font-size:13px;color:#666;line-height:1.6;}
+/* CULTURE BAND */
+.culture-band{background:linear-gradient(135deg,var(--dark-red),var(--deep-red));color:var(--white);padding:44px 20px;text-align:center;}
+.culture-band h2{font-size:24px;font-weight:700;margin-bottom:12px;font-family:serif;}
+.culture-band p{font-size:13px;opacity:.85;max-width:600px;margin:0 auto 24px;line-height:1.8;}
+.culture-icons{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
+.ci{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;opacity:.9;}
+.ci-icon{font-size:32px;}
+/* FAQ */
+.faq-wrap{max-width:720px;margin:0 auto;}
+.faq-item{background:var(--white);border-radius:10px;padding:16px 20px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06);cursor:pointer;transition:all .2s;}
+.faq-item:hover{box-shadow:0 4px 16px rgba(139,26,26,0.1);}
+.faq-q{font-size:14px;font-weight:700;color:var(--dark-red);display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.faq-a{font-size:13px;color:#555;line-height:1.7;margin-top:10px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-icon{transform:rotate(180deg);}
+.faq-icon{transition:transform .3s;color:var(--saffron);}
+/* WA BANNER */
+.wa-banner{background:linear-gradient(135deg,#075e54,#25d366);color:var(--white);padding:24px 20px;text-align:center;}
+.wa-banner h3{font-size:18px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;justify-content:center;}
+.wa-banner p{font-size:13px;opacity:.9;margin-bottom:16px;}
+.wa-btn{background:var(--white);color:#075e54;padding:11px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.2);}
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,.8);padding:32px 20px;text-align:center;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-bottom:24px;text-align:left;max-width:800px;margin-left:auto;margin-right:auto;}
+.footer-col h4{font-size:13px;font-weight:700;color:var(--gold);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;}
+.footer-col a{display:block;color:rgba(255,255,255,.7);text-decoration:none;font-size:12px;padding:3px 0;transition:color .2s;display:flex;align-items:center;gap:6px;}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-size:11px;opacity:.55;}
+/* Scroll to top */
+.scroll-top{position:fixed;bottom:20px;right:20px;background:var(--saffron);color:var(--white);width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:all .25s;z-index:100;opacity:0;pointer-events:none;}
+.scroll-top.show{opacity:1;pointer-events:all;}
+.scroll-top:hover{background:var(--dark-red);transform:translateY(-3px);}
+/* Animate on scroll */
+.aos{opacity:0;transform:translateY(30px);transition:all .6s ease;}
+.aos.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-logo"><i class="fa-solid fa-om"></i></div>
+    <div class="nav-title"><h1>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା</h1><p>Free Odia Typing Tutor</p></div>
+  </a>
+  <button class="hamburger" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+  <div class="nav-links" id="navlinks">
+    <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="learn.html"><i class="fa-solid fa-keyboard"></i> Learn</a>
+    <a href="guide.html" class="guide-link"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <a href="learn.html" class="nav-cta"><i class="fa-solid fa-play"></i> Start Typing</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-circle hc1"></div>
+  <div class="hero-circle hc2"></div>
+  <div class="hero-circle hc3"></div>
+  <div class="hero-content">
+    <div class="hero-odia">ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା</div>
+    <div class="hero-sub">Learn Odia Typing Online — Free, Fast & Fun</div>
+    <p class="hero-desc">Master touch typing in Odia using the Akruti English Phonetic keyboard. No software needed. Works on any device. 36 progressive lessons from beginner to expert.</p>
+    <div class="hero-btns">
+      <a href="learn.html" class="btn btn-primary"><i class="fa-solid fa-keyboard"></i> Start Typing Now</a>
+      <a href="guide.html" class="btn btn-secondary"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">36</div><div class="lbl"><i class="fa-solid fa-book-open"></i> Lessons</div></div>
+      <div class="hero-stat"><div class="num">3</div><div class="lbl"><i class="fa-solid fa-layer-group"></i> Levels</div></div>
+      <div class="hero-stat"><div class="num">100%</div><div class="lbl"><i class="fa-solid fa-heart"></i> Free</div></div>
+      <div class="hero-stat"><div class="num">0</div><div class="lbl"><i class="fa-solid fa-download"></i> Software</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<div class="section aos" id="features">
+  <h2 class="sec-title">Why Choose Us?</h2>
+  <p class="sec-sub">The most complete free Odia typing tutor available online</p>
+  <div class="features">
+    <div class="feature-card"><div class="fi">⌨️</div><h3><i class="fa-solid fa-keyboard" style="color:var(--saffron)"></i> Akruti Phonetic Layout</h3><p>Learn the standard Akruti English Phonetic keyboard used by professionals across Odisha. No software installation required — we handle the conversion in your browser.</p></div>
+    <div class="feature-card"><div class="fi">🎨</div><h3><i class="fa-solid fa-palette" style="color:var(--saffron)"></i> Color-Coded Finger Guide</h3><p>Each key is color-coded by finger — gold for pinky, orange for ring, red for middle. Know exactly which finger to press at all times with our glowing key indicator.</p></div>
+    <div class="feature-card"><div class="fi">📊</div><h3><i class="fa-solid fa-chart-line" style="color:var(--saffron)"></i> Track Your Progress</h3><p>Earn stars ★★★ for each lesson. Track WPM speed and real accuracy. Progress saved automatically in your browser — continue anytime, anywhere.</p></div>
+    <div class="feature-card"><div class="fi">📱</div><h3><i class="fa-solid fa-mobile-screen" style="color:var(--saffron)"></i> Mobile Friendly</h3><p>Works on mobile and desktop. Mobile users type with their device keyboard while desktop users get a full realistic visual keyboard experience.</p></div>
+    <div class="feature-card"><div class="fi">🏆</div><h3><i class="fa-solid fa-trophy" style="color:var(--saffron)"></i> Progressive Learning</h3><p>Start from basic vowels and consonants, advance through matras and conjuncts, and master full Odia paragraphs about culture, stories and wisdom.</p></div>
+    <div class="feature-card"><div class="fi">🔤</div><h3><i class="fa-solid fa-link" style="color:var(--saffron)"></i> Full Conjunct Support</h3><p>Complete support for Halant, Ya-Phala, Ra-Phala, Reph and all Odia conjunct letters — the most accurate Odia typing tutor online.</p></div>
+  </div>
+</div>
+
+<!-- LEVELS -->
+<div style="background:#f9f0e8;padding:50px 20px;">
+  <div style="max-width:1020px;margin:0 auto;" class="aos">
+    <h2 class="sec-title">Learning Levels</h2>
+    <p class="sec-sub">36 lessons across 3 progressive levels — learn at your own pace</p>
+    <div class="levels">
+      <div class="level-card beginner">
+        <div class="lv-num">1</div>
+        <h3><i class="fa-solid fa-seedling"></i> Beginner</h3>
+        <div class="lc-count"><i class="fa-solid fa-list"></i> 12 Lessons</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Home row keys</li>
+          <li><i class="fa-solid fa-check"></i> All Odia vowels (ସ୍ୱର)</li>
+          <li><i class="fa-solid fa-check"></i> All consonants (ବ୍ୟଞ୍ଜନ)</li>
+          <li><i class="fa-solid fa-check"></i> Numbers in Odia script</li>
+          <li><i class="fa-solid fa-check"></i> Basic matras (ା ି ୁ େ ୋ)</li>
+        </ul>
+      </div>
+      <div class="level-card intermediate">
+        <div class="lv-num">2</div>
+        <h3><i class="fa-solid fa-bolt"></i> Intermediate</h3>
+        <div class="lc-count"><i class="fa-solid fa-list"></i> 12 Lessons</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> All vowel signs (matras)</li>
+          <li><i class="fa-solid fa-check"></i> Simple Odia words</li>
+          <li><i class="fa-solid fa-check"></i> Conjunct letters (ଯୁକ୍ତ)</li>
+          <li><i class="fa-solid fa-check"></i> Ra-Phala &amp; Ya-Phala</li>
+          <li><i class="fa-solid fa-check"></i> Full Odia sentences</li>
+        </ul>
+      </div>
+      <div class="level-card expert">
+        <div class="lv-num">3</div>
+        <h3><i class="fa-solid fa-trophy"></i> Expert</h3>
+        <div class="lc-count"><i class="fa-solid fa-list"></i> 12 Lessons</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Indian culture paragraphs</li>
+          <li><i class="fa-solid fa-check"></i> Odia heritage stories</li>
+          <li><i class="fa-solid fa-check"></i> Inspirational quotes</li>
+          <li><i class="fa-solid fa-check"></i> Human nature &amp; psychology</li>
+          <li><i class="fa-solid fa-check"></i> Free paragraph practice</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="learn.html" class="btn btn-primary" style="font-size:16px;padding:14px 36px;"><i class="fa-solid fa-play"></i> Start Learning Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section aos">
+  <h2 class="sec-title">How It Works</h2>
+  <p class="sec-sub">Start typing in Odia in just 3 simple steps</p>
+  <div class="steps">
+    <div class="step"><div class="step-num"><i class="fa-solid fa-1"></i></div><h3>Choose a Lesson</h3><p>Pick any lesson from Beginner, Intermediate or Expert. 36 lessons total — learn at your own pace.</p></div>
+    <div class="step"><div class="step-num"><i class="fa-solid fa-2"></i></div><h3>Type the Practice Text</h3><p>Type the Odia text shown on screen. Your keyboard is converted to Odia automatically using the Akruti layout. Glowing keys guide you!</p></div>
+    <div class="step"><div class="step-num"><i class="fa-solid fa-3"></i></div><h3>See Your Results</h3><p>When done, instantly see your WPM speed, real accuracy % and star rating. Press Enter to go to the next lesson automatically.</p></div>
+  </div>
+</div>
+
+<!-- CULTURE BAND -->
+<div class="culture-band aos">
+  <h2><i class="fa-solid fa-om"></i> Celebrating Odia Language &amp; Culture</h2>
+  <p>ଓଡ଼ିଆ ଭାଷା ଭାରତର ଏକ ପ୍ରାଚୀନ ଓ ସମୃଦ୍ଧ ଭାଷା। Our mission is to help every Odia speaker type their mother tongue with pride and speed.</p>
+  <div class="culture-icons">
+    <div class="ci"><div class="ci-icon">🏛️</div><span>Jagannath</span></div>
+    <div class="ci"><div class="ci-icon">💃</div><span>Odissi Dance</span></div>
+    <div class="ci"><div class="ci-icon">🎨</div><span>Pattachitra</span></div>
+    <div class="ci"><div class="ci-icon">⛵</div><span>Bali Yatra</span></div>
+    <div class="ci"><div class="ci-icon">🌞</div><span>Konark Sun</span></div>
+    <div class="ci"><div class="ci-icon">📜</div><span>Odia Script</span></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section aos">
+  <h2 class="sec-title">Frequently Asked Questions</h2>
+  <p class="sec-sub">Everything you need to know about learning Odia typing</p>
+  <div class="faq-wrap">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Do I need to install Akruti software? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
+      <div class="faq-a">No! Our website converts your regular keyboard input to Odia automatically using the Akruti English Phonetic layout. No software installation is required on your computer or mobile.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How do I type conjunct letters (ଯୁକ୍ତ ଅକ୍ଷର)? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
+      <div class="faq-a">Press the 'f' key as a Halant/linker between two consonants. Example: k+f+t = କ୍ତ. For Ya-Phala press Shift+Y after a consonant. For Ra-Phala press f+r. See our Finger Guide for full details.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Is this website completely free? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
+      <div class="faq-a">Yes, completely free! All 36 lessons across Beginner, Intermediate and Expert levels are free with no registration required. Your progress is saved automatically in your browser.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can I use this on mobile? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
+      <div class="faq-a">Yes! Mobile users can type using their phone's Odia keyboard. Tap the typing box and your mobile keyboard will open. The website is fully responsive and works on all screen sizes.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What is the Akruti English Phonetic keyboard layout? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
+      <div class="faq-a">Akruti English Phonetic is the most popular Odia keyboard layout used by government offices, newspapers and professionals across Odisha. Each English key maps to an Odia character. Visit our Finger Guide page to learn the complete layout.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP BANNER -->
+<div class="wa-banner aos">
+  <h3><i class="fa-brands fa-whatsapp"></i> Need a Website for Your Business?</h3>
+  <p>Professional website design services by Amar Visual Studio — affordable, modern &amp; SEO optimized</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://wa.me/916372885071" target="_blank" class="wa-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 63728 85071</a>
+    <a href="https://www.amarvisualstudio.in" target="_blank" class="wa-btn" style="background:rgba(255,255,255,0.9);"><i class="fa-solid fa-globe"></i> amarvisualstudio.in</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4><i class="fa-solid fa-om"></i> Quick Links</h4>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="learn.html"><i class="fa-solid fa-keyboard"></i> Learn Typing</a>
+      <a href="guide.html"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fa-solid fa-star"></i> Levels</h4>
+      <a href="learn.html"><i class="fa-solid fa-seedling"></i> Beginner (12 lessons)</a>
+      <a href="learn.html"><i class="fa-solid fa-bolt"></i> Intermediate (12 lessons)</a>
+      <a href="learn.html"><i class="fa-solid fa-trophy"></i> Expert (12 lessons)</a>
+      <a href="sitemap.xml"><i class="fa-solid fa-sitemap"></i> Sitemap</a>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fa-brands fa-whatsapp"></i> Website Design</h4>
+      <a href="https://www.amarvisualstudio.in" target="_blank"><i class="fa-solid fa-palette"></i> Amar Visual Studio</a>
+      <a href="https://wa.me/916372885071" target="_blank"><i class="fa-brands fa-whatsapp"></i> +91 63728 85071</a>
+      <a href="https://www.amarvisualstudio.in" target="_blank"><i class="fa-solid fa-globe"></i> amarvisualstudio.in</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା · Free Odia Typing Tutor · Akruti English Phonetic Layout · Bhubaneswar, Odisha</p>
+    <p style="margin-top:6px;">Website Design by <a href="https://www.amarvisualstudio.in" target="_blank" style="color:var(--gold);text-decoration:none;">Amar Visual Studio</a></p>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</div>
+
+<script>
+function toggleNav(){document.getElementById('navlinks').classList.toggle('open');}
+function toggleFaq(el){el.classList.toggle('open');}
+
+// Scroll animations
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.15});
+document.querySelectorAll('.aos').forEach(el=>observer.observe(el));
+
+// Scroll to top button
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTop').classList.toggle('show',window.scrollY>300);
+});
+</script>
+</body>
+</html>

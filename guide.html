@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ଆଙ୍ଗୁଳି ଗାଇଡ | Finger Position Guide | ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା</title>
+<meta name="description" content="Learn ten finger touch typing in Odia. Complete finger position guide, hand placement, Akruti keyboard layout with color coded keys. All explained in Odia language."/>
+<meta name="keywords" content="Odia finger typing guide, ଦଶ ଆଙ୍ଗୁଳି ଟାଇପ, Akruti keyboard layout Odia, touch typing Odia, ହାତ ଅବସ୍ଥାନ"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--saffron:#FF6B00;--deep-red:#C0392B;--gold:#F0A500;--dark-red:#8B1A1A;--cream:#FFF8F0;--text:#2C1810;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+
+/* NAV */
+nav{background:linear-gradient(135deg,var(--dark-red),var(--deep-red));padding:0 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 16px rgba(0,0,0,0.4);position:sticky;top:0;z-index:200;}
+.nav-brand{display:flex;align-items:center;gap:10px;padding:10px 0;text-decoration:none;}
+.nav-logo{width:38px;height:38px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.nav-title h1{font-size:14px;font-weight:700;color:var(--white);}
+.nav-title p{font-size:9px;color:rgba(255,255,255,0.65);}
+.nav-links{display:flex;gap:3px;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padding:7px 11px;border-radius:6px;font-size:12px;font-weight:500;transition:all .2s;display:flex;align-items:center;gap:4px;}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,0.15);color:var(--white);}
+.nav-links a.guide-link{background:rgba(240,165,0,0.25);color:var(--gold);}
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:20px;cursor:pointer;}
+@media(max-width:767px){
+  .hamburger{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark-red);flex-direction:column;padding:8px;gap:2px;z-index:300;box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:10px 14px;}
+}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--dark-red),var(--saffron));color:var(--white);padding:40px 20px;text-align:center;position:relative;overflow:hidden;}
+.hero h1{font-size:28px;font-weight:800;font-family:serif;margin-bottom:6px;animation:fadeInDown .6s ease;}
+.hero h2{font-size:15px;font-weight:600;opacity:.9;margin-bottom:8px;animation:fadeInDown .6s ease .1s both;}
+.hero p{font-size:12px;opacity:.8;max-width:600px;margin:0 auto;line-height:1.7;animation:fadeInUp .6s ease .2s both;}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.container{max-width:1020px;margin:0 auto;padding:28px 20px;}
+
+/* SECTION */
+.sec-title{font-size:20px;font-weight:800;color:var(--dark-red);font-family:serif;display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.sec-title::after{content:'';display:block;width:50px;height:3px;background:var(--saffron);margin-top:8px;margin-bottom:16px;border-radius:2px;}
+.sec-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6;}
+
+/* ══ REALISTIC VISUAL KEYBOARD ══ */
+.kb-guide-wrap{background:var(--white);border-radius:16px;padding:20px;box-shadow:0 4px 20px rgba(139,26,26,0.1);margin-bottom:28px;}
+.kb-guide-wrap h3{font-size:14px;font-weight:700;color:var(--dark-red);margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+
+/* Realistic keyboard body */
+.realistic-keyboard{
+  background:linear-gradient(145deg,#2a2a2a,#1a1a1a);
+  border-radius:14px;
+  padding:12px 10px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.1);
+  border:1px solid #444;
+  position:relative;
+}
+.realistic-keyboard::before{
+  content:'';position:absolute;inset:8px;
+  background:linear-gradient(145deg,#353535,#252525);
+  border-radius:8px;z-index:0;
+  box-shadow:inset 0 2px 6px rgba(0,0,0,0.4);
+}
+.kb-row{display:flex;gap:3px;justify-content:center;margin-bottom:3px;position:relative;z-index:1;}
+
+/* Base key */
+.rk{
+  min-width:46px;height:52px;
+  background:linear-gradient(145deg,#f8f0e3,#e8d8c0);
+  border:1px solid #c4a882;
+  border-radius:6px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:space-between;
+  padding:4px 3px;position:relative;
+  box-shadow:0 4px 0 #9d7c5a,0 5px 8px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.7),inset 0 -1px 0 rgba(0,0,0,0.1);
+  cursor:default;user-select:none;
+}
+.rk .rk-top{font-size:11px;color:var(--dark-red);font-family:serif;align-self:flex-end;margin-right:3px;font-weight:700;line-height:1;min-height:13px;}
+.rk .rk-lbl{font-size:8px;color:rgba(0,0,0,0.35);position:absolute;top:3px;left:3px;font-weight:600;}
+.rk .rk-bot{font-size:14px;color:#1a0800;font-family:serif;align-self:flex-start;margin-left:3px;font-weight:800;line-height:1;min-height:15px;}
+.rk .rk-dot{width:5px;height:5px;border-radius:50%;position:absolute;bottom:3px;right:3px;opacity:.85;}
+.rk.wide{min-width:62px;}.rk.wider{min-width:76px;}.rk.widest{min-width:90px;}
+.rk.space-rk{min-width:240px;}
+.rk.space-rk .rk-bot{font-size:10px;color:#888;align-self:center;margin:0;font-family:sans-serif;font-weight:500;}
+.rk.sp-key .rk-bot{font-size:9px;color:#bbb;font-family:sans-serif;font-weight:400;}
+
+/* Finger colors */
+.rk-f0{background:linear-gradient(145deg,#fff8d6,#fde68a)!important;border-color:#d97706!important;box-shadow:0 4px 0 #b45309,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f1{background:linear-gradient(145deg,#fff0e0,#fed7aa)!important;border-color:#ea580c!important;box-shadow:0 4px 0 #9a3412,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f2{background:linear-gradient(145deg,#fff0f0,#fecaca)!important;border-color:#dc2626!important;box-shadow:0 4px 0 #991b1b,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f3{background:linear-gradient(145deg,#fff3e8,#fed7b0)!important;border-color:#c2410c!important;box-shadow:0 4px 0 #7c2d12,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f4{background:linear-gradient(145deg,#f5f0ff,#e9d5ff)!important;border-color:#7c3aed!important;box-shadow:0 4px 0 #5b21b6,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f5{background:linear-gradient(145deg,#fff0f0,#fecaca)!important;border-color:#dc2626!important;box-shadow:0 4px 0 #991b1b,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f6{background:linear-gradient(145deg,#fff0e0,#fed7aa)!important;border-color:#ea580c!important;box-shadow:0 4px 0 #9a3412,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-f7{background:linear-gradient(145deg,#fff8d6,#fde68a)!important;border-color:#d97706!important;box-shadow:0 4px 0 #b45309,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.rk-thumb{background:linear-gradient(145deg,#f0f0f0,#d6d3d1)!important;border-color:#a8a29e!important;box-shadow:0 4px 0 #78716c,0 5px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.6)!important;}
+
+/* Home row bump on F and J */
+.home-bump::after{content:'';position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:8px;height:2px;background:rgba(0,0,0,0.3);border-radius:1px;}
+
+/* Halant key special */
+.halant-key{border-color:#f97316!important;box-shadow:0 4px 0 #c2410c,0 5px 8px rgba(0,0,0,0.35),0 0 0 1.5px rgba(249,115,22,0.4),inset 0 1px 0 rgba(255,255,255,0.8)!important;}
+.halant-key .rk-bot{color:var(--deep-red);font-size:10px;font-weight:900;}
+
+/* HOME ROW LABEL */
+.home-row-label{text-align:center;font-size:9px;color:var(--gold);font-weight:700;margin:2px 0;letter-spacing:2px;text-transform:uppercase;}
+
+/* FINGER LEGEND */
+.finger-legend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:16px 0;}
+.fl-card{background:var(--white);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06);}
+.fl-circle{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;}
+.fl-info h4{font-size:11px;font-weight:700;color:var(--dark-red);}
+.fl-info .fl-odia{font-size:10px;color:#666;font-family:serif;}
+.fl-info .fl-keys{font-size:9px;color:#999;margin-top:1px;font-family:monospace;}
+
+/* HAND GUIDE */
+.hands-section{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0;}
+@media(max-width:600px){.hands-section{grid-template-columns:1fr;}}
+.hand-card{background:var(--white);border-radius:14px;padding:20px;text-align:center;box-shadow:0 4px 16px rgba(139,26,26,0.08);}
+.hand-card h4{font-size:15px;font-weight:700;color:var(--dark-red);font-family:serif;margin-bottom:4px;display:flex;align-items:center;gap:6px;justify-content:center;}
+.hand-card p{font-size:11px;color:#666;margin-bottom:12px;line-height:1.5;}
+.hand-card .home-keys-list{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+.hk-badge{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700;color:var(--white);font-family:serif;}
+
+/* HOME ROW CARD */
+.home-row-card{background:linear-gradient(135deg,var(--dark-red),var(--deep-red));border-radius:14px;padding:22px;color:var(--white);margin:20px 0;}
+.home-row-card h3{font-size:18px;font-weight:700;font-family:serif;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.home-row-card p{font-size:13px;opacity:.9;line-height:1.7;margin-bottom:10px;}
+.home-keys-display{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.hk-disp{background:rgba(255,255,255,0.2);border-radius:6px;padding:6px 12px;font-size:14px;font-weight:700;font-family:serif;border:1px solid rgba(255,255,255,0.3);}
+.hk-disp.special{background:var(--gold);color:var(--dark-red);border-color:var(--gold);}
+
+/* SPECIAL COMBOS */
+.combos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0;}
+.combo-card{background:var(--white);border-radius:10px;padding:16px;box-shadow:0 3px 10px rgba(0,0,0,0.07);border-left:4px solid var(--saffron);}
+.combo-card h4{font-size:13px;font-weight:700;color:var(--dark-red);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.combo-example{display:flex;align-items:center;gap:6px;font-size:16px;font-family:serif;flex-wrap:wrap;margin-top:6px;}
+.combo-key{background:#f3f4f6;border:1px solid #d1d5db;border-radius:4px;padding:2px 8px;font-size:12px;font-family:monospace;font-weight:700;color:var(--dark-red);}
+.combo-arrow{color:var(--saffron);font-weight:700;}
+.combo-result{color:var(--dark-red);font-weight:700;font-size:20px;}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0;}
+.tip-card{background:var(--white);border-radius:12px;padding:18px;box-shadow:0 3px 10px rgba(139,26,26,0.08);border-left:4px solid var(--saffron);transition:transform .2s;}
+.tip-card:hover{transform:translateY(-3px);}
+.tip-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--gold));color:var(--white);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:10px;box-shadow:0 3px 8px rgba(255,107,0,.3);}
+.tip-card h3{font-size:14px;font-weight:700;color:var(--dark-red);margin-bottom:3px;font-family:serif;}
+.tip-en{font-size:10px;color:#999;margin-bottom:6px;font-style:italic;}
+.tip-card p{font-size:12px;color:#444;line-height:1.7;}
+
+/* POSTURE */
+.posture-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0;}
+.posture-card{background:var(--white);border-radius:10px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);text-align:center;transition:transform .2s;}
+.posture-card:hover{transform:translateY(-3px);}
+.posture-icon{font-size:32px;margin-bottom:8px;}
+.posture-card h4{font-size:12px;font-weight:700;color:var(--dark-red);margin-bottom:4px;}
+.posture-card p{font-size:11px;color:#555;line-height:1.6;}
+
+/* CTA */
+.cta-band{background:linear-gradient(135deg,var(--dark-red),var(--saffron));border-radius:16px;padding:28px;text-align:center;color:var(--white);margin:24px 0;}
+.cta-band h2{font-size:22px;font-weight:700;font-family:serif;margin-bottom:8px;}
+.cta-band p{font-size:13px;opacity:.9;margin-bottom:16px;}
+.btn{padding:11px 28px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .2s;}
+.btn-primary{background:var(--gold);color:var(--dark-red);box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+.btn-primary:hover{background:#FFB800;transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.5);margin-left:8px;}
+.btn-outline:hover{background:rgba(255,255,255,0.15);}
+
+/* WA */
+.wa-banner{background:linear-gradient(135deg,#075e54,#25d366);color:var(--white);padding:24px 20px;text-align:center;border-radius:14px;margin:24px 0;}
+.wa-banner h3{font-size:16px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px;justify-content:center;}
+.wa-banner p{font-size:12px;opacity:.9;margin-bottom:12px;}
+.wa-btn{background:var(--white);color:#075e54;padding:9px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:12px;display:inline-flex;align-items:center;gap:6px;transition:all .2s;margin:4px;}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.2);}
+
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,.8);padding:24px 20px;text-align:center;}
+.footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:10px;flex-wrap:wrap;}
+.footer-links a{color:var(--gold);text-decoration:none;font-size:12px;display:flex;align-items:center;gap:4px;}
+.footer-links a:hover{text-decoration:underline;}
+footer p{font-size:11px;opacity:.6;margin-top:6px;}
+
+/* Scroll to top */
+.scroll-top{position:fixed;bottom:20px;right:20px;background:var(--saffron);color:var(--white);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);transition:all .25s;z-index:100;opacity:0;pointer-events:none;}
+.scroll-top.show{opacity:1;pointer-events:all;}
+.scroll-top:hover{background:var(--dark-red);}
+
+/* Animate on scroll */
+.aos{opacity:0;transform:translateY(24px);transition:all .5s ease;}
+.aos.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-logo"><i class="fa-solid fa-om"></i></div>
+    <div class="nav-title"><h1>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା</h1><p>Free Odia Typing Tutor</p></div>
+  </a>
+  <button class="hamburger" onclick="document.getElementById('nl').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
+  <div class="nav-links" id="nl">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="learn.html"><i class="fa-solid fa-keyboard"></i> Learn</a>
+    <a href="guide.html" class="active guide-link"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1><i class="fa-solid fa-hand"></i> ଆଙ୍ଗୁଳି ଗାଇଡ</h1>
+  <h2>Finger Position Guide · ଦଶ ଆଙ୍ଗୁଳି ଟାଇପ ଶିଖ</h2>
+  <p>ଏଠାରେ ତୁମେ ଶିଖିବ — ହାତ ଠିକ ଜାଗାରେ ରଖ, ସଠିକ ଆଙ୍ଗୁଳିରେ ଚାବି ଦବାଅ, ଏବଂ ଦ୍ରୁତ ଗତିରେ ଟାଇପ କର।</p>
+</div>
+
+<div class="container">
+
+  <!-- REALISTIC KEYBOARD DIAGRAM -->
+  <div class="kb-guide-wrap aos">
+    <h3><i class="fa-solid fa-keyboard" style="color:var(--saffron)"></i> ଅକ୍ର୍ୟୁଟି ଇଂରାଜୀ ଫୋନେଟିକ କୀବୋର୍ଡ — Akruti English Phonetic Layout</h3>
+    <div class="realistic-keyboard" id="guide-kb"></div>
+    <div class="home-row-label"><i class="fa-solid fa-house"></i> HOME ROW — ଘର ଧାଡ଼ି (A S D F · H J K L)</div>
+  </div>
+
+  <!-- FINGER LEGEND -->
+  <div class="aos">
+    <h2 class="sec-title"><i class="fa-solid fa-palette" style="color:var(--saffron)"></i> ଆଙ୍ଗୁଳି ରଙ୍ଗ ଚାର୍ଟ — Finger Color Chart</h2>
+    <div class="finger-legend-grid">
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fef3c7,#f59e0b)"><i class="fa-solid fa-hand-point-up" style="color:#92400e"></i></div><div class="fl-info"><h4>ବାମ କନିଷ୍ଠା</h4><div class="fl-odia">Left Pinky · Gold</div><div class="fl-keys">` 1 Q A Z</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fed7aa,#fb923c)"><i class="fa-solid fa-hand-point-up" style="color:#7c2d12"></i></div><div class="fl-info"><h4>ବାମ ଅନାମିକା</h4><div class="fl-odia">Left Ring · Orange</div><div class="fl-keys">2 W S X</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fecaca,#f87171)"><i class="fa-solid fa-hand-point-up" style="color:#7f1d1d"></i></div><div class="fl-info"><h4>ବାମ ମଧ୍ୟମା</h4><div class="fl-odia">Left Middle · Red</div><div class="fl-keys">3 E D C</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fde8d8,#f97316)"><i class="fa-solid fa-hand-point-up" style="color:#7c2d12"></i></div><div class="fl-info"><h4>ବାମ ତର୍ଜନୀ</h4><div class="fl-odia">Left Index · Deep Orange</div><div class="fl-keys">4 5 R T F G V B</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#ede9fe,#a78bfa)"><i class="fa-solid fa-hand-point-up" style="color:#4c1d95"></i></div><div class="fl-info"><h4>ଡାହାଣ ତର୍ଜନୀ</h4><div class="fl-odia">Right Index · Purple</div><div class="fl-keys">6 7 Y U H J N M</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fecaca,#f87171)"><i class="fa-solid fa-hand-point-up" style="color:#7f1d1d"></i></div><div class="fl-info"><h4>ଡାହାଣ ମଧ୍ୟମା</h4><div class="fl-odia">Right Middle · Red</div><div class="fl-keys">8 I K ,</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fed7aa,#fb923c)"><i class="fa-solid fa-hand-point-up" style="color:#7c2d12"></i></div><div class="fl-info"><h4>ଡାହାଣ ଅନାମିକା</h4><div class="fl-odia">Right Ring · Orange</div><div class="fl-keys">9 O L .</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#fef3c7,#f59e0b)"><i class="fa-solid fa-hand-point-up" style="color:#92400e"></i></div><div class="fl-info"><h4>ଡାହାଣ କନିଷ୍ଠା</h4><div class="fl-odia">Right Pinky · Gold</div><div class="fl-keys">0 - = P [ ] ; ' /</div></div></div>
+      <div class="fl-card"><div class="fl-circle" style="background:linear-gradient(135deg,#f0f0f0,#d6d3d1)"><i class="fa-solid fa-thumbs-up" style="color:#57534e"></i></div><div class="fl-info"><h4>ଉଭୟ ଅଙ୍ଗୁଷ୍ଠ</h4><div class="fl-odia">Both Thumbs · Grey</div><div class="fl-keys">SPACE BAR</div></div></div>
+    </div>
+  </div>
+
+  <!-- HAND GUIDE SVG -->
+  <div class="aos">
+    <h2 class="sec-title"><i class="fa-solid fa-hands" style="color:var(--saffron)"></i> ହାତ ଅବସ୍ଥାନ — Hand Position Guide</h2>
+    <div class="hands-section">
+      <!-- LEFT HAND -->
+      <div class="hand-card">
+        <h4><i class="fa-solid fa-hand" style="color:var(--saffron)"></i> ବାମ ହାତ — Left Hand</h4>
+        <p>A S D F G ← ଏ ୫ ଚାବି ବାମ ହାତ ପାଇଁ। F ଚାବିରେ ତର୍ଜନୀ ଆଙ୍ଗୁଳି ରଖ।</p>
+        <svg viewBox="0 0 220 260" width="180" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="110" cy="200" rx="75" ry="58" fill="#f9dcc4" stroke="#e5b48a" stroke-width="2"/>
+          <ellipse cx="44" cy="178" rx="14" ry="30" fill="#f9dcc4" stroke="#e5b48a" stroke-width="1.5" transform="rotate(-35 44 178)"/>
+          <text x="24" y="190" font-size="8" fill="#d97706" font-weight="700">Thumb</text>
+          <!-- Index F,G - deep orange -->
+          <rect x="62" y="48" width="26" height="96" rx="13" fill="#f97316" stroke="#c2410c" stroke-width="2" opacity=".8"/>
+          <text x="66" y="85" font-size="10" fill="white" font-weight="800">F</text>
+          <text x="66" y="100" font-size="10" fill="white" font-weight="800">G</text>
+          <text x="58" y="162" font-size="8" fill="#c2410c" font-weight="700">ତର୍ଜନୀ</text>
+          <!-- Middle D - red -->
+          <rect x="92" y="32" width="26" height="106" rx="13" fill="#f87171" stroke="#dc2626" stroke-width="2" opacity=".8"/>
+          <text x="98" y="78" font-size="10" fill="white" font-weight="800">D</text>
+          <text x="88" y="156" font-size="8" fill="#dc2626" font-weight="700">ମଧ୍ୟମା</text>
+          <!-- Ring S - orange -->
+          <rect x="122" y="42" width="26" height="100" rx="13" fill="#fb923c" stroke="#ea580c" stroke-width="2" opacity=".8"/>
+          <text x="129" y="81" font-size="10" fill="white" font-weight="800">S</text>
+          <text x="118" y="158" font-size="8" fill="#ea580c" font-weight="700">ଅନାମିକା</text>
+          <!-- Pinky A - gold -->
+          <rect x="150" y="60" width="22" height="82" rx="11" fill="#f59e0b" stroke="#d97706" stroke-width="2" opacity=".8"/>
+          <text x="156" y="95" font-size="10" fill="white" font-weight="800">A</text>
+          <text x="146" y="156" font-size="8" fill="#d97706" font-weight="700">କନିଷ୍ଠା</text>
+          <!-- Home row line -->
+          <line x1="55" y1="132" x2="180" y2="132" stroke="var(--dark-red)" stroke-width="2" stroke-dasharray="4,3" opacity=".5"/>
+          <text x="72" y="125" font-size="8" fill="var(--dark-red)" font-weight="700">Home Row →</text>
+          <!-- Knuckles -->
+          <ellipse cx="75" cy="144" rx="11" ry="7" fill="#f3c5a0" opacity=".7"/>
+          <ellipse cx="105" cy="138" rx="11" ry="7" fill="#f3c5a0" opacity=".7"/>
+          <ellipse cx="135" cy="142" rx="11" ry="7" fill="#f3c5a0" opacity=".7"/>
+          <ellipse cx="161" cy="142" rx="9" ry="6" fill="#f3c5a0" opacity=".7"/>
+          <!-- Space -->
+          <rect x="25" y="224" width="65" height="20" rx="5" fill="#d6d3d1" stroke="#a8a29e" stroke-width="1.5"/>
+          <text x="36" y="238" font-size="9" fill="#555" font-weight="600">SPACE</text>
+        </svg>
+        <div class="home-keys-list">
+          <span class="hk-badge" style="background:#f59e0b">A</span>
+          <span class="hk-badge" style="background:#fb923c">S</span>
+          <span class="hk-badge" style="background:#f87171">D</span>
+          <span class="hk-badge" style="background:#f97316">F ◆</span>
+          <span class="hk-badge" style="background:#f97316">G</span>
+        </div>
+      </div>
+      <!-- RIGHT HAND -->
+      <div class="hand-card">
+        <h4><i class="fa-solid fa-hand" style="color:var(--saffron);transform:scaleX(-1);display:inline-block"></i> ଡାହାଣ ହାତ — Right Hand</h4>
+        <p>H J K L ; ← ଏ ୫ ଚାବି ଡାହାଣ ହାତ ପାଇଁ। J ଚାବିରେ ତର୍ଜନୀ ଆଙ୍ଗୁଳି ରଖ।</p>
+        <svg viewBox="0 0 220 260" width="180" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="110" cy="200" rx="75" ry="58" fill="#f9dcc4" stroke="#e5b48a" stroke-width="2"/>
+          <ellipse cx="176" cy="178" rx="14" ry="30" fill="#f9dcc4" stroke="#e5b48a" stroke-width="1.5" transform="rotate(35 176 178)"/>
+          <text x="158" y="190" font-size="8" fill="#d97706" font-weight="700">Thumb</text>
+          <!-- Index H,J - purple -->
+          <rect x="130" y="48" width="26" height="96" rx="13" fill="#a78bfa" stroke="#7c3aed" stroke-width="2" opacity=".8"/>
+          <text x="135" y="85" font-size="10" fill="white" font-weight="800">H</text>
+          <text x="136" y="100" font-size="10" fill="white" font-weight="800">J</text>
+          <text x="126" y="162" font-size="8" fill="#7c3aed" font-weight="700">ତର୍ଜନୀ</text>
+          <!-- Middle K - red -->
+          <rect x="100" y="32" width="26" height="106" rx="13" fill="#f87171" stroke="#dc2626" stroke-width="2" opacity=".8"/>
+          <text x="107" y="78" font-size="10" fill="white" font-weight="800">K</text>
+          <text x="96" y="156" font-size="8" fill="#dc2626" font-weight="700">ମଧ୍ୟମା</text>
+          <!-- Ring L - orange -->
+          <rect x="70" y="42" width="26" height="100" rx="13" fill="#fb923c" stroke="#ea580c" stroke-width="2" opacity=".8"/>
+          <text x="78" y="81" font-size="10" fill="white" font-weight="800">L</text>
+          <text x="64" y="158" font-size="8" fill="#ea580c" font-weight="700">ଅନାମିକା</text>
+          <!-- Pinky ; - gold -->
+          <rect x="46" y="60" width="22" height="82" rx="11" fill="#f59e0b" stroke="#d97706" stroke-width="2" opacity=".8"/>
+          <text x="52" y="96" font-size="10" fill="white" font-weight="800">;</text>
+          <text x="40" y="156" font-size="8" fill="#d97706" font-weight="700">କନିଷ୍ଠା</text>
+          <!-- Home row line -->
+          <line x1="40" y1="132" x2="164" y2="132" stroke="var(--dark-red)" stroke-width="2" stroke-dasharray="4,3" opacity=".5"/>
+          <text x="46" y="125" font-size="8" fill="var(--dark-red)" font-weight="700">← Home Row</text>
+          <!-- Knuckles -->
+          <ellipse cx="143" cy="144" rx="11" ry="7" fill="#f3c5a0" opacity=".7"/>
+          <ellipse cx="113" cy="138" rx="11" ry="7" fill="#f3c5a0" opacity=".7"/>
+          <ellipse cx="83" cy="142" rx="11" ry="7" fill="#f3c5a0" opacity=".7"/>
+          <ellipse cx="57" cy="142" rx="9" ry="6" fill="#f3c5a0" opacity=".7"/>
+          <!-- Space -->
+          <rect x="128" y="224" width="65" height="20" rx="5" fill="#d6d3d1" stroke="#a8a29e" stroke-width="1.5"/>
+          <text x="139" y="238" font-size="9" fill="#555" font-weight="600">SPACE</text>
+        </svg>
+        <div class="home-keys-list">
+          <span class="hk-badge" style="background:#a78bfa">H</span>
+          <span class="hk-badge" style="background:#a78bfa">J ◆</span>
+          <span class="hk-badge" style="background:#f87171">K</span>
+          <span class="hk-badge" style="background:#fb923c">L</span>
+          <span class="hk-badge" style="background:#f59e0b">;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME ROW -->
+  <div class="home-row-card aos">
+    <h3><i class="fa-solid fa-house"></i> ହୋମ ରୋ — Home Row (ଘର ଧାଡ଼ି)</h3>
+    <p>ହୋମ ରୋ ହେଉଛି ଟାଇପ ଶିକ୍ଷାର ଭିତ୍ତି। ଟାଇପ ସମୟରେ ଆଙ୍ଗୁଳି ସବୁ ସମୟ ଏହି ଧାଡ଼ିକୁ ଫେରି ଆସିବ। F ଓ J ଚାବିରେ ଛୋଟ ଉଁଚ ଚିହ୍ନ ◆ ଅଛି — ଏହା ଆଙ୍ଗୁଳିର ଘର।</p>
+    <p style="font-size:12px;opacity:.8;">The home row is where fingers always return after pressing any key. Feel the bump on F and J with your index fingers.</p>
+    <div class="home-keys-display">
+      <span class="hk-disp" style="background:rgba(245,158,11,.3)">A</span>
+      <span class="hk-disp" style="background:rgba(251,146,60,.3)">S</span>
+      <span class="hk-disp" style="background:rgba(248,113,113,.3)">D</span>
+      <span class="hk-disp special">F ◆</span>
+      <span class="hk-disp" style="background:rgba(249,115,22,.3)">G</span>
+      <span class="hk-disp" style="background:rgba(167,139,250,.3)">H</span>
+      <span class="hk-disp special">J ◆</span>
+      <span class="hk-disp" style="background:rgba(248,113,113,.3)">K</span>
+      <span class="hk-disp" style="background:rgba(251,146,60,.3)">L</span>
+      <span class="hk-disp" style="background:rgba(245,158,11,.3)">;</span>
+    </div>
+  </div>
+
+  <!-- SPECIAL COMBOS -->
+  <div class="aos">
+    <h2 class="sec-title"><i class="fa-solid fa-link" style="color:var(--saffron)"></i> ବିଶେଷ ଚାବି ସଂଯୋଗ — Special Key Combinations</h2>
+    <div class="combos-grid">
+      <div class="combo-card">
+        <h4><i class="fa-solid fa-link" style="color:var(--deep-red)"></i> ହଲନ୍ତ — Halant (f key)</h4>
+        <p style="font-size:11px;color:#555;margin-bottom:6px;">ଦୁଇ ବ୍ୟଞ୍ଜନ ଯୋଡ଼ିବାକୁ F ଚାବି ଦବାଅ।</p>
+        <div class="combo-example">
+          <span class="combo-key">K</span><span class="combo-arrow">+</span>
+          <span class="combo-key">F</span><span class="combo-arrow">+</span>
+          <span class="combo-key">T</span><span class="combo-arrow">→</span>
+          <span class="combo-result">କ୍ତ</span>
+        </div>
+        <div class="combo-example" style="margin-top:6px;">
+          <span class="combo-key">K</span><span class="combo-arrow">+</span>
+          <span class="combo-key">F</span><span class="combo-arrow">+</span>
+          <span class="combo-key">L</span><span class="combo-arrow">→</span>
+          <span class="combo-result">କ୍ଲ</span>
+        </div>
+      </div>
+      <div class="combo-card">
+        <h4><i class="fa-solid fa-arrow-up" style="color:var(--saffron)"></i> ୟ-ଫଳ — Ya-Phala (Shift+Y)</h4>
+        <p style="font-size:11px;color:#555;margin-bottom:6px;">ବ୍ୟଞ୍ଜନ ପରେ Shift+Y ଦବାଅ।</p>
+        <div class="combo-example">
+          <span class="combo-key">K</span><span class="combo-arrow">+</span>
+          <span class="combo-key">⇧+Y</span><span class="combo-arrow">→</span>
+          <span class="combo-result">କ୍ୟ</span>
+        </div>
+        <div class="combo-example" style="margin-top:6px;">
+          <span class="combo-key">G</span><span class="combo-arrow">+</span>
+          <span class="combo-key">⇧+Y</span><span class="combo-arrow">→</span>
+          <span class="combo-result">ଗ୍ୟ</span>
+        </div>
+      </div>
+      <div class="combo-card">
+        <h4><i class="fa-solid fa-r" style="color:var(--saffron)"></i> ର-ଫଳ — Ra-Phala (f+r)</h4>
+        <p style="font-size:11px;color:#555;margin-bottom:6px;">F ଦବାଇ R ଦବାଅ।</p>
+        <div class="combo-example">
+          <span class="combo-key">G</span><span class="combo-arrow">+</span>
+          <span class="combo-key">F</span><span class="combo-arrow">+</span>
+          <span class="combo-key">R</span><span class="combo-arrow">→</span>
+          <span class="combo-result">ଗ୍ର</span>
+        </div>
+        <div class="combo-example" style="margin-top:6px;">
+          <span class="combo-key">P</span><span class="combo-arrow">+</span>
+          <span class="combo-key">F</span><span class="combo-arrow">+</span>
+          <span class="combo-key">R</span><span class="combo-arrow">→</span>
+          <span class="combo-result">ପ୍ର</span>
+        </div>
+      </div>
+      <div class="combo-card">
+        <h4><i class="fa-solid fa-rotate-left" style="color:var(--saffron)"></i> ରେଫ — Reph (r+f)</h4>
+        <p style="font-size:11px;color:#555;margin-bottom:6px;">ବ୍ୟଞ୍ଜନ ପୂର୍ବରୁ R+F ଦବାଅ।</p>
+        <div class="combo-example">
+          <span class="combo-key">R</span><span class="combo-arrow">+</span>
+          <span class="combo-key">F</span><span class="combo-arrow">+</span>
+          <span class="combo-key">K</span><span class="combo-arrow">→</span>
+          <span class="combo-result">ର୍କ</span>
+        </div>
+        <div class="combo-example" style="margin-top:6px;">
+          <span class="combo-key">R</span><span class="combo-arrow">+</span>
+          <span class="combo-key">F</span><span class="combo-arrow">+</span>
+          <span class="combo-key">G</span><span class="combo-arrow">→</span>
+          <span class="combo-result">ର୍ଗ</span>
+        </div>
+      </div>
+      <div class="combo-card">
+        <h4><i class="fa-solid fa-circle-dot" style="color:var(--saffron)"></i> ଅନୁସ୍ୱାର — Anusvara (x)</h4>
+        <p style="font-size:11px;color:#555;margin-bottom:6px;">X ଚାବି ଦବାଅ।</p>
+        <div class="combo-example">
+          <span class="combo-key">K</span><span class="combo-arrow">+</span>
+          <span class="combo-key">X</span><span class="combo-arrow">→</span>
+          <span class="combo-result">କଂ</span>
+        </div>
+        <div class="combo-example" style="margin-top:6px;">
+          <span class="combo-key">⇧+X</span><span class="combo-arrow">→</span>
+          <span class="combo-result">ଁ</span>
+          <span style="font-size:10px;color:#666">(Chandrabindu)</span>
+        </div>
+      </div>
+      <div class="combo-card">
+        <h4><i class="fa-solid fa-a" style="color:var(--saffron)"></i> ମାତ୍ରା — Matras (vowel signs)</h4>
+        <p style="font-size:11px;color:#555;margin-bottom:6px;">ବ୍ୟଞ୍ଜନ ପରେ ମାତ୍ରା ଦବାଅ।</p>
+        <div class="combo-example">
+          <span class="combo-key">K</span><span class="combo-arrow">+</span>
+          <span class="combo-key">A</span><span class="combo-arrow">→</span>
+          <span class="combo-result">କା</span>
+        </div>
+        <div class="combo-example" style="margin-top:6px;">
+          <span class="combo-key">K</span><span class="combo-arrow">+</span>
+          <span class="combo-key">I</span><span class="combo-arrow">→</span>
+          <span class="combo-result">କି</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="aos">
+    <h2 class="sec-title"><i class="fa-solid fa-lightbulb" style="color:var(--saffron)"></i> ଦ୍ରୁତ ଟାଇପ ଟିପ୍ସ — Touch Typing Tips in Odia</h2>
+    <div class="tips-grid">
+      <div class="tip-card"><div class="tip-num">୧</div><h3>ହୋମ ରୋ ମନେ ରଖ</h3><div class="tip-en">Always return to home row</div><p>ପ୍ରତ୍ୟେକ ଚାବି ଦବାଇ ଫେରି ଆସ। F ଏବଂ J ଚାବି ଉପରେ ଆଙ୍ଗୁଳି ସ୍ଥାପିତ ରଖ। ଏହା ସବୁଠୁ ଗୁରୁତ୍ୱପୂର୍ଣ ନିୟମ।</p></div>
+      <div class="tip-card"><div class="tip-num">୨</div><h3>କୀ-ବୋର୍ଡ ଦେଖ ନାହିଁ</h3><div class="tip-en">Don't look at keyboard — eyes on screen</div><p>ଟଚ ଟାଇପ ମାନେ ହାତ ଦେଖ ନକରି ଟାଇପ କରିବ। ଆଖ ସ୍କ୍ରିନ ଉପରେ ରଖ। ଅଭ୍ୟାସ ଦ୍ୱାରା ସ୍ୱଭାବ ହୋଇଯିବ।</p></div>
+      <div class="tip-card"><div class="tip-num">୩</div><h3>ଧୀରେ ଆରମ୍ଭ କର</h3><div class="tip-en">Start slow — accuracy before speed</div><p>ଆରମ୍ଭରେ ଦ୍ରୁତ ଟାଇପ ଚେଷ୍ଟା କର ନାହିଁ। ଶୁଦ୍ଧ ଭାବରେ ଟାଇପ କର। ଶୁଦ୍ଧତା ବଢ଼ିଲେ ଦ୍ରୁତତା ଆପେ ଆସିବ।</p></div>
+      <div class="tip-card"><div class="tip-num">୪</div><h3>ସଠିକ ଭଙ୍ଗୀରେ ବସ</h3><div class="tip-en">Sit in correct posture</div><p>ସିଧା ବସ। ଯନ୍ତ୍ରପ ଆଖ ସ୍ତରରେ ରଖ। ଆଙ୍ଗୁଳି ଆଳ ଭାବରେ ଧର। ଘଣ୍ଟ ଶୋଇ ଟାଇପ କର ନାହିଁ।</p></div>
+      <div class="tip-card"><div class="tip-num">୫</div><h3>ନିୟମିତ ଅଭ୍ୟାସ</h3><div class="tip-en">Practice 15-30 min daily</div><p>ପ୍ରତ୍ୟେକ ଦିନ ୧୫ ରୁ ୩୦ ମିନିଟ ଅଭ୍ୟାସ କର। ଛୋଟ ନିୟମିତ ଅଭ୍ୟାସ ବଡ଼ ଅଭ୍ୟାସ ଅପେକ୍ଷା ବେଶି ଫଳ ଦିଏ।</p></div>
+      <div class="tip-card"><div class="tip-num">୬</div><h3>ଭୁଲ ଗ୍ରହଣ କର</h3><div class="tip-en">Mistakes are your teachers</div><p>ଭୁଲ ଦ୍ୱାରା ହତାଶ ହୁଅ ନାହିଁ। ପ୍ରତ୍ୟେକ ଭୁଲ ଏକ ଶିକ୍ଷା। ସଠିକ ଆଙ୍ଗୁଳି ଅଭ୍ୟାସ ଦ୍ୱାରା ଭୁଲ ଧୀରେ ଧୀରେ କମ ହୋଇଯାଏ।</p></div>
+      <div class="tip-card"><div class="tip-num">୭</div><h3>WPM ଲକ୍ଷ୍ୟ ରଖ</h3><div class="tip-en">Set WPM targets progressively</div><p>ଆରମ୍ଭ: ୧୫-୨୦ WPM · ସାଧାରଣ: ୩୦-୪୦ · ଭଲ: ୫୦-୬୦ · ବୃତ୍ତିଗତ: ୮୦+ WPM। ଓଡ଼ିଆ ଟାଇପ ଲକ୍ଷ୍ୟ: ୩୦-୪୦ WPM</p></div>
+      <div class="tip-card"><div class="tip-num">୮</div><h3>ଛନ୍ଦ ଖୋଜ</h3><div class="tip-en">Find your typing rhythm</div><p>ଟାଇପ ଏକ ଛନ୍ଦ ଭଳି। ସ୍ଥିର ଗତିରେ ଟାଇପ କର। ଅସ୍ଥିର ଗତି ଅପେକ୍ଷା ସ୍ଥିର ଗତି ସବୁ ସମୟ ଉତ୍ତମ।</p></div>
+    </div>
+  </div>
+
+  <!-- POSTURE -->
+  <div class="aos">
+    <h2 class="sec-title"><i class="fa-solid fa-person-sitting" style="color:var(--saffron)"></i> ସଠିକ ଭଙ୍ଗୀ — Correct Posture</h2>
+    <div class="posture-grid">
+      <div class="posture-card"><div class="posture-icon">🪑</div><h4>ବସ ଭଙ୍ଗୀ</h4><p>ସିଧା ବସ। ପିଠ ଚେୟାରରେ ଲାଗିଥିବ। ଘଣ୍ଟ ବ୍ୟଥ ଏଡ଼ାଇବ।</p></div>
+      <div class="posture-card"><div class="posture-icon">💻</div><h4>ସ୍କ୍ରିନ ଦୂରତ୍ୱ</h4><p>ଆଖ ଓ ସ୍କ୍ରିନ ମଧ୍ୟରେ ୪୫-୭୦ ସେ.ମି. ଦୂରତ୍ୱ ରଖ।</p></div>
+      <div class="posture-card"><div class="posture-icon">🙌</div><h4>ହାତ ଅବସ୍ଥାନ</h4><p>ହାତ ଆଳ ଭାବରେ ଧର। ଆଙ୍ଗୁଳି ଟିକ ବଙ୍କା। ଚାପ ବ୍ୟଥ ଏଡ଼ାଅ।</p></div>
+      <div class="posture-card"><div class="posture-icon">👁️</div><h4>ଆଖ ଆରାମ</h4><p>ପ୍ରତ୍ୟେକ ୨୦ ମିନିଟ ପରେ ଆଖ ବନ୍ଦ କର ୨୦ ସେକେଣ୍ଡ।</p></div>
+      <div class="posture-card"><div class="posture-icon">⌚</div><h4>ବିଶ୍ରାମ</h4><p>ପ୍ରତ୍ୟେକ ୩୦-୪୫ ମିନିଟ ପରେ ୫ ମିନିଟ ବିଶ୍ରାମ ନିଅ।</p></div>
+      <div class="posture-card"><div class="posture-icon">💡</div><h4>ଆଲୋ</h4><p>ସ୍କ୍ରିନ ଉପରୁ ଆଲୋ ଛିଟା ନ ଲାଗୁ। ଭଲ ଆଲୋ ଥିବ।</p></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-band aos">
+    <h2><i class="fa-solid fa-keyboard"></i> ଆଜୁ ଅଭ୍ୟାସ ଆରମ୍ଭ କର!</h2>
+    <p>ଏହି ଜ୍ଞାନ ବ୍ୟବହାର କରି ଟାଇପ ଅଭ୍ୟାସ ଆରମ୍ଭ କର। ୩ ସପ୍ତାହ ଭିତରେ ଗତି ଦ୍ୱିଗୁଣ ହୋଇଯିବ।</p>
+    <a href="learn.html" class="btn btn-primary"><i class="fa-solid fa-play"></i> ଅଭ୍ୟାସ ଆରମ୍ଭ କର</a>
+    <a href="index.html" class="btn btn-outline"><i class="fa-solid fa-house"></i> ଘର ପୃଷ୍ଠା</a>
+  </div>
+
+  <!-- WA -->
+  <div class="wa-banner aos">
+    <h3><i class="fa-brands fa-whatsapp"></i> ୱେବସାଇଟ ଡିଜାଇନ ଦରକାର?</h3>
+    <p>Professional website design by Amar Visual Studio — affordable, modern &amp; SEO optimized</p>
+    <a href="https://wa.me/916372885071" target="_blank" class="wa-btn"><i class="fa-brands fa-whatsapp"></i> +91 63728 85071</a>
+    <a href="https://www.amarvisualstudio.in" target="_blank" class="wa-btn" style="background:rgba(255,255,255,.9)"><i class="fa-solid fa-globe"></i> amarvisualstudio.in</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="learn.html"><i class="fa-solid fa-keyboard"></i> Learn</a>
+    <a href="guide.html"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <a href="sitemap.xml"><i class="fa-solid fa-sitemap"></i> Sitemap</a>
+  </div>
+  <p>© 2026 ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା · ଆଙ୍ଗୁଳି ଗାଇଡ | Touch Typing Guide in Odia</p>
+  <p>Website by <a href="https://www.amarvisualstudio.in" target="_blank" style="color:var(--gold);text-decoration:none;"><i class="fa-solid fa-palette"></i> Amar Visual Studio</a> · <a href="https://wa.me/916372885071" target="_blank" style="color:var(--gold);text-decoration:none;"><i class="fa-brands fa-whatsapp"></i> +91 63728 85071</a></p>
+</footer>
+
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></div>
+
+<script>
+// Build the realistic guide keyboard
+const KM_G={'`':['\u0B13','\u0B14',0],'1':['\u0B67','!',0],'2':['\u0B68','@',1],'3':['\u0B69','\u0B37',2],'4':['\u0B6A','$',3],'5':['\u0B6B','\u0B1E',3],'6':['\u0B6C','^',4],'7':['\u0B6D','&',4],'8':['\u0B6E','\u0B19',5],'9':['\u0B6F','(',6],'0':['\u0B66',')',7],'-':['','\u0B1E',7],'=':['\u0B43','+',7],'q':['\u0B09','\u0B0A',0],'w':['\u0B0F','\u0B10',1],'e':['\u0B47','\u0B48',2],'r':['\u0B30','',3],'t':['\u0B24','\u0B25',3],'y':['\u0B5F','Y\u2191',4],'u':['\u0B41','\u0B42',4],'i':['\u0B3F','\u0B40',5],'o':['\u0B4B','\u0B4C',6],'p':['\u0B2A','\u0B2B',7],'[':['\u0B21','\u0B22',7],']':['','',7],'a':['\u0B3E','\u0B05',0],'s':['\u0B38','\u0B36',1],'d':['\u0B26','\u0B27',2],'f':['HL\u2193','',3],'g':['\u0B17','\u0B18',3],'h':['\u0B39','\u0B37',4],'j':['\u0B1C','\u0B1D',4],'k':['\u0B15','\u0B16',5],'l':['\u0B32','\u0B33',6],';':['','\u0B03',7],"'":['\u0B1F','\u0B20',7],'z':['\u0B07','\u0B08',0],'x':['\u0B02','\u0B01',1],'c':['\u0B1A','\u0B1B',2],'v':['','',3],'b':['\u0B2C','\u0B2D',3],'n':['\u0B28','\u0B23',4],'m':['\u0B2E','',5],',':['\u0B06','',6],'.':['\u0964','',7],'/':['',"?",7]};
+const ROWS=[['`','1','2','3','4','5','6','7','8','9','0','-','='],['q','w','e','r','t','y','u','i','o','p','[',']'],['a','s','d','f','g','h','j','k','l',';',"'"],['z','x','c','v','b','n','m',',','.','/',]];
+const FC_G=['rk-f0','rk-f1','rk-f2','rk-f3','rk-f4','rk-f5','rk-f6','rk-f7'];
+const FCOLORS_G=['#f59e0b','#fb923c','#f87171','#f97316','#a78bfa','#f87171','#fb923c','#f59e0b'];
+const HOME_BUMP=new Set(['f','j']);
+const HOME_KEYS=new Set(['a','s','d','f','g','h','j','k','l',';']);
+
+function buildGuideKB(){
+  const kb=document.getElementById('guide-kb');
+  ROWS.forEach((row,ri)=>{
+    const div=document.createElement('div');div.className='kb-row';
+    // Left special key
+    if(ri===0){const k=mkSp('Esc','wide sp-key');div.appendChild(k);}
+    else if(ri===1){const k=mkSp('Tab','wide sp-key');div.appendChild(k);}
+    else if(ri===2){const k=mkSp('Caps','wider sp-key');div.appendChild(k);}
+    else{const k=mkSp('⇧ Shift','widest sp-key');div.appendChild(k);}
+
+    row.forEach(k=>{
+      const m=KM_G[k]||['','',0];
+      const el=document.createElement('div');
+      const fc=FC_G[m[2]]||'';
+      el.className='rk '+fc+(k==='f'?' halant-key':'')+(HOME_BUMP.has(k)?' home-bump':'');
+      const dc=FCOLORS_G[m[2]]||'#ccc';
+      el.innerHTML=`<span class="rk-top">${m[1]}</span><span class="rk-lbl">${k.toUpperCase()}</span><span class="rk-bot">${m[0]||k}</span><span class="rk-dot" style="background:${dc}"></span>`;
+      div.appendChild(el);
+    });
+
+    // Right special key
+    if(ri===0){const k=mkSp('⌫ Back','wide sp-key');div.appendChild(k);}
+    else if(ri===1){const k=mkSp('\\','wider sp-key');div.appendChild(k);}
+    else if(ri===2){const k=mkSp('Enter ↵','wider sp-key');div.appendChild(k);}
+    else{const k=mkSp('⇧ Shift','widest sp-key');div.appendChild(k);}
+    kb.appendChild(div);
+  });
+
+  // Space row
+  const sr=document.createElement('div');sr.className='kb-row';
+  const ctrlL=mkSp('Ctrl','wide sp-key');sr.appendChild(ctrlL);
+  const altL=mkSp('Alt','wide sp-key');sr.appendChild(altL);
+  const sp=document.createElement('div');
+  sp.className='rk rk-thumb space-rk';
+  sp.innerHTML='<span class="rk-top"></span><span class="rk-bot">SPACE — ଉଭୟ ଅଙ୍ଗୁଷ୍ଠ (Both Thumbs)</span>';
+  sr.appendChild(sp);
+  const altR=mkSp('Alt','wide sp-key');sr.appendChild(altR);
+  const ctrlR=mkSp('Ctrl','wide sp-key');sr.appendChild(ctrlR);
+  kb.appendChild(sr);
+}
+
+function mkSp(label,cls){
+  const el=document.createElement('div');
+  el.className='rk '+cls;
+  el.innerHTML=`<span class="rk-top"></span><span class="rk-bot">${label}</span>`;
+  return el;
+}
+
+buildGuideKB();
+
+// Scroll animations
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1});
+document.querySelectorAll('.aos').forEach(el=>obs.observe(el));
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTop').classList.toggle('show',window.scrollY>300);
+});
+</script>
+</body>
+</html>

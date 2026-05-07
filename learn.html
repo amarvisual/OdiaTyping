@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ | Learn Odia Typing Free Online</title>
+<meta name="description" content="Practice Odia typing online free with 36 lessons. Beginner to Expert. Akruti keyboard with finger guide. Track WPM and accuracy."/>
+<meta name="keywords" content="Odia typing practice, ଓଡ଼ିଆ ଟାଇପ, Akruti keyboard Odia, learn Odia typing"/>
+<link rel="sitemap" type="application/xml" href="sitemap.xml"/>
+<link rel="canonical" href="learn.html"/>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --saffron:#FF6B00;--deep-red:#C0392B;--gold:#F0A500;
+  --dark-red:#8B1A1A;--cream:#FFF8F0;--text:#2C1810;--white:#fff;
+  --key-bg:linear-gradient(145deg,#f5ede0,#e8d8c0);
+  --key-shadow:0 4px 6px rgba(0,0,0,0.3),0 1px 3px rgba(0,0,0,0.2);
+  --key-active-shadow:0 1px 2px rgba(0,0,0,0.3);
+  --kb-bg:linear-gradient(145deg,#2a2a2a,#1a1a1a);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(--text);}
+
+/* ── DESKTOP: no scroll ── */
+@media(min-width:768px){
+  html,body{overflow:hidden;}
+  .main{flex:1;overflow:hidden;}
+}
+/* ── MOBILE: scroll allowed ── */
+@media(max-width:767px){
+  html,body{overflow-y:auto;}
+  .virtual-kb-section{display:none;}
+  .mobile-kb-notice{display:block!important;}
+}
+
+body{display:flex;flex-direction:column;}
+
+/* ══ NAV ══ */
+nav{background:linear-gradient(135deg,var(--dark-red),var(--deep-red));padding:0 16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 12px rgba(0,0,0,0.4);flex-shrink:0;position:sticky;top:0;z-index:200;}
+.nav-brand{display:flex;align-items:center;gap:8px;padding:8px 0;text-decoration:none;}
+.nav-logo{width:34px;height:34px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.nav-title h1{font-size:13px;font-weight:700;color:var(--white);letter-spacing:.5px;}
+.nav-title p{font-size:8px;color:rgba(255,255,255,0.65);}
+.nav-links{display:flex;gap:2px;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:11px;font-weight:500;transition:all .2s;display:flex;align-items:center;gap:4px;}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,0.15);color:var(--white);}
+.nav-links a.guide-link{background:rgba(240,165,0,0.2);color:var(--gold);}
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:20px;cursor:pointer;padding:6px;}
+@media(max-width:767px){
+  .hamburger{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark-red);flex-direction:column;padding:8px;gap:2px;z-index:300;box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:10px 14px;border-radius:6px;}
+}
+
+/* ══ MAIN ══ */
+.main{display:flex;flex-direction:column;padding:6px 12px;gap:5px;}
+@media(min-width:768px){.main{flex:1;min-height:0;}}
+@media(max-width:767px){.main{padding:8px 12px;gap:8px;}}
+
+/* ── LESSON STRIP ── */
+.strip-wrap{background:var(--white);border-radius:10px;padding:6px 10px;flex-shrink:0;border-left:4px solid var(--saffron);box-shadow:0 2px 8px rgba(139,26,26,0.1);}
+.strip-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.strip-lbl{font-size:9px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:4px;}
+.strip-nav{display:flex;gap:4px;align-items:center;}
+.snav-btn{padding:3px 8px;border:1.5px solid var(--saffron);border-radius:5px;background:transparent;color:var(--saffron);cursor:pointer;font-size:9px;font-weight:700;transition:all .2s;display:flex;align-items:center;gap:2px;}
+.snav-btn:hover{background:var(--saffron);color:var(--white);}
+#lesson-counter{font-size:10px;color:var(--dark-red);font-weight:700;padding:0 4px;}
+.lesson-strip{display:flex;gap:3px;overflow-x:auto;padding-bottom:2px;}
+.lesson-strip::-webkit-scrollbar{height:2px;}
+.lesson-strip::-webkit-scrollbar-thumb{background:var(--saffron);border-radius:2px;}
+.lc{background:var(--cream);border-radius:6px;padding:3px 8px;cursor:pointer;border:2px solid transparent;flex-shrink:0;text-align:center;transition:all .15s;min-width:75px;}
+.lc:hover{border-color:var(--gold);transform:translateY(-1px);}
+.lc.active{border-color:var(--saffron);background:rgba(255,107,0,0.08);}
+.lc.done{border-color:#059669;background:rgba(5,150,105,0.05);}
+.lv{font-size:7px;font-weight:700;padding:1px 4px;border-radius:3px;margin-bottom:1px;display:inline-block;}
+.lv.beg{background:#d1fae5;color:#059669;}
+.lv.int{background:#fef3c7;color:#d97706;}
+.lv.exp{background:rgba(255,107,0,0.15);color:var(--dark-red);}
+.lc .lname{font-size:9px;font-weight:600;color:var(--text);white-space:nowrap;}
+.lc .st{font-size:9px;color:var(--gold);}
+
+/* ── PRACTICE TEXT ── */
+.practice-card{background:var(--white);border-radius:10px;padding:10px 14px;flex-shrink:0;box-shadow:0 2px 8px rgba(139,26,26,0.09);border-left:4px solid var(--saffron);}
+.pcard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.pcard-lbl{font-size:9px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:4px;}
+.pcard-name{font-size:11px;font-weight:700;color:var(--dark-red);}
+#target-text{font-size:22px;line-height:2;font-family:serif;word-break:break-all;}
+@media(max-width:767px){#target-text{font-size:18px;line-height:1.9;}}
+.char{color:#ccc;}
+.char.correct{color:#059669;}
+.char.incorrect{color:var(--deep-red);background:#fee2e2;border-radius:2px;}
+.char.current{border-bottom:3px solid var(--saffron);color:var(--dark-red);background:rgba(255,107,0,0.07);border-radius:2px;}
+
+/* ── INPUT ── */
+.input-card{background:var(--white);border-radius:10px;padding:7px 12px;flex-shrink:0;box-shadow:0 2px 8px rgba(139,26,26,0.09);border-left:4px solid var(--gold);}
+.input-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;flex-wrap:wrap;gap:4px;}
+.input-lbl{font-size:9px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:4px;}
+.badges{display:flex;gap:3px;align-items:center;flex-wrap:wrap;}
+.badge{font-size:9px;padding:2px 7px;border-radius:7px;background:#f3f4f6;color:#555;font-weight:500;border:none;display:flex;align-items:center;gap:3px;}
+.badge.on{background:rgba(255,107,0,0.15);color:var(--saffron);}
+.badge.halant{background:#fee2e2;color:var(--deep-red);display:none;}
+.badge.halant.show{display:flex;}
+.badge-btn{cursor:pointer;transition:all .15s;}
+.badge-btn:hover{filter:brightness(.88);}
+#hidden-input{position:fixed;opacity:0;width:1px;height:1px;top:-300px;}
+#typed-display{width:100%;min-height:40px;font-size:22px;border:2px solid #e8d5c0;border-radius:8px;background:#fffdf9;color:var(--text);font-family:serif;word-break:break-all;cursor:text;padding:5px 10px;transition:border .2s;line-height:1.7;}
+#typed-display.focused{border-color:var(--saffron);background:var(--white);box-shadow:0 0 0 3px rgba(255,107,0,.1);}
+#typed-display.halant-pending{border-color:var(--deep-red);}
+@media(max-width:767px){#typed-display{font-size:18px;}}
+.cursor{display:none;width:2px;height:.85em;background:var(--saffron);vertical-align:middle;animation:blink 1s infinite;}
+.cursor.show{display:inline-block;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.input-hint{font-size:9px;color:#aaa;margin-top:3px;line-height:1.5;}
+.mobile-kb-notice{display:none;background:rgba(255,107,0,.1);border:1.5px solid var(--saffron);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--dark-red);margin-top:4px;text-align:center;}
+
+/* ── RESULT BAR ── */
+.result-bar{display:none;background:linear-gradient(135deg,var(--dark-red),var(--saffron));border-radius:10px;padding:10px 14px;flex-shrink:0;color:var(--white);align-items:center;gap:12px;flex-wrap:wrap;}
+.result-bar.show{display:flex;animation:slideIn .4s ease;}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+.r-stat{text-align:center;}
+.r-stat .rv{font-size:20px;font-weight:800;}
+.r-stat .rl{font-size:8px;opacity:.8;text-transform:uppercase;}
+.r-stars{font-size:22px;letter-spacing:2px;color:var(--gold);animation:starPop .5s ease;}
+@keyframes starPop{0%{transform:scale(0);}70%{transform:scale(1.2);}100%{transform:scale(1);}}
+.r-msg{flex:1;font-size:13px;font-weight:600;}
+.enter-hint{background:rgba(255,255,255,.2);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:600;animation:pulse-hint 1.2s infinite;}
+@keyframes pulse-hint{0%,100%{opacity:1;}50%{opacity:.5;}}
+
+/* ══ REALISTIC KEYBOARD ══ */
+.virtual-kb-section{flex:1;display:flex;flex-direction:column;min-height:0;}
+.keyboard-wrap{background:var(--white);border-radius:12px;padding:8px 10px;flex:1;display:flex;flex-direction:column;gap:4px;min-height:0;box-shadow:0 2px 8px rgba(139,26,26,0.09);}
+.kb-top{display:flex;justify-content:space-between;align-items:center;flex-shrink:0;flex-wrap:wrap;gap:4px;}
+.finger-legend{display:flex;gap:5px;flex-wrap:wrap;}
+.fl-item{display:flex;align-items:center;gap:2px;font-size:8px;color:#666;}
+.fl-dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+#next-key-bar{font-size:10px;font-weight:700;color:var(--dark-red);min-height:12px;display:flex;align-items:center;gap:4px;}
+
+/* ── REALISTIC KEYBOARD BODY ── */
+.keyboard{
+  background:var(--kb-bg);
+  border-radius:12px;
+  padding:10px 8px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:0;
+  box-shadow:0 8px 24px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.1);
+  border:1px solid #444;
+  position:relative;
+}
+/* Keyboard inner plate */
+.keyboard::before{
+  content:'';position:absolute;inset:6px;
+  background:linear-gradient(145deg,#3a3a3a,#252525);
+  border-radius:8px;z-index:0;
+  box-shadow:inset 0 2px 4px rgba(0,0,0,0.4);
+}
+.kb-row{display:flex;gap:3px;justify-content:center;position:relative;z-index:1;}
+
+/* ── REALISTIC KEY ── */
+.key{
+  min-width:44px;height:46px;
+  background:linear-gradient(145deg,#f8f0e3,#e8d8c0);
+  border:1px solid #c4a882;
+  border-radius:6px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:space-between;
+  cursor:pointer;padding:3px 3px;
+  position:relative;user-select:none;
+  box-shadow:
+    0 4px 0 #9d7c5a,
+    0 5px 6px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  transition:all .08s;
+  transform:translateY(0);
+}
+.key:hover{
+  background:linear-gradient(145deg,#fff5e8,#f0e0c8);
+  box-shadow:
+    0 4px 0 #9d7c5a,
+    0 6px 8px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.key:active,.key.active,.key.pressed{
+  transform:translateY(3px);
+  box-shadow:
+    0 1px 0 #9d7c5a,
+    0 2px 3px rgba(0,0,0,0.3),
+    inset 0 1px 2px rgba(0,0,0,0.15);
+  background:linear-gradient(145deg,#ede0cc,#ddd0b8);
+}
+.key.glow{
+  box-shadow:
+    0 4px 0 #b8860b,
+    0 6px 12px rgba(240,165,0,0.5),
+    0 0 0 2px var(--gold),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  animation:keyGlow .8s infinite;
+  background:linear-gradient(145deg,#fff8e1,#ffeaa0);
+}
+@keyframes keyGlow{
+  0%,100%{box-shadow:0 4px 0 #b8860b,0 6px 12px rgba(240,165,0,0.4),0 0 0 2px var(--gold),inset 0 1px 0 rgba(255,255,255,.7);}
+  50%{box-shadow:0 4px 0 #b8860b,0 6px 20px rgba(240,165,0,0.8),0 0 0 3px var(--gold),inset 0 1px 0 rgba(255,255,255,.7);}
+}
+/* Finger color overrides */
+.f0{background:linear-gradient(145deg,#fff8d6,#fde68a)!important;border-color:#d97706!important;box-shadow:0 4px 0 #b45309,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f1{background:linear-gradient(145deg,#fff0e0,#fed7aa)!important;border-color:#ea580c!important;box-shadow:0 4px 0 #9a3412,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f2{background:linear-gradient(145deg,#fff0f0,#fecaca)!important;border-color:#dc2626!important;box-shadow:0 4px 0 #991b1b,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f3{background:linear-gradient(145deg,#fff3e8,#fed7b0)!important;border-color:#c2410c!important;box-shadow:0 4px 0 #7c2d12,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f4{background:linear-gradient(145deg,#f5f0ff,#e9d5ff)!important;border-color:#7c3aed!important;box-shadow:0 4px 0 #5b21b6,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f5{background:linear-gradient(145deg,#fff0f0,#fecaca)!important;border-color:#dc2626!important;box-shadow:0 4px 0 #991b1b,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f6{background:linear-gradient(145deg,#fff0e0,#fed7aa)!important;border-color:#ea580c!important;box-shadow:0 4px 0 #9a3412,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f7{background:linear-gradient(145deg,#fff8d6,#fde68a)!important;border-color:#d97706!important;box-shadow:0 4px 0 #b45309,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.7)!important;}
+.f-thumb{background:linear-gradient(145deg,#f0f0f0,#d6d3d1)!important;border-color:#a8a29e!important;box-shadow:0 4px 0 #78716c,0 5px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.5)!important;}
+/* Home row keys get a subtle ridge on F and J */
+.home-key::after{content:'';position:absolute;bottom:7px;left:50%;transform:translateX(-50%);width:8px;height:2px;background:rgba(0,0,0,0.25);border-radius:1px;}
+.key .top{font-size:10px;color:var(--dark-red);font-family:serif;align-self:flex-end;margin-right:2px;min-height:11px;font-weight:700;line-height:1;}
+.key .lbl{font-size:7px;color:rgba(0,0,0,0.35);position:absolute;top:2px;left:3px;font-weight:600;}
+.key .bot{font-size:13px;color:#1a0800;font-family:serif;align-self:flex-start;margin-left:2px;min-height:14px;font-weight:800;line-height:1;}
+.key .fdot{width:4px;height:4px;border-radius:50%;position:absolute;bottom:2px;right:2px;opacity:.8;}
+.key.wide{min-width:60px;}
+.key.wider{min-width:72px;}
+.key.widest{min-width:86px;}
+.key.space-key{min-width:220px;}
+.key.space-key .bot{font-size:9px;color:#888;align-self:center;margin:0;font-family:sans-serif;font-weight:500;}
+.key.sp .bot{font-size:9px;color:#bbb;font-family:sans-serif;font-weight:500;}
+.key.fkey{
+  background:linear-gradient(145deg,#fff0e0,#ffd5a8)!important;
+  border-color:#c2410c!important;
+  box-shadow:0 4px 0 #7c2d12,0 5px 6px rgba(0,0,0,.35),0 0 0 1.5px #f97316,inset 0 1px 0 rgba(255,255,255,.7)!important;
+}
+.key.fkey .bot{color:var(--deep-red);font-size:10px;font-weight:900;}
+.shifted .top{color:var(--saffron)!important;}
+.shifted{filter:brightness(.93);}
+
+/* ── FOOTER STRIP ── */
+.footer-strip{background:var(--dark-red);color:rgba(255,255,255,.7);padding:4px 16px;font-size:9px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;flex-wrap:wrap;gap:4px;}
+.footer-strip a{color:var(--gold);text-decoration:none;}
+.footer-strip a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-logo"><i class="fa-solid fa-om"></i></div>
+    <div class="nav-title"><h1>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା</h1><p>Free Odia Typing Tutor</p></div>
+  </a>
+  <button class="hamburger" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+  <div class="nav-links" id="navlinks">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="learn.html" class="active"><i class="fa-solid fa-keyboard"></i> Learn</a>
+    <a href="guide.html" class="guide-link"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <!-- LESSON STRIP -->
+  <div class="strip-wrap">
+    <div class="strip-top">
+      <span class="strip-lbl"><i class="fa-solid fa-book-open"></i> All Lessons</span>
+      <div class="strip-nav">
+        <button class="snav-btn" onclick="prevLesson()"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+        <span id="lesson-counter">L1/36</span>
+        <button class="snav-btn" onclick="nextLesson()">Next <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <div class="lesson-strip" id="lesson-strip"></div>
+  </div>
+
+  <!-- PRACTICE TEXT -->
+  <div class="practice-card">
+    <div class="pcard-top">
+      <span class="pcard-lbl"><i class="fa-solid fa-align-left"></i> Practice Text</span>
+      <span class="pcard-name" id="pcard-name"></span>
+    </div>
+    <div id="target-text"></div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-card">
+    <div class="input-top">
+      <span class="input-lbl"><i class="fa-solid fa-pen-to-square"></i> Type Here</span>
+      <div class="badges">
+        <span class="badge" id="sbadge"><i class="fa-solid fa-arrow-up"></i> Shift: OFF</span>
+        <span class="badge halant" id="hbadge"><i class="fa-solid fa-link"></i> Halant ON</span>
+        <button class="badge badge-btn" style="background:#fee2e2;color:var(--deep-red);" onclick="proc('Backspace',false)"><i class="fa-solid fa-delete-left"></i></button>
+        <button class="badge badge-btn" style="background:rgba(255,107,0,.1);color:var(--saffron);" onclick="resetLesson()"><i class="fa-solid fa-rotate-left"></i> Restart</button>
+      </div>
+    </div>
+    <input id="hidden-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="none"/>
+    <div id="typed-display" onclick="activate()">
+      <span id="typed-content"></span><span class="cursor" id="cur"></span>
+    </div>
+    <p class="input-hint"><i class="fa-solid fa-circle-info"></i> Click above then type · <b style="color:var(--deep-red)">f</b>=Halant · Shift+Y=Ya-phala · f+r=Ra-phala · <b>Enter</b>=Next lesson</p>
+    <div class="mobile-kb-notice"><i class="fa-solid fa-mobile-screen"></i> Mobile user? Tap the input box above — your phone keyboard will open. Type in Odia using your device keyboard!</div>
+  </div>
+
+  <!-- RESULT BAR -->
+  <div class="result-bar" id="result-bar">
+    <div class="r-stars" id="r-stars">☆☆☆</div>
+    <div class="r-stat"><div class="rv" id="r-wpm">0</div><div class="rl"><i class="fa-solid fa-gauge-high"></i> WPM</div></div>
+    <div class="r-stat"><div class="rv" id="r-acc">0%</div><div class="rl"><i class="fa-solid fa-bullseye"></i> Accuracy</div></div>
+    <div class="r-stat"><div class="rv" id="r-time">0s</div><div class="rl"><i class="fa-solid fa-clock"></i> Time</div></div>
+    <div class="r-stat"><div class="rv" id="r-score">0</div><div class="rl"><i class="fa-solid fa-star"></i> Score</div></div>
+    <div class="r-msg" id="r-msg">🎉</div>
+    <div class="enter-hint"><i class="fa-solid fa-turn-down"></i> Press Enter for next</div>
+  </div>
+
+  <!-- KEYBOARD -->
+  <div class="virtual-kb-section">
+    <div class="keyboard-wrap">
+      <div class="kb-top">
+        <div class="finger-legend">
+          <div class="fl-item"><span class="fl-dot" style="background:#f59e0b"></span>L.Pinky</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#fb923c"></span>L.Ring</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#f87171"></span>L.Middle</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#f97316"></span>L.Index</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#a78bfa"></span>R.Index</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#f87171"></span>R.Middle</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#fb923c"></span>R.Ring</div>
+          <div class="fl-item"><span class="fl-dot" style="background:#f59e0b"></span>R.Pinky</div>
+        </div>
+        <div id="next-key-bar"></div>
+      </div>
+      <div class="keyboard" id="kb"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER STRIP -->
+<div class="footer-strip">
+  <span><i class="fa-solid fa-globe"></i> ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା · Free Odia Typing Tutor</span>
+  <span>
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/916372885071" target="_blank">Website Design: +91 63728 85071</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.amarvisualstudio.in" target="_blank"><i class="fa-solid fa-palette"></i> Amar Visual Studio</a>
+  </span>
+</div>
+
+<script>
+const H='\u0B4D',ZWNJ='\u200C';
+const IV=new Set(['\u0B05','\u0B06','\u0B07','\u0B08','\u0B09','\u0B0A','\u0B0B','\u0B0C','\u0B0F','\u0B10','\u0B13','\u0B14']);
+const MT=new Set(['\u0B3E','\u0B3F','\u0B40','\u0B41','\u0B42','\u0B43','\u0B47','\u0B48','\u0B4B','\u0B4C','\u0B01','\u0B02','\u0B03','\u0B4D']);
+const CON=new Set(['\u0B15','\u0B16','\u0B17','\u0B18','\u0B19','\u0B1A','\u0B1B','\u0B1C','\u0B1D','\u0B1E','\u0B1F','\u0B20','\u0B21','\u0B22','\u0B23','\u0B24','\u0B25','\u0B26','\u0B27','\u0B28','\u0B2A','\u0B2B','\u0B2C','\u0B2D','\u0B2E','\u0B5F','\u0B30','\u0B32','\u0B33','\u0B38','\u0B36','\u0B37','\u0B39']);
+const isCon=c=>CON.has(c),isIV=c=>IV.has(c),isMT=c=>MT.has(c);
+const KM={'`':['\u0B13','\u0B14'],'1':['\u0B67','!'],'2':['\u0B68','@'],'3':['\u0B69','\u0B37'],'4':['\u0B6A','$'],'5':['\u0B6B','\u0B1E'],'6':['\u0B6C','^'],'7':['\u0B6D','&'],'8':['\u0B6E','\u0B19'],'9':['\u0B6F','('],'0':['\u0B66',')'],'-':['','\u0B1E'],'=':['\u0B43',''],'q':['\u0B09','\u0B0A'],'w':['\u0B0F','\u0B10'],'e':['\u0B47','\u0B48'],'r':['\u0B30',''],'t':['\u0B24','\u0B25'],'y':['\u0B5F',''],'u':['\u0B41','\u0B42'],'i':['\u0B3F','\u0B40'],'o':['\u0B4B','\u0B4C'],'p':['\u0B2A','\u0B2B'],'[':['\u0B21','\u0B22'],']':['',''],'a':['\u0B3E','\u0B05'],'s':['\u0B38','\u0B36'],'d':['\u0B26','\u0B27'],'f':['',''],'g':['\u0B17','\u0B18'],'h':['\u0B39','\u0B37'],'j':['\u0B1C','\u0B1D'],'k':['\u0B15','\u0B16'],'l':['\u0B32','\u0B33'],';':['','\u0B03'],"'":['\u0B1F','\u0B20'],'z':['\u0B07','\u0B08'],'x':['\u0B02','\u0B01'],'c':['\u0B1A','\u0B1B'],'v':['',''],'b':['\u0B2C','\u0B2D'],'n':['\u0B28','\u0B23'],'m':['\u0B2E',''],',':['\u0B06',''],'.':['\u0964',''],'/':['',"?"],' ':[' ',' ']};
+const FM={'`':0,'1':0,'2':1,'3':2,'4':3,'5':3,'6':4,'7':4,'8':5,'9':6,'0':7,'-':7,'=':7,'q':0,'w':1,'e':2,'r':3,'t':3,'y':4,'u':4,'i':5,'o':6,'p':7,'[':7,']':7,'a':0,'s':1,'d':2,'f':3,'g':3,'h':4,'j':4,'k':5,'l':6,';':7,"'":7,'z':0,'x':1,'c':2,'v':3,'b':3,'n':4,'m':5,',':6,'.':7,'/':7};
+const FC=['f0','f1','f2','f3','f4','f5','f6','f7'];
+const FCOLORS=['#f59e0b','#fb923c','#f87171','#f97316','#a78bfa','#f87171','#fb923c','#f59e0b'];
+const FNAMES=['Left Pinky','Left Ring','Left Middle','Left Index','Right Index','Right Middle','Right Ring','Right Pinky'];
+const HOME_KEYS=new Set(['a','s','d','f','g','h','j','k','l',';']);
+
+const ALL=[
+  {lv:'beg',lvt:'🌱',name:'Home Row',     text:'କ ଗ ହ ଜ ଲ ସ ଦ ନ ମ ଫ'},
+  {lv:'beg',lvt:'🌱',name:'Vowels A–U',   text:'ଅ ଆ ଇ ଈ ଉ ଊ'},
+  {lv:'beg',lvt:'🌱',name:'Vowels E–O',   text:'ଏ ଐ ଓ ଔ'},
+  {lv:'beg',lvt:'🌱',name:'Consonants 1', text:'କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ'},
+  {lv:'beg',lvt:'🌱',name:'Consonants 2', text:'ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ'},
+  {lv:'beg',lvt:'🌱',name:'Consonants 3', text:'ୟ ର ଲ ଳ ସ ଶ ଷ ହ'},
+  {lv:'beg',lvt:'🌱',name:'Numbers',      text:'୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯ ୦'},
+  {lv:'beg',lvt:'🌱',name:'AA Matra',     text:'କା ଗା ହା ଜା ଲା ସା ନା ମା'},
+  {lv:'beg',lvt:'🌱',name:'I Matra',      text:'କି ଗି ହି ଜି ଲି ସି ନି ମି'},
+  {lv:'beg',lvt:'🌱',name:'U Matra',      text:'କୁ ଗୁ ହୁ ଜୁ ଲୁ ସୁ ନୁ ମୁ'},
+  {lv:'beg',lvt:'🌱',name:'E Matra',      text:'କେ ଗେ ହେ ଜେ ଲେ ସେ ନେ ମେ'},
+  {lv:'beg',lvt:'🌱',name:'O Matra',      text:'କୋ ଗୋ ହୋ ଜୋ ଲୋ ସୋ ନୋ ମୋ'},
+  {lv:'int',lvt:'⚡',name:'All Matras',   text:'କା କି କୀ କୁ କୂ କୃ କେ କୈ କୋ କୌ'},
+  {lv:'int',lvt:'⚡',name:'Words 1',      text:'ଘର ଜଳ ନଦୀ ଆକାଶ ମାତା ପିତା'},
+  {lv:'int',lvt:'⚡',name:'Words 2',      text:'ଭୂମି ଗଛ ଫୁଲ ଫଳ ଜଳ ବାୟୁ'},
+  {lv:'int',lvt:'⚡',name:'Conjuncts',    text:'କ୍ତ କ୍ଲ ମ୍ପ ନ୍ତ ସ୍ତ ଦ୍ୱ'},
+  {lv:'int',lvt:'⚡',name:'Ra-Phala',     text:'ଗ୍ର ପ୍ର କ୍ର ଦ୍ର ବ୍ର ସ୍ର'},
+  {lv:'int',lvt:'⚡',name:'Ya-Phala',     text:'କ୍ୟ ଗ୍ୟ ସ୍ୟ ବ୍ୟ ଦ୍ୟ'},
+  {lv:'int',lvt:'⚡',name:'Reph',         text:'ର୍କ ର୍ଗ ର୍ତ ର୍ଦ ର୍ପ'},
+  {lv:'int',lvt:'⚡',name:'Anusvara',     text:'କଂ ଗଂ ହଂ ସଂ ଜଂ ଦଂ'},
+  {lv:'int',lvt:'⚡',name:'Sentence 1',   text:'ଓଡ଼ିଆ ଆମ ମାତୃଭାଷା ।'},
+  {lv:'int',lvt:'⚡',name:'Sentence 2',   text:'ଜ୍ଞାନ ହିଁ ଶକ୍ତି ।'},
+  {lv:'int',lvt:'⚡',name:'Sentence 3',   text:'ଶ୍ରମ ହିଁ ଧର୍ମ ।'},
+  {lv:'int',lvt:'⚡',name:'Sentence 4',   text:'ଜଳ ହିଁ ଜୀବନ ।'},
+  {lv:'exp',lvt:'🏆',name:'Indian Culture',text:'ଭାରତ ଏକ ବିବିଧ ସଂସ୍କୃତିର ଦେଶ । ଏଠାରେ ବିଭିନ୍ନ ଭାଷା, ଧର୍ମ ଓ ପରମ୍ପରା ଏକ ସୂତ୍ରରେ ଗ୍ରଥିତ ।'},
+  {lv:'exp',lvt:'🏆',name:'Jagannath',    text:'ପୁରୀ ସ୍ଥିତ ଜଗନ୍ନାଥ ମନ୍ଦିର ଓଡ଼ିଶାର ଗୌରବ । ପ୍ରତି ବର୍ଷ ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତ ଏହି ଧାମକୁ ଆସନ୍ତି ।'},
+  {lv:'exp',lvt:'🏆',name:'Odia Heritage',text:'ଓଡ଼ିଶୀ ନୃତ୍ୟ, ପଟ୍ଟଚିତ୍ର ଓ ସୁନ୍ଦର ହସ୍ତଶିଳ୍ପ ଆମ ରାଜ୍ୟର ପରିଚୟ । ଏ ଗୌରବ ଆମ ଅହଂକାର ।'},
+  {lv:'exp',lvt:'🏆',name:'Kindness',     text:'ଜଣେ ଗରିବ ବ୍ୟକ୍ତି ଭୋକିଲା ପ୍ରାଣୀକୁ ଖାଦ୍ୟ ଦେଲେ । ଦୟାର ଏ ଛୋଟ କାର୍ଯ୍ୟ ତାଙ୍କ ଜୀବନ ବଦଳାଇ ଦେଲା ।'},
+  {lv:'exp',lvt:'🏆',name:'Inspirational',text:'ସଫଳ ହେବା ପାଇଁ ନିଜ ଉପରେ ବିଶ୍ୱାସ ରଖ । ପ୍ରତ୍ୟେକ ବିଫଳତା ସଫଳତାର ଏକ ପଦକ୍ଷେପ ।'},
+  {lv:'exp',lvt:'🏆',name:'Human Nature', text:'ମଣିଷ ସ୍ୱଭାବତଃ ସାମାଜିକ ପ୍ରାଣୀ । ସ୍ନେହ ଓ ସହାନୁଭୂତି ଜୀବନକୁ ସୁନ୍ଦର ଓ ଅର୍ଥବହ କରିଥାଏ ।'},
+  {lv:'exp',lvt:'🏆',name:'Psychology',   text:'ମଣିଷର ମନ ଏକ ଅଦ୍ଭୁତ ଶକ୍ତି । ଆମ ଭାବନା ଓ ଚିନ୍ତା ଆମ ଜୀବନର ଦିଗ ନିର୍ଣ୍ଣୟ କରିଥାଏ ।'},
+  {lv:'exp',lvt:'🏆',name:'Courage',      text:'ଦୁର୍ଗମ ପଥରେ ଯିଏ ଆଗ ବଢ଼େ, ସଫଳତା ତା ପାଇଁ ଅପେକ୍ଷା କରେ । ସାହସ ଜୀବନର ସର୍ବଶ୍ରେଷ୍ଠ ଗୁଣ ।'},
+  {lv:'exp',lvt:'🏆',name:'Positive Mind',text:'ସକାରାତ୍ମକ ଚିନ୍ତା ଜୀବନ ବଦଳାଏ । ଯେ ସବୁଦିନ ଭଲ ଭାବରେ ଭାବେ, ତାଙ୍କ ଜୀବନ ସୁଖମୟ ହୁଏ ।'},
+  {lv:'exp',lvt:'🏆',name:'Wisdom',       text:'ଜ୍ଞାନ ହିଁ ଆଲୋକ । ଶ୍ରମ ଓ ଅଧ୍ୟୟନ ଦ୍ୱାରା ଆର୍ଜ୍ଜିତ ବିଦ୍ୟା ଜୀବନ ଆଲୋକିତ କରେ ।'},
+  {lv:'exp',lvt:'🏆',name:'Free Practice',text:'ଆଜି ମୁଁ ଓଡ଼ିଆ ଟାଇପ ଶିଖୁଛି । ନିୟମିତ ଅଭ୍ୟାସ ଦ୍ୱାରା ମୋ ଦକ୍ଷତା ଦିନକୁ ଦିନ ବଢ଼ୁଛି ।'},
+];
+
+let idx=0,out='',halant=false,shifted=false,isActive=false;
+let started=false,t0=null,tmrId=null,lessonDone=false;
+let totalAttempts=0,correctAttempts=0;
+let scores=JSON.parse(localStorage.getItem('odiaScores8')||'{}');
+
+function gSplit(s){try{return[...new Intl.Segmenter('or',{granularity:'grapheme'}).segment(s)].map(x=>x.segment);}catch(e){const r=[];let c='';for(const ch of s){const cp=ch.codePointAt(0);if(((cp>=0x0B00&&cp<=0x0B4D)||ch===ZWNJ)&&c)c+=ch;else{if(c)r.push(c);c=ch;}}if(c)r.push(c);return r;}}
+function lastChar(){for(let i=out.length-1;i>=0;i--)if(out[i]!==ZWNJ)return out[i];return '';}
+
+function proc(k,sh){
+  if(lessonDone){if(k==='Enter'){advance();return;}return;}
+  if(k==='Backspace'){const g=gSplit(out);if(g.length){g.pop();out=g.join('');}halant=false;render();return;}
+  if(k==='Enter')return;
+  if(k===' '){if(halant){out+=H;halant=false;}else out+=' ';countAcc();render();return;}
+  if(sh&&k==='7'){out+='\u0B30'+H;render();return;}
+  if(sh&&k==='y'){out+=H+'\u0B5F';halant=false;countAcc();render();return;}
+  if(!sh&&k==='f'){if(isCon(lastChar()))halant=true;render();return;}
+  const m=KM[k];if(!m)return;
+  const ch=sh?m[1]:m[0];if(!ch)return;
+  if(halant){if(isCon(ch)){out+=H+ch;}else out+=ch;halant=false;}
+  else{if(isMT(ch)&&isIV(lastChar()))out+=ZWNJ+ch;else out+=ch;}
+  countAcc();render();
+}
+
+function countAcc(){
+  const tG=gSplit(ALL[idx].text),oG=gSplit(out);
+  const pos=oG.length-1;
+  if(pos>=0&&pos<tG.length){totalAttempts++;if(oG[pos]===tG[pos])correctAttempts++;}
+}
+
+function render(){
+  if(!started&&out.replace(/[\s\u200C]/g,'').length>=3){
+    started=true;t0=Date.now();
+    tmrId=setInterval(()=>{},300);
+  }
+  document.getElementById('typed-content').textContent=out;
+  const disp=document.getElementById('typed-display');
+  disp.className=(halant?'halant-pending':'')+(isActive?' focused':'');
+  document.getElementById('hbadge').className='badge halant'+(halant?' show':'');
+  const tG=gSplit(ALL[idx].text),oG=gSplit(out);
+  let html='',correct=0;
+  tG.forEach((tc,i)=>{
+    const typed=oG[i];let cls='char';
+    if(typed===undefined){if(i===oG.length)cls='char current';}
+    else if(typed===tc){cls='char correct';correct++;}
+    else cls='char incorrect';
+    html+=`<span class="${cls}">${tc}</span>`;
+  });
+  document.getElementById('target-text').innerHTML=html;
+  hlNext(tG,oG);
+  if(!lessonDone&&oG.length>=tG.length&&out.length>0){lessonDone=true;clearInterval(tmrId);showResult(correct);}
+}
+
+function showResult(correct){
+  const el=started?Math.max((Date.now()-t0)/1000,1):1;
+  const wpm=Math.round((correct/5)/(el/60));
+  const acc=totalAttempts>0?Math.round((correctAttempts/totalAttempts)*100):100;
+  const score=Math.round(correct*10+wpm+(acc/2));
+  const stars=acc>=95?3:acc>=80?2:acc>=60?1:0;
+  const prev=scores[idx]||{stars:0,wpm:0};
+  if(stars>prev.stars||(stars===prev.stars&&wpm>prev.wpm)){scores[idx]={stars,wpm,acc};localStorage.setItem('odiaScores8',JSON.stringify(scores));}
+  document.getElementById('r-wpm').textContent=wpm;
+  document.getElementById('r-acc').textContent=acc+'%';
+  document.getElementById('r-time').textContent=Math.round(el)+'s';
+  document.getElementById('r-score').textContent=score;
+  document.getElementById('r-stars').textContent='★'.repeat(stars)+'☆'.repeat(3-stars);
+  const msgs=['ଆହୁରି ଅଭ୍ୟାସ କର! 💪','ଭଲ ଲାଗିଲା! 👍','ଦୁର୍ଦ୍ଧାନ୍ତ! 🌟','ସାବାସ! Perfect! 🎉'];
+  document.getElementById('r-msg').textContent=msgs[stars];
+  document.getElementById('result-bar').classList.add('show');
+  buildStrip();
+}
+
+function advance(){if(idx<ALL.length-1)idx++;buildStrip();resetLesson();activate();}
+function nextLesson(){if(idx<ALL.length-1)idx++;buildStrip();resetLesson();}
+function prevLesson(){if(idx>0)idx--;buildStrip();resetLesson();}
+
+function resetLesson(){
+  out='';halant=false;started=false;lessonDone=false;totalAttempts=0;correctAttempts=0;
+  clearInterval(tmrId);
+  document.getElementById('typed-content').textContent='';
+  document.getElementById('result-bar').classList.remove('show');
+  document.getElementById('pcard-name').textContent=ALL[idx].lvt+' '+ALL[idx].name;
+  document.getElementById('lesson-counter').textContent=`L${idx+1}/${ALL.length}`;
+  document.querySelectorAll('.key.glow').forEach(k=>k.classList.remove('glow'));
+  document.getElementById('next-key-bar').innerHTML='';
+  render();
+}
+
+function buildStrip(){
+  const strip=document.getElementById('lesson-strip');strip.innerHTML='';
+  ALL.forEach((l,i)=>{
+    const s=scores[i]||{stars:0};
+    const div=document.createElement('div');
+    div.className='lc'+(i===idx?' active':'')+(s.stars>0?' done':'');
+    div.innerHTML=`<span class="lv ${l.lv}">${l.lvt}</span><div class="lname">${l.name}</div><div class="st">${'★'.repeat(s.stars)}${'☆'.repeat(3-s.stars)}</div>`;
+    div.onclick=()=>{idx=i;buildStrip();resetLesson();};
+    strip.appendChild(div);
+    if(i===idx)setTimeout(()=>div.scrollIntoView({block:'nearest',inline:'center'}),50);
+  });
+}
+
+function hlNext(tG,oG){
+  document.querySelectorAll('.key.glow').forEach(k=>k.classList.remove('glow'));
+  const bar=document.getElementById('next-key-bar');bar.innerHTML='';
+  if(oG.length>=tG.length)return;
+  const nc=tG[oG.length];if(!nc||nc===' ')return;
+  const fc=[...nc.replace(ZWNJ,'')][0];if(!fc)return;
+  for(const[k,v]of Object.entries(KM)){
+    if(v[0]===fc||v[1]===fc){
+      const el=document.getElementById('key-'+k);if(el)el.classList.add('glow');
+      const isShift=v[1]===fc,fi=FM[k];
+      bar.innerHTML=`<i class="fa-solid fa-hand-point-right" style="color:${FCOLORS[fi]}"></i><span style="color:${FCOLORS[fi]};font-weight:700;">${isShift?'⇧+':''}<b>${k.toUpperCase()}</b> · ${FNAMES[fi]}</span>`;
+      break;
+    }
+  }
+}
+
+function activate(){
+  const inp=document.getElementById('hidden-input');
+  inp.focus();isActive=true;
+  document.getElementById('typed-display').classList.add('focused');
+  document.getElementById('cur').classList.add('show');
+}
+document.getElementById('hidden-input').addEventListener('blur',()=>{
+  isActive=false;
+  document.getElementById('typed-display').classList.remove('focused');
+  document.getElementById('cur').classList.remove('show');
+});
+
+// MOBILE: detect if mobile and handle input differently
+const isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+if(isMobile){
+  document.getElementById('hidden-input').removeAttribute('inputmode');
+  document.getElementById('hidden-input').addEventListener('input',function(){
+    // For mobile: just display what was typed
+    out=this.value;
+    render();
+  });
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Shift'){shifted=true;updateShiftUI();return;}
+  if(['F5','F12','F1','F2','F3','F4'].includes(e.key))return;
+  if(e.ctrlKey||e.metaKey||e.altKey)return;
+  e.preventDefault();
+  if(!isActive)activate();
+  const sp={'Backspace':'Backspace',' ':' ','Enter':'Enter','=':'=','-':'-','.':'.',',':',','[':'[',']':']',';':';',"'":"'",'/':"/",'`':'`'};
+  const k=sp[e.key]||(e.key.length===1?e.key.toLowerCase():null);
+  if(!k)return;
+  proc(k,e.shiftKey);
+  if(k!=='Enter'&&k!=='Backspace'){const el=document.getElementById('key-'+k);if(el)flash(el);}
+  if(e.shiftKey&&e.key!=='Shift'){shifted=false;updateShiftUI();}
+});
+document.addEventListener('keyup',e=>{if(e.key==='Shift'){shifted=false;updateShiftUI();}});
+
+// BUILD KEYBOARD
+const ROWS=[['`','1','2','3','4','5','6','7','8','9','0','-','='],['q','w','e','r','t','y','u','i','o','p','[',']'],['a','s','d','f','g','h','j','k','l',';',"'"],['z','x','c','v','b','n','m',',','.','/',]];
+function buildKB(){
+  const kb=document.getElementById('kb');
+  ROWS.forEach((row,ri)=>{
+    const div=document.createElement('div');div.className='kb-row';
+    if(ri===0){
+      row.forEach(k=>div.appendChild(mk(k)));
+      const bk=msp('⌫','wide');bk.onclick=()=>proc('Backspace',false);div.appendChild(bk);
+    }else if(ri===1){
+      div.appendChild(msp('Tab','wide'));row.forEach(k=>div.appendChild(mk(k)));
+    }else if(ri===2){
+      div.appendChild(msp('Caps','wider'));row.forEach(k=>div.appendChild(mk(k)));div.appendChild(msp('Enter','wider'));
+    }else{
+      div.appendChild(msp('⇧ Shift','widest',true));row.forEach(k=>div.appendChild(mk(k)));div.appendChild(msp('⇧ Shift','widest',true));
+    }
+    kb.appendChild(div);
+  });
+  const sr=document.createElement('div');sr.className='kb-row';
+  const sp=document.createElement('div');sp.className='key space-key f-thumb';
+  sp.innerHTML='<span class="top"></span><span class="bot">SPACE — Both Thumbs</span>';
+  sp.onclick=()=>{proc(' ',false);activate();};
+  sr.appendChild(sp);kb.appendChild(sr);
+}
+
+function mk(k){
+  const m=KM[k]||['',''],fc=FC[FM[k]]||'';
+  const el=document.createElement('div');
+  el.className='key '+fc+(k==='f'?' fkey':'')+(HOME_KEYS.has(k)&&(k==='f'||k==='j')?' home-key':'');
+  el.id='key-'+k;
+  const bot=k==='f'?'HL↓':m[0];
+  const top=k==='y'?'Y↑':m[1];
+  const dc=FCOLORS[FM[k]]||'#ccc';
+  el.innerHTML=`<span class="top">${top}</span><span class="lbl">${k.toUpperCase()}</span><span class="bot">${bot}</span><span class="fdot" style="background:${dc}"></span>`;
+  el.onclick=()=>{proc(k,shifted);if(shifted){shifted=false;updateShiftUI();}flash(el);activate();};
+  return el;
+}
+function msp(label,cls,isShift){
+  const el=document.createElement('div');el.className='key sp '+(cls||'');
+  el.innerHTML=`<span class="top"></span><span class="bot">${label}</span>`;
+  if(isShift)el.onclick=()=>{shifted=!shifted;updateShiftUI();};
+  return el;
+}
+function flash(el){
+  el.classList.add('pressed');
+  setTimeout(()=>el.classList.remove('pressed'),120);
+}
+function updateShiftUI(){
+  document.getElementById('sbadge').className='badge'+(shifted?' on':'');
+  document.getElementById('sbadge').innerHTML=(shifted?'<i class="fa-solid fa-arrow-up"></i> Shift: ON':'<i class="fa-solid fa-arrow-up"></i> Shift: OFF');
+  document.querySelectorAll('.key').forEach(k=>{shifted?k.classList.add('shifted'):k.classList.remove('shifted');});
+}
+function toggleNav(){document.getElementById('navlinks').classList.toggle('open');}
+
+buildKB();buildStrip();resetLesson();
+document.getElementById('cur').style.display='none';
+</script>
+</body>
+</html>
