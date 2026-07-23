@@ -30,8 +30,12 @@ html,body{height:100%;font-family:'Segoe UI',Arial,sans-serif;background:var(--c
 /* ── MOBILE: scroll allowed ── */
 @media(max-width:767px){
   html,body{overflow-y:auto;}
-  .virtual-kb-section{display:none;}
+  .virtual-kb-section{display:none!important;}
   .mobile-kb-notice{display:block!important;}
+}
+/* Hide mobile notice on desktop */
+@media(min-width:768px){
+  .mobile-kb-notice{display:none!important;}
 }
 
 body{display:flex;flex-direction:column;}
@@ -295,12 +299,12 @@ nav{background:linear-gradient(135deg,var(--dark-red),var(--deep-red));padding:0
         <button class="badge badge-btn" style="background:rgba(255,107,0,.1);color:var(--saffron);" onclick="resetLesson()"><i class="fa-solid fa-rotate-left"></i> Restart</button>
       </div>
     </div>
-    <input id="hidden-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="none"/>
+    <input id="hidden-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
     <div id="typed-display" onclick="activate()">
       <span id="typed-content"></span><span class="cursor" id="cur"></span>
     </div>
     <p class="input-hint"><i class="fa-solid fa-circle-info"></i> Click above then type · <b style="color:var(--deep-red)">f</b>=Halant · Shift+Y=Ya-phala · f+r=Ra-phala · <b>Enter</b>=Next lesson</p>
-    <div class="mobile-kb-notice"><i class="fa-solid fa-mobile-screen"></i> Mobile user? Tap the input box above — your phone keyboard will open. Type in Odia using your device keyboard!</div>
+    <div class="mobile-kb-notice"><i class="fa-solid fa-mobile-screen"></i> Mobile user: Tap the box above → type English letters on your phone keyboard → they will automatically convert to Odia! Example: type <b>k</b> → gets <b>କ</b>, type <b>ka</b> → gets <b>କା</b></div>
   </div>
 
   <!-- RESULT BAR -->
@@ -528,15 +532,77 @@ document.getElementById('hidden-input').addEventListener('blur',()=>{
   document.getElementById('cur').classList.remove('show');
 });
 
-// MOBILE: detect if mobile and handle input differently
+// ── MOBILE vs DESKTOP handling ──
 const isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+const hiddenInp=document.getElementById('hidden-input');
+
 if(isMobile){
-  document.getElementById('hidden-input').removeAttribute('inputmode');
-  document.getElementById('hidden-input').addEventListener('input',function(){
-    // For mobile: just display what was typed
-    out=this.value;
-    render();
+  // On mobile: allow keyboard to open, convert each keystroke through Akruti map
+  hiddenInp.setAttribute('inputmode','text');
+  hiddenInp.setAttribute('autocapitalize','none');
+  hiddenInp.setAttribute('autocorrect','off');
+  hiddenInp.setAttribute('autocomplete','off');
+  hiddenInp.setAttribute('spellcheck','false');
+
+  let lastVal='';
+
+  hiddenInp.addEventListener('input',function(){
+    const cur=this.value;
+    if(cur.length===0){
+      // All cleared — treat as backspace
+      proc('Backspace',false);
+      lastVal='';
+      return;
+    }
+    if(cur.length < lastVal.length){
+      // Backspace
+      proc('Backspace',false);
+    } else {
+      // New chars added
+      const added=cur.slice(lastVal.length);
+      for(const ch of added){
+        const lo=ch.toLowerCase();
+        const isShift=(ch!==lo&&ch===ch.toUpperCase());
+        if(lo===' '){proc(' ',false);}
+        else if(lo==='\n'||lo==='\r'){if(lessonDone)advance();}
+        else if(KM[lo]!==undefined){proc(lo,isShift);}
+        else if(ch==='।'){proc('.',false);}
+      }
+    }
+    lastVal=cur;
+    // Reset input value periodically to prevent accumulation
+    if(this.value.length>10){
+      this.value='';
+      lastVal='';
+    }
   });
+
+  // Also handle hardware keyboard backspace/enter on mobile
+  hiddenInp.addEventListener('keydown',function(e){
+    if(e.key==='Backspace'){
+      e.preventDefault();
+      proc('Backspace',false);
+      this.value=this.value.slice(0,-1);
+      lastVal=this.value;
+    }
+    if(e.key==='Enter'){
+      e.preventDefault();
+      if(lessonDone)advance();
+    }
+  });
+
+  // Make typed-display clickable to open keyboard
+  document.getElementById('typed-display').addEventListener('click',function(){
+    hiddenInp.focus();
+    isActive=true;
+    this.classList.add('focused');
+    document.getElementById('cur').classList.add('show');
+  });
+
+} else {
+  // On desktop: block mobile keyboard from opening on hidden input
+  hiddenInp.setAttribute('inputmode','none');
+  hiddenInp.setAttribute('readonly','false');
 }
 
 document.addEventListener('keydown',e=>{
