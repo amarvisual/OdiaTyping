@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://odiatyping.in/sitemap.xml
