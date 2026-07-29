@@ -3,357 +3,495 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ | Learn Odia Typing Free Online | Akruti Keyboard</title>
-<meta name="description" content="Practice Odia typing online free with 36 lessons from beginner to expert. Akruti English Phonetic keyboard with realistic visual layout. Track WPM and accuracy."/>
-<meta name="keywords" content="Odia typing practice, ଓଡ଼ିଆ ଟାଇପ, Akruti keyboard Odia, learn Odia typing, Odia typing test government exam"/>
+<title>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ | Learn Odia Typing Free Online | Akruti Keyboard 36 Lessons</title>
+<meta name="description" content="Practice Odia typing free with 36 lessons, transparent hand guide, minimalist keyboard and 10-finger technique. Akruti English Phonetic layout. Track WPM and accuracy. No software needed."/>
+<meta name="keywords" content="Odia typing practice, Akruti keyboard, learn Odia typing, Odia typing test, OSSC typing, 10 finger Odia typing"/>
 <link rel="canonical" href="https://odiatyping.in/learn"/>
-<link rel="sitemap" type="application/xml" href="sitemap.xml"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Odia Typing Tutor","url":"https://odiatyping.in/learn","description":"Free Odia typing tutor with 36 lessons using Akruti English Phonetic keyboard layout.","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"inLanguage":"or"}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା","url":"https://odiatyping.in"}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Odia Typing Tutor","url":"https://odiatyping.in/learn","description":"Free Odia typing tutor with 36 lessons, transparent hand guide, minimalist keyboard and 10-finger technique using Akruti English Phonetic layout.","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"inLanguage":"or"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା","url":"https://odiatyping.in"}</script>
 <style>
+/* ═══ TOKENS ═══ */
 :root{
-  --bg:#0f1117;
-  --surface:#1a1d27;
-  --surface2:#22263a;
-  --border:#2e3250;
+  --bg:#0a0c14;
+  --panel:#0f1220;
+  --card:#141828;
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(255,255,255,.04);
   --accent:#f59e0b;
-  --accent2:#3b82f6;
+  --accent-dim:rgba(245,158,11,.15);
   --green:#10b981;
+  --green-dim:rgba(16,185,129,.15);
+  --blue:#3b82f6;
   --red:#ef4444;
-  --text:#e2e8f0;
-  --text2:#94a3b8;
-  --text3:#64748b;
-  --white:#ffffff;
-  --key-face:#2d3148;
-  --key-top:#363b5e;
-  --key-shadow:#1a1d35;
-  --key-border:#404570;
+  --text:#dde4f0;
+  --text2:#6b7a99;
+  --text3:#3d4a66;
+  --white:#fff;
+
+  /* finger colours — subtle, not garish */
+  --f0:rgba(148,163,184,.6);  /* pinky */
+  --f1:rgba(167,139,250,.6);  /* ring */
+  --f2:rgba(96,165,250,.6);   /* middle */
+  --f3:rgba(52,211,153,.6);   /* index L */
+  --f4:rgba(251,191,36,.6);   /* index R */
+  --f5:rgba(96,165,250,.6);   /* middle R */
+  --f6:rgba(167,139,250,.6);  /* ring R */
+  --f7:rgba(148,163,184,.6);  /* pinky R */
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow:hidden;}
-@media(max-width:767px){html,body{overflow-y:auto;}.kb-section{display:none!important;}.mobile-hint{display:block!important;}}
+@media(max-width:767px){html,body{overflow-y:auto;}}
 
-/* NAV */
-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;justify-content:space-between;height:48px;flex-shrink:0;}
+/* ═══ NAV ═══ */
+nav{
+  height:48px;flex-shrink:0;
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  padding:0 16px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:relative;z-index:50;
+}
 .nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;}
-.nav-logo{width:30px;height:30px;background:linear-gradient(135deg,var(--accent),#d97706);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;}
-.nav-title{font-size:13px;font-weight:700;color:var(--text);}
-.nav-sub{font-size:9px;color:var(--text3);}
-.nav-links{display:flex;gap:2px;}
-.nav-links a{color:var(--text2);text-decoration:none;padding:5px 10px;border-radius:6px;font-size:11px;font-weight:500;transition:all .2s;display:flex;align-items:center;gap:4px;}
-.nav-links a:hover{background:var(--surface2);color:var(--text);}
-.nav-links a.active{background:var(--surface2);color:var(--accent);}
-.hamburger{display:none;background:none;border:none;color:var(--text);font-size:18px;cursor:pointer;}
-@media(max-width:767px){.hamburger{display:block;}.nav-links{display:none;position:absolute;top:48px;left:0;right:0;background:var(--surface);flex-direction:column;padding:8px;z-index:300;border-bottom:1px solid var(--border);}.nav-links.open{display:flex;}}
+.nav-logo{width:28px;height:28px;background:linear-gradient(135deg,var(--accent),#d97706);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;}
+.nav-title{font-size:12px;font-weight:700;color:var(--white);}
+.nav-links{display:flex;gap:1px;align-items:center;}
+.nav-links a{color:var(--text2);text-decoration:none;padding:5px 10px;border-radius:6px;font-size:11px;font-weight:500;transition:all .15s;display:flex;align-items:center;gap:4px;}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.05);color:var(--text);}
+.nav-links a.active{color:var(--accent);}
+.nav-cta{background:var(--accent)!important;color:#000!important;font-weight:700!important;border-radius:7px!important;font-size:11px!important;}
+.hamburger{display:none;background:none;border:none;color:var(--text);font-size:16px;cursor:pointer;}
+@media(max-width:700px){
+  .hamburger{display:block;}
+  .nav-links{display:none;position:absolute;top:48px;left:0;right:0;background:var(--panel);flex-direction:column;padding:8px;gap:2px;border-bottom:1px solid var(--border);z-index:200;}
+  .nav-links.open{display:flex;}
+}
 
-/* LAYOUT */
+/* ═══ MAIN LAYOUT ═══ */
 body{display:flex;flex-direction:column;}
-.main{flex:1;display:flex;flex-direction:column;padding:8px 12px;gap:6px;min-height:0;overflow:hidden;}
-@media(max-width:767px){.main{overflow-y:auto;padding:8px;gap:8px;}}
+.main{flex:1;display:grid;grid-template-rows:auto auto auto auto 1fr;gap:0;min-height:0;overflow:hidden;}
+@media(max-width:767px){.main{display:flex;flex-direction:column;overflow-y:auto;gap:8px;padding:8px;}}
 
-/* LESSON SELECTOR */
-.lesson-bar{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:8px 12px;flex-shrink:0;}
-.lesson-bar-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
-.lesson-bar-label{font-size:9px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1.2px;}
-.lesson-nav{display:flex;gap:4px;align-items:center;}
-.ln-btn{padding:3px 10px;border:1px solid var(--border);border-radius:5px;background:transparent;color:var(--text2);cursor:pointer;font-size:9px;font-weight:600;transition:all .15s;}
-.ln-btn:hover{background:var(--surface2);color:var(--text);border-color:var(--accent);}
-#lesson-counter{font-size:10px;color:var(--accent);font-weight:700;padding:0 6px;}
-.lesson-strip{display:flex;gap:4px;overflow-x:auto;padding-bottom:2px;}
+/* ═══ LESSON BAR ═══ */
+.lesson-bar{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  padding:6px 12px;
+  display:flex;align-items:center;gap:10px;
+  flex-shrink:0;
+}
+.lb-label{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;}
+.lesson-strip{display:flex;gap:4px;overflow-x:auto;flex:1;}
 .lesson-strip::-webkit-scrollbar{height:2px;}
-.lesson-strip::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.lc{background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:4px 10px;cursor:pointer;flex-shrink:0;text-align:center;transition:all .15s;min-width:80px;}
-.lc:hover{border-color:var(--accent);background:#1e2235;}
-.lc.active{border-color:var(--accent);background:rgba(245,158,11,.08);}
-.lc.done{border-color:var(--green);}
-.lv-tag{font-size:7px;font-weight:700;padding:1px 5px;border-radius:3px;margin-bottom:2px;display:inline-block;}
-.lv-tag.beg{background:rgba(16,185,129,.15);color:var(--green);}
-.lv-tag.int{background:rgba(59,130,246,.15);color:var(--accent2);}
-.lv-tag.exp{background:rgba(245,158,11,.15);color:var(--accent);}
-.lc-name{font-size:9px;font-weight:500;color:var(--text2);white-space:nowrap;}
-.lc-stars{font-size:9px;color:var(--accent);}
+.lesson-strip::-webkit-scrollbar-thumb{background:var(--border);border-radius:1px;}
+.lc{
+  flex-shrink:0;
+  padding:4px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:10px;font-weight:600;
+  color:var(--text2);
+  background:transparent;
+  border:1px solid transparent;
+  transition:all .15s;
+  display:flex;flex-direction:column;align-items:center;gap:1px;
+  min-width:72px;
+}
+.lc:hover{background:var(--card);border-color:var(--border);color:var(--text);}
+.lc.active{background:var(--accent-dim);border-color:rgba(245,158,11,.3);color:var(--accent);}
+.lc.done{border-color:rgba(16,185,129,.2);}
+.lc-tag{font-size:7px;font-weight:700;padding:1px 5px;border-radius:3px;text-transform:uppercase;letter-spacing:.5px;}
+.lc-tag.beg{background:var(--green-dim);color:var(--green);}
+.lc-tag.int{background:rgba(59,130,246,.12);color:var(--blue);}
+.lc-tag.exp{background:var(--accent-dim);color:var(--accent);}
+.lc-name{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:80px;}
+.lc-stars{font-size:8px;color:var(--accent);}
+.lb-nav{display:flex;gap:4px;flex-shrink:0;}
+.lb-btn{padding:4px 8px;background:transparent;border:1px solid var(--border);border-radius:5px;color:var(--text2);cursor:pointer;font-size:10px;font-weight:600;transition:all .15s;white-space:nowrap;}
+.lb-btn:hover{background:var(--card);color:var(--text);}
+#lcount{font-size:10px;color:var(--accent);font-weight:700;padding:0 6px;white-space:nowrap;}
 
-/* PRACTICE TEXT */
-.practice-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 14px;flex-shrink:0;}
-.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
-.card-label{font-size:9px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
-.lesson-title{font-size:11px;font-weight:600;color:var(--accent);}
-#target-text{font-size:20px;line-height:2;font-family:'Noto Sans Oriya',serif;word-break:break-all;min-height:30px;}
-@media(max-width:767px){#target-text{font-size:17px;}}
+/* ═══ PRACTICE TEXT ═══ */
+.practice-zone{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  padding:10px 16px;
+  flex-shrink:0;
+}
+.pz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.pz-label{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.lesson-name-badge{font-size:10px;font-weight:600;color:var(--accent);background:var(--accent-dim);padding:2px 8px;border-radius:4px;}
+#target-text{
+  font-size:22px;
+  font-family:'Noto Sans Oriya',serif;
+  line-height:1.9;
+  word-break:break-all;
+  min-height:28px;
+}
+@media(max-width:600px){#target-text{font-size:17px;}}
 .ch{color:var(--text3);}
 .ch.ok{color:var(--green);}
-.ch.bad{color:var(--red);background:rgba(239,68,68,.12);border-radius:2px;}
-.ch.cur{color:var(--text);background:rgba(245,158,11,.15);border-bottom:2px solid var(--accent);border-radius:2px;}
+.ch.bad{color:var(--red);background:rgba(239,68,68,.1);border-radius:2px;}
+.ch.cur{color:var(--white);border-bottom:2px solid var(--accent);border-radius:1px;}
 
-/* INPUT AREA */
-.input-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:8px 12px;flex-shrink:0;}
-.input-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;flex-wrap:wrap;gap:4px;}
-.input-label{font-size:9px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
-.badges{display:flex;gap:3px;flex-wrap:wrap;}
-.badge{font-size:9px;padding:2px 8px;border-radius:6px;background:var(--surface2);color:var(--text2);border:1px solid var(--border);font-weight:500;display:flex;align-items:center;gap:3px;}
-.badge.active-badge{background:rgba(245,158,11,.1);color:var(--accent);border-color:var(--accent);}
-.badge.red-badge{background:rgba(239,68,68,.1);color:var(--red);border-color:var(--red);}
-.badge-btn{cursor:pointer;transition:all .15s;}
-.badge-btn:hover{filter:brightness(1.2);}
+/* ═══ INPUT ZONE ═══ */
+.input-zone{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  padding:8px 12px;
+  flex-shrink:0;
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+}
 #hidden-input{position:fixed;opacity:0;width:1px;height:1px;top:-999px;left:-999px;}
-.typed-box{width:100%;min-height:36px;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;padding:5px 10px;font-size:20px;font-family:'Noto Sans Oriya',serif;color:var(--text);cursor:text;word-break:break-all;line-height:1.7;transition:border .2s;}
-.typed-box.focused{border-color:var(--accent);box-shadow:0 0 0 3px rgba(245,158,11,.08);}
-.typed-box.halant-on{border-color:var(--red);}
-@media(max-width:767px){.typed-box{font-size:17px;}}
-.blink-cur{display:none;width:2px;height:.85em;background:var(--accent);vertical-align:middle;animation:blink 1s infinite;}
-.blink-cur.show{display:inline-block;}
+.typed-wrap{
+  flex:1;min-width:200px;
+  background:var(--card);
+  border:1.5px solid var(--border);
+  border-radius:8px;
+  padding:6px 12px;
+  font-size:20px;
+  font-family:'Noto Sans Oriya',serif;
+  color:var(--text);
+  min-height:40px;
+  cursor:text;
+  word-break:break-all;
+  line-height:1.6;
+  transition:border-color .2s;
+}
+.typed-wrap.active{border-color:rgba(245,158,11,.4);}
+.typed-wrap.halant{border-color:rgba(239,68,68,.5);}
+@media(max-width:600px){.typed-wrap{font-size:17px;}}
+.bcur{display:none;width:2px;height:.85em;background:var(--accent);vertical-align:middle;animation:blink 1s infinite;margin-left:1px;}
+.bcur.show{display:inline-block;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-.input-hint{font-size:9px;color:var(--text3);margin-top:3px;line-height:1.5;}
-.mobile-hint{display:none;background:rgba(245,158,11,.08);border:1px solid var(--accent);border-radius:6px;padding:6px 10px;font-size:11px;color:var(--accent);text-align:center;margin-top:4px;}
+.input-badges{display:flex;gap:4px;flex-shrink:0;flex-wrap:wrap;}
+.badge{font-size:9px;padding:3px 8px;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--text2);font-weight:500;cursor:pointer;display:flex;align-items:center;gap:3px;transition:all .15s;}
+.badge:hover{border-color:var(--accent);color:var(--text);}
+.badge.on{background:var(--accent-dim);border-color:rgba(245,158,11,.3);color:var(--accent);}
+.badge.danger.on{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:var(--red);}
+.mobile-hint{display:none;font-size:10px;color:var(--accent);padding:4px 10px;background:var(--accent-dim);border-radius:5px;margin-top:4px;width:100%;}
+@media(max-width:767px){.mobile-hint{display:block;}}
 
-/* RESULT BAR */
-.result-bar{display:none;background:linear-gradient(135deg,#1a2744,#0f1a2e);border:1px solid #2563eb44;border-radius:10px;padding:10px 14px;flex-shrink:0;align-items:center;gap:14px;flex-wrap:wrap;}
-.result-bar.show{display:flex;animation:slideUp .35s ease;}
-@keyframes slideUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+/* ═══ RESULT BAR ═══ */
+.result-bar{
+  display:none;
+  background:linear-gradient(90deg,rgba(16,185,129,.06),rgba(59,130,246,.04));
+  border-bottom:1px solid rgba(16,185,129,.15);
+  padding:8px 16px;
+  align-items:center;
+  gap:16px;flex-wrap:wrap;
+  flex-shrink:0;
+  animation:slideIn .3s ease;
+}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+.result-bar.show{display:flex;}
+.r-stars{font-size:18px;color:var(--accent);}
 .r-stat{text-align:center;}
-.r-val{font-size:22px;font-weight:800;color:var(--white);}
+.r-val{font-size:20px;font-weight:800;color:var(--white);}
 .r-lbl{font-size:8px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;}
-.r-stars{font-size:20px;color:var(--accent);}
-.r-msg{flex:1;font-size:13px;font-weight:600;color:var(--text);}
-.next-hint{background:rgba(245,158,11,.1);border:1px solid var(--accent);border-radius:6px;padding:4px 12px;font-size:10px;color:var(--accent);font-weight:600;animation:pulse .9s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.5;}}
+.r-msg{flex:1;font-size:12px;font-weight:600;color:var(--text);}
+.r-next{font-size:10px;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:4px;animation:pulse .9s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 
-/* KEYBOARD */
-.kb-section{flex:1;display:flex;flex-direction:column;min-height:0;}
-.kb-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:6px 10px;flex:1;display:flex;flex-direction:column;gap:5px;min-height:0;}
-.kb-info{display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
-.kb-legend{display:flex;gap:10px;flex-wrap:wrap;}
-.kl-item{font-size:8px;color:var(--text3);display:flex;align-items:center;gap:3px;}
-.kl-dot{width:6px;height:6px;border-radius:50%;}
-#next-hint-bar{font-size:10px;color:var(--accent);font-weight:600;min-height:14px;}
-
-/* REALISTIC KEYBOARD — single dark theme */
-.keyboard{
-  background:linear-gradient(160deg,#1c1f2e 0%,#151720 100%);
-  border:1px solid #2a2d45;
-  border-radius:12px;
-  padding:10px 8px 12px;
+/* ═══ KEYBOARD SECTION ═══ */
+.kb-section{
   flex:1;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
   min-height:0;
-  box-shadow:0 8px 32px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);
+  overflow:hidden;
+}
+@media(max-width:767px){.kb-section{display:none;}}
+
+.kb-header{
+  padding:5px 12px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;
+  gap:8px;
+}
+.kb-hint{font-size:11px;color:var(--accent);font-weight:600;min-height:16px;display:flex;align-items:center;gap:5px;}
+.kb-toggles{display:flex;gap:4px;}
+.kb-toggle{font-size:9px;padding:3px 8px;border-radius:4px;background:transparent;border:1px solid var(--border);color:var(--text3);cursor:pointer;transition:all .15s;font-weight:600;}
+.kb-toggle:hover{border-color:var(--border);color:var(--text2);}
+.kb-toggle.on{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--text);}
+
+/* ── THE KEYBOARD ── */
+.kb-body{
+  flex:1;
+  min-height:0;
+  padding:8px 12px 10px;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
   position:relative;
 }
-.keyboard::before{
-  content:'';position:absolute;inset:6px;
-  background:linear-gradient(160deg,#23273a,#1a1d2b);
-  border-radius:8px;z-index:0;
-  box-shadow:inset 0 1px 3px rgba(0,0,0,.5);
-}
-.kb-row{display:flex;gap:4px;justify-content:center;position:relative;z-index:1;margin-bottom:0;}
+.kb-row{display:flex;gap:4px;align-items:flex-end;}
+.kb-row.r1{padding-left:0;}
+.kb-row.r2{padding-left:28px;}
+.kb-row.r3{padding-left:10px;}  /* caps offset */
+.kb-row.r4{padding-left:0;}
+.kb-row.r5{justify-content:center;}
 
-/* BASE KEY — realistic dark keycap */
+/* ── MINIMALIST KEY ── */
 .key{
   position:relative;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-end;
+  width:46px;height:42px;
+  border-radius:5px;
+  background:var(--card);
+  border:1px solid var(--border2);
   cursor:pointer;
   user-select:none;
+  transition:background .1s,border-color .1s,transform .08s;
   flex-shrink:0;
+  overflow:hidden;
 }
-.key-cap{
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:space-between;
-  background:linear-gradient(170deg,#363a52 0%,#282c3f 55%,#1f2235 100%);
-  border:1px solid #3d4160;
-  border-radius:6px;
-  padding:3px 4px 4px;
-  height:46px;
-  width:46px;
-  position:relative;
-  box-shadow:
-    0 4px 0 #0f1020,
-    0 5px 8px rgba(0,0,0,.5),
-    inset 0 1px 0 rgba(255,255,255,.08),
-    inset 0 -1px 0 rgba(0,0,0,.3);
-  transition:all .08s;
+/* Finger colour dot — bottom edge strip */
+.key::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;
+  border-radius:0 0 5px 5px;
+  background:var(--fcol,transparent);
+  transition:background .2s;
 }
-.key:active .key-cap,.key.pressed .key-cap{
-  transform:translateY(3px);
-  box-shadow:0 1px 0 #0f1020,0 2px 4px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05);
+.key:hover{background:rgba(255,255,255,.06);}
+.key:active,.key.pressed{transform:translateY(2px);background:rgba(255,255,255,.04);}
+
+/* Glow = next key */
+.key.glow{
+  background:rgba(245,158,11,.08);
+  border-color:rgba(245,158,11,.35);
+  box-shadow:0 0 12px rgba(245,158,11,.2),inset 0 0 8px rgba(245,158,11,.06);
+  animation:key-pulse .7s ease-in-out infinite;
 }
-/* Glow for next key */
-.key.glow .key-cap{
-  background:linear-gradient(170deg,#2d3420,#1e2415);
-  border-color:#ca8a04;
-  box-shadow:
-    0 4px 0 #5a3a00,
-    0 0 12px rgba(202,138,4,.35),
-    0 0 0 1.5px rgba(202,138,4,.4),
-    inset 0 1px 0 rgba(255,255,255,.1);
-  animation:glow-pulse .8s infinite;
-}
-@keyframes glow-pulse{
-  0%,100%{box-shadow:0 4px 0 #5a3a00,0 0 10px rgba(202,138,4,.3),0 0 0 1.5px rgba(202,138,4,.35),inset 0 1px 0 rgba(255,255,255,.1);}
-  50%{box-shadow:0 4px 0 #5a3a00,0 0 20px rgba(202,138,4,.6),0 0 0 2px rgba(202,138,4,.5),inset 0 1px 0 rgba(255,255,255,.12);}
-}
-/* Home row keys — tiny ridge on F and J */
-.key.home-bump .key-cap::after{
-  content:'';position:absolute;bottom:7px;left:50%;
-  transform:translateX(-50%);
-  width:8px;height:2px;
-  background:rgba(255,255,255,.25);border-radius:1px;
-}
-/* Halant key (F) — subtle amber outline */
-.key.fkey .key-cap{
-  border-color:#78350f;
-  box-shadow:0 4px 0 #0f1020,0 5px 8px rgba(0,0,0,.5),0 0 0 1px rgba(180,83,9,.3),inset 0 1px 0 rgba(255,255,255,.08);
+@keyframes key-pulse{0%,100%{box-shadow:0 0 8px rgba(245,158,11,.2);}50%{box-shadow:0 0 20px rgba(245,158,11,.4);}}
+
+/* home row bump on F and J */
+.key.home::before{
+  content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);
+  width:10px;height:2px;background:rgba(255,255,255,.2);border-radius:1px;
 }
 
-/* Key label typography */
-.key-top{font-size:9px;color:#94a3b8;align-self:flex-end;margin-right:2px;font-family:'Noto Sans Oriya',serif;font-weight:600;line-height:1;min-height:10px;}
-.key-eng{font-size:7px;color:#475569;position:absolute;top:2px;left:3px;font-weight:600;letter-spacing:.3px;}
-.key-bot{font-size:13px;color:#cbd5e1;align-self:flex-start;margin-left:2px;font-family:'Noto Sans Oriya',serif;font-weight:700;line-height:1;min-height:14px;}
-/* Special keys */
-.key.wide .key-cap{width:62px;}
-.key.wider .key-cap{width:76px;}
-.key.widest .key-cap{width:90px;}
-.key.spacebar .key-cap{width:240px;}
-.key.spacebar .key-bot{font-size:9px;color:#475569;align-self:center;margin:0;font-family:'Segoe UI',sans-serif;font-weight:500;letter-spacing:.5px;}
-.key.sp-key .key-bot{font-size:9px;color:#475569;font-family:'Segoe UI',sans-serif;font-weight:400;align-self:center;margin:0;}
-/* Shift highlight */
-.key.shifted .key-cap{background:linear-gradient(170deg,#2d3040,#202338);}
-.key.shifted .key-bot{color:#e2e8f0;}
+/* Key labels */
+.k-shift{font-size:8px;color:var(--text3);align-self:flex-end;margin-right:3px;margin-top:3px;font-family:'Noto Sans Oriya',serif;line-height:1;min-height:10px;}
+.k-main{font-size:13px;color:var(--text2);align-self:flex-start;margin-left:3px;margin-bottom:3px;font-family:'Noto Sans Oriya',serif;font-weight:700;line-height:1;}
+.k-eng{position:absolute;top:2px;right:3px;font-size:7px;color:var(--text3);font-weight:700;letter-spacing:.2px;}
+
+/* WIDE KEYS */
+.key.w-tab{width:66px;}
+.key.w-caps{width:72px;}
+.key.w-shift-l{width:86px;}
+.key.w-shift-r{width:86px;}
+.key.w-bksp{width:66px;}
+.key.w-enter{width:76px;}
+.key.w-space{width:220px;height:36px;}
+.key.w-fn{width:40px;opacity:.45;}
+.key.sp-label{font-size:9px;color:var(--text3);font-family:'Segoe UI',sans-serif;font-weight:500;}
+
+/* ── TRANSPARENT HAND SVG OVERLAY ── */
+.hand-overlay{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:100%;
+  pointer-events:none;
+  transition:opacity .3s;
+}
+.hand-overlay.hidden{opacity:0;}
+.hand-svg{
+  width:100%;height:100%;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.6));
+}
+
+/* ── FINGER LEGEND ── */
+.finger-legend{
+  display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+  padding:4px 12px 6px;flex-shrink:0;
+}
+.fl-item{display:flex;align-items:center;gap:3px;font-size:8px;color:var(--text3);}
+.fl-dot{width:6px;height:6px;border-radius:50%;}
+
+/* ── SEO TEXT (hidden visually, visible to Google) ── */
+.seo-block{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
 
 /* FOOTER */
-.footer-strip{background:var(--surface);border-top:1px solid var(--border);padding:4px 16px;font-size:9px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;flex-wrap:wrap;gap:4px;color:var(--text3);}
+.footer-strip{
+  background:var(--panel);
+  border-top:1px solid var(--border);
+  padding:3px 14px;
+  font-size:9px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-shrink:0;flex-wrap:wrap;gap:4px;
+  color:var(--text3);
+}
 .footer-strip a{color:var(--accent);text-decoration:none;}
-.footer-strip a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
 
+<!-- SEO BLOCK — visible to Google, not users -->
+<div class="seo-block" aria-hidden="true">
+  <h1>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ — Free Odia Typing Practice Online with Akruti English Phonetic Keyboard</h1>
+  <p>Practice Odia typing online free with 36 progressive lessons using the Akruti English Phonetic keyboard layout — the standard used in Odisha government offices, DTP centres and newspapers. Beginner to Expert levels with transparent hand guide, minimalist keyboard, WPM tracking and accuracy score. Perfect for OSSC and OPSC government exam typing test preparation. No software installation needed — type English letters and they automatically convert to Odia in your browser using the Akruti layout. Special keys: f = Halant joiner, Shift+Y = Ya-phala, f+r = Ra-phala, r+f = Reph, x = Anusvara.</p>
+</div>
+
+<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-brand">
     <div class="nav-logo">🏛</div>
-    <div><div class="nav-title">ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା</div><div class="nav-sub">Free Odia Typing Tutor</div></div>
+    <div class="nav-title">ଓଡ଼ିଆ ଟାଇପିଂ</div>
   </a>
   <button class="hamburger" onclick="document.getElementById('nl').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
   <div class="nav-links" id="nl">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="learn.html" class="active"><i class="fa-solid fa-keyboard"></i> Learn</a>
-    <a href="guide.html"><i class="fa-solid fa-hand"></i> Finger Guide</a>
+    <a href="guide.html"><i class="fa-solid fa-hand"></i> Guide</a>
     <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
     <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
-    <a href="learn.html" class="nav-cta"><i class="fa-solid fa-play"></i> Start Typing Free</a>
+    <a href="index.html" class="nav-cta"><i class="fa-solid fa-house"></i> Home</a>
   </div>
 </nav>
 
+<!-- MAIN -->
 <div class="main">
 
-  <!-- SEO: Real indexable content for Google -->
-  <section style="background:#111827;border:1px solid #1e2d47;border-radius:10px;padding:14px 18px;flex-shrink:0;display:none;" id="seo-text" aria-hidden="false">
-    <h1 style="font-size:13px;font-weight:700;color:#f59e0b;margin-bottom:6px;">ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ — Free Odia Typing Practice Online</h1>
-    <p style="font-size:11px;color:#64748b;line-height:1.6;margin-bottom:4px;">Practice Odia typing online free with 36 progressive lessons using the <strong>Akruti English Phonetic keyboard layout</strong> — the standard used in Odisha government offices, DTP centres and newspapers. No software installation needed. Type English letters and they automatically convert to Odia in your browser.</p>
-    <p style="font-size:11px;color:#64748b;line-height:1.6;margin-bottom:4px;">This Odia typing tutor covers <strong>Beginner (vowels, consonants, matras)</strong>, <strong>Intermediate (words, conjuncts, Ra-Phala, Ya-Phala, Reph)</strong> and <strong>Expert (full Odia paragraphs about culture, Jagannath, Odia heritage)</strong>. Track your WPM speed and accuracy after every lesson. Earn star ratings ★★★. Perfect for OSSC and OPSC government exam typing test preparation.</p>
-    <p style="font-size:11px;color:#64748b;line-height:1.6;">Special keys: <strong>f = Halant (୍)</strong> joiner between consonants · <strong>Shift+Y = Ya-phala</strong> · <strong>f+r = Ra-phala</strong> · <strong>r+f = Reph</strong> · <strong>x = Anusvara (ଂ)</strong> · <strong>. = Odia danda (।)</strong>. Press Enter after each lesson to advance automatically.</p>
-  </section>
-
-
-  <!-- LESSON SELECTOR -->
+  <!-- LESSON BAR -->
   <div class="lesson-bar">
-    <div class="lesson-bar-top">
-      <span class="lesson-bar-label"><i class="fa-solid fa-book-open"></i> Lessons</span>
-      <div class="lesson-nav">
-        <button class="ln-btn" onclick="prevLesson()">← Prev</button>
-        <span id="lesson-counter">1 / 36</span>
-        <button class="ln-btn" onclick="nextLesson()">Next →</button>
-      </div>
+    <span class="lb-label">Lessons</span>
+    <div class="lesson-strip" id="strip"></div>
+    <div class="lb-nav">
+      <button class="lb-btn" onclick="prevL()">←</button>
+      <span id="lcount">1/36</span>
+      <button class="lb-btn" onclick="nextL()">→</button>
     </div>
-    <div class="lesson-strip" id="lesson-strip"></div>
   </div>
 
   <!-- PRACTICE TEXT -->
-  <div class="practice-card">
-    <div class="card-header">
-      <span class="card-label"><i class="fa-solid fa-align-left"></i> Practice Text</span>
-      <span class="lesson-title" id="lesson-title"></span>
+  <div class="practice-zone">
+    <div class="pz-top">
+      <span class="pz-label"><i class="fa-solid fa-align-left"></i> Practice</span>
+      <span class="lesson-name-badge" id="lname"></span>
     </div>
     <div id="target-text"></div>
   </div>
 
-  <!-- INPUT -->
-  <div class="input-card">
-    <div class="input-top">
-      <span class="input-label"><i class="fa-solid fa-pen-to-square"></i> Type Here</span>
-      <div class="badges">
-        <span class="badge" id="shift-badge"><i class="fa-solid fa-arrow-up"></i> Shift OFF</span>
-        <span class="badge red-badge" id="halant-badge" style="display:none"><i class="fa-solid fa-link"></i> Halant</span>
-        <button class="badge badge-btn" onclick="proc('Backspace',false)" style="background:rgba(239,68,68,.1);color:var(--red);border-color:#ef444433"><i class="fa-solid fa-delete-left"></i></button>
-        <button class="badge badge-btn" onclick="resetLesson()" style="background:rgba(59,130,246,.1);color:var(--accent2);border-color:#3b82f633"><i class="fa-solid fa-rotate-left"></i> Restart</button>
-      </div>
-    </div>
+  <!-- INPUT ZONE -->
+  <div class="input-zone">
     <input id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <div class="typed-box" id="typed-box" onclick="activate()">
-      <span id="typed-content"></span><span class="blink-cur" id="bcur"></span>
+    <div class="typed-wrap" id="typed-wrap" onclick="activate()">
+      <span id="typed-out"></span><span class="bcur" id="bcur"></span>
     </div>
-    <div class="input-hint"><i class="fa-solid fa-circle-info"></i> Click above then type · <b style="color:var(--red)">f</b> = Halant (୍) · Shift+Y = Ya-phala · f+r = Ra-phala · r+f = Reph · <b>Enter</b> = Next lesson</div>
-    <div class="mobile-hint"><i class="fa-solid fa-mobile-screen"></i> Tap box above → type English letters → auto-converts to Odia! (k=କ, a=ା, ka=କା)</div>
+    <div class="input-badges">
+      <div class="badge" id="shift-badge"><i class="fa-solid fa-arrow-up"></i> Shift</div>
+      <div class="badge danger" id="halant-badge"><i class="fa-solid fa-link"></i> HL</div>
+      <div class="badge" onclick="proc('Backspace',false)" title="Backspace"><i class="fa-solid fa-delete-left"></i></div>
+      <div class="badge" onclick="resetL()" title="Restart"><i class="fa-solid fa-rotate-left"></i></div>
+    </div>
+    <div class="mobile-hint"><i class="fa-solid fa-mobile-screen"></i> Tap box → type English → converts to Odia automatically</div>
   </div>
 
-  <!-- RESULT -->
+  <!-- RESULT BAR -->
   <div class="result-bar" id="result-bar">
     <div class="r-stars" id="r-stars"></div>
     <div class="r-stat"><div class="r-val" id="r-wpm">0</div><div class="r-lbl">WPM</div></div>
     <div class="r-stat"><div class="r-val" id="r-acc">0%</div><div class="r-lbl">Accuracy</div></div>
     <div class="r-stat"><div class="r-val" id="r-time">0s</div><div class="r-lbl">Time</div></div>
-    <div class="r-stat"><div class="r-val" id="r-score">0</div><div class="r-lbl">Score</div></div>
     <div class="r-msg" id="r-msg"></div>
-    <div class="next-hint"><i class="fa-solid fa-turn-down"></i> Enter = Next</div>
+    <div class="r-next"><i class="fa-solid fa-turn-down"></i> Enter = Next lesson</div>
   </div>
 
-  <!-- KEYBOARD -->
+  <!-- KEYBOARD SECTION -->
   <div class="kb-section">
-    <div class="kb-wrap">
-      <div class="kb-info">
-        <div class="kb-legend">
-          <div class="kl-item"><span class="kl-dot" style="background:#64748b"></span> L.Pinky</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#7c3aed"></span> L.Ring</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#2563eb"></span> L.Middle</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#059669"></span> L.Index</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#d97706"></span> R.Index</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#2563eb"></span> R.Middle</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#7c3aed"></span> R.Ring</div>
-          <div class="kl-item"><span class="kl-dot" style="background:#64748b"></span> R.Pinky</div>
-        </div>
-        <div id="next-hint-bar"></div>
+    <div class="kb-header">
+      <div class="kb-hint" id="kb-hint"><i class="fa-solid fa-hand-point-right"></i> Click the box above and start typing</div>
+      <div class="kb-toggles">
+        <button class="kb-toggle on" id="toggle-hand" onclick="toggleHand()"><i class="fa-solid fa-hand"></i> Hand Guide</button>
+        <button class="kb-toggle on" id="toggle-odia" onclick="toggleOdia()"><i class="fa-solid fa-font"></i> Odia Labels</button>
       </div>
-      <div class="keyboard" id="kb"></div>
+    </div>
+
+    <!-- FINGER LEGEND -->
+    <div class="finger-legend">
+      <div class="fl-item"><div class="fl-dot" style="background:#94a3b8"></div>L.Pinky</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#a78bfa"></div>L.Ring</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#60a5fa"></div>L.Middle</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#34d399"></div>L.Index</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#fbbf24"></div>R.Index</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#60a5fa"></div>R.Middle</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#a78bfa"></div>R.Ring</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#94a3b8"></div>R.Pinky</div>
+    </div>
+
+    <div class="kb-body" id="kb-body">
+      <div id="kb"></div>
+      <!-- TRANSPARENT HAND SVG -->
+      <div class="hand-overlay" id="hand-overlay">
+        <svg class="hand-svg" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <filter id="glow-hand"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <!-- LEFT HAND — fingers pointing down onto keyboard -->
+          <g opacity="0.55" filter="url(#glow-hand)">
+            <!-- Palm left -->
+            <ellipse cx="220" cy="195" rx="72" ry="28" fill="rgba(180,200,240,0.12)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
+            <!-- Pinky L -->
+            <path d="M155,195 Q152,165 150,140 Q149,128 153,122 Q157,116 163,120 Q168,124 166,138 L164,195Z" fill="rgba(148,163,184,0.18)" stroke="rgba(148,163,184,0.5)" stroke-width="1.2"/>
+            <!-- Ring L -->
+            <path d="M172,195 Q170,158 168,128 Q167,114 172,108 Q178,102 185,107 Q191,112 188,128 L186,195Z" fill="rgba(167,139,250,0.18)" stroke="rgba(167,139,250,0.5)" stroke-width="1.2"/>
+            <!-- Middle L -->
+            <path d="M192,195 Q190,152 188,118 Q187,103 193,97 Q200,91 207,97 Q213,103 210,118 L208,195Z" fill="rgba(96,165,250,0.18)" stroke="rgba(96,165,250,0.5)" stroke-width="1.2"/>
+            <!-- Index L -->
+            <path d="M213,195 Q213,158 213,128 Q213,113 219,107 Q226,101 233,107 Q239,113 237,128 L236,195Z" fill="rgba(52,211,153,0.18)" stroke="rgba(52,211,153,0.5)" stroke-width="1.2"/>
+            <!-- Thumb L (pointing right toward space) -->
+            <path d="M220,195 Q238,192 255,195 Q265,198 262,205 Q258,212 245,210 L220,205Z" fill="rgba(180,200,240,0.14)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
+          </g>
+
+          <!-- RIGHT HAND -->
+          <g opacity="0.55" filter="url(#glow-hand)">
+            <!-- Palm right -->
+            <ellipse cx="680" cy="195" rx="72" ry="28" fill="rgba(180,200,240,0.12)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
+            <!-- Index R -->
+            <path d="M664,195 Q663,158 662,128 Q661,113 668,107 Q675,101 682,107 Q688,113 686,128 L685,195Z" fill="rgba(251,191,36,0.18)" stroke="rgba(251,191,36,0.5)" stroke-width="1.2"/>
+            <!-- Middle R -->
+            <path d="M690,195 Q689,152 689,118 Q690,103 697,97 Q704,91 710,97 Q716,103 713,118 L712,195Z" fill="rgba(96,165,250,0.18)" stroke="rgba(96,165,250,0.5)" stroke-width="1.2"/>
+            <!-- Ring R -->
+            <path d="M715,195 Q714,158 713,128 Q712,114 718,108 Q725,102 731,107 Q737,112 734,128 L732,195Z" fill="rgba(167,139,250,0.18)" stroke="rgba(167,139,250,0.5)" stroke-width="1.2"/>
+            <!-- Pinky R -->
+            <path d="M737,195 Q735,165 734,140 Q733,128 737,122 Q742,116 748,120 Q753,124 751,138 L749,195Z" fill="rgba(148,163,184,0.18)" stroke="rgba(148,163,184,0.5)" stroke-width="1.2"/>
+            <!-- Thumb R -->
+            <path d="M680,195 Q662,192 645,195 Q635,198 638,205 Q642,212 655,210 L680,205Z" fill="rgba(180,200,240,0.14)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
+          </g>
+
+          <!-- HOME ROW INDICATORS -->
+          <circle cx="248" cy="212" r="5" fill="rgba(52,211,153,0.6)" opacity="0.8"/>
+          <circle cx="668" cy="212" r="5" fill="rgba(251,191,36,0.6)" opacity="0.8"/>
+          <text x="248" y="216" text-anchor="middle" font-size="5" fill="white" opacity="0.9">F</text>
+          <text x="668" y="216" text-anchor="middle" font-size="5" fill="white" opacity="0.9">J</text>
+        </svg>
+      </div>
     </div>
   </div>
 
 </div>
 
+<!-- FOOTER -->
 <div class="footer-strip">
-  <span>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା · Free Odia Typing Tutor</span>
-  <span>
-    <a href="https://wa.me/916372885071" target="_blank"><i class="fa-brands fa-whatsapp"></i> Website Design: +91 63728 85071</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.amarvisualstudio.in" target="_blank"><i class="fa-solid fa-palette"></i> Amar Visual Studio</a>
-  </span>
+  <span>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା · <a href="https://www.amarvisualstudio.in" target="_blank">Amar Visual Studio</a> · <a href="https://wa.me/916372885071" target="_blank">+91 63728 85071</a></span>
+  <span style="color:var(--text3);font-size:8px;">f=Halant · Shift+Y=Ya-phala · f+r=Ra-phala · r+f=Reph · Enter=Next</span>
 </div>
 
 <script>
+// ═══ AKRUTI MAP ═══
 const H='\u0B4D',ZWNJ='\u200C';
-const IV=new Set('\u0B05\u0B06\u0B07\u0B08\u0B09\u0B0A\u0B0B\u0B0C\u0B0F\u0B10\u0B13\u0B14'.split(''));
-const MT=new Set('\u0B3E\u0B3F\u0B40\u0B41\u0B42\u0B43\u0B47\u0B48\u0B4B\u0B4C\u0B01\u0B02\u0B03\u0B4D'.split(''));
-const CON=new Set('\u0B15\u0B16\u0B17\u0B18\u0B19\u0B1A\u0B1B\u0B1C\u0B1D\u0B1E\u0B1F\u0B20\u0B21\u0B22\u0B23\u0B24\u0B25\u0B26\u0B27\u0B28\u0B2A\u0B2B\u0B2C\u0B2D\u0B2E\u0B5F\u0B30\u0B32\u0B33\u0B38\u0B36\u0B37\u0B39'.split(''));
-const isCon=c=>CON.has(c),isIV=c=>IV.has(c),isMT=c=>MT.has(c);
-
 const KM={
   '`':['\u0B13','\u0B14'],'1':['\u0B67','!'],'2':['\u0B68','@'],'3':['\u0B69','\u0B37'],
   '4':['\u0B6A','$'],'5':['\u0B6B','\u0B1E'],'6':['\u0B6C','^'],'7':['\u0B6D','&'],
-  '8':['\u0B6E','\u0B19'],'9':['\u0B6F','('],'0':['\u0B66',')'],'-':['','\u0B1E'],'=':['\u0B43','+'],
+  '8':['\u0B6E','\u0B19'],'9':['\u0B6F','('],'0':['\u0B66',')'],'-':['','\u0B1E'],
+  '=':['\u0B43','+'],
   'q':['\u0B09','\u0B0A'],'w':['\u0B0F','\u0B10'],'e':['\u0B47','\u0B48'],
   'r':['\u0B30',''],'t':['\u0B24','\u0B25'],'y':['\u0B5F',''],
   'u':['\u0B41','\u0B42'],'i':['\u0B3F','\u0B40'],'o':['\u0B4B','\u0B4C'],
@@ -364,314 +502,358 @@ const KM={
   ';':['','\u0B03'],"'":['\u0B1F','\u0B20'],
   'z':['\u0B07','\u0B08'],'x':['\u0B02','\u0B01'],'c':['\u0B1A','\u0B1B'],
   'v':['',''],'b':['\u0B2C','\u0B2D'],'n':['\u0B28','\u0B23'],
-  'm':['\u0B2E',''],',':['\u0B06',''],'.':['\u0964',''],'/':['',"?"],' ':[' ',' ']
+  'm':['\u0B2E',''],',':['\u0B06',''],'.':['\u0964',''],'/':['',"?"],
+  ' ':[' ',' ']
 };
 
-const FM={
+// Finger index 0-7
+const FK={
   '`':0,'1':0,'2':1,'3':2,'4':3,'5':3,'6':4,'7':4,'8':5,'9':6,'0':7,'-':7,'=':7,
   'q':0,'w':1,'e':2,'r':3,'t':3,'y':4,'u':4,'i':5,'o':6,'p':7,'[':7,']':7,
   'a':0,'s':1,'d':2,'f':3,'g':3,'h':4,'j':4,'k':5,'l':6,';':7,"'":7,
-  'z':0,'x':1,'c':2,'v':3,'b':3,'n':4,'m':5,',':6,'.':7,'/':7
+  'z':0,'x':1,'c':2,'v':3,'b':3,'n':4,'m':5,',':6,'.':7,'/':7,' ':9
 };
-const FDOT_COLORS=['#64748b','#7c3aed','#2563eb','#059669','#d97706','#2563eb','#7c3aed','#64748b'];
+const FCOLS=['#94a3b8','#a78bfa','#60a5fa','#34d399','#fbbf24','#60a5fa','#a78bfa','#94a3b8'];
 const FNAMES=['L.Pinky','L.Ring','L.Middle','L.Index','R.Index','R.Middle','R.Ring','R.Pinky'];
 
+const IV=new Set('\u0B05\u0B06\u0B07\u0B08\u0B09\u0B0A\u0B0B\u0B0C\u0B0F\u0B10\u0B13\u0B14'.split(''));
+const MT=new Set('\u0B3E\u0B3F\u0B40\u0B41\u0B42\u0B43\u0B47\u0B48\u0B4B\u0B4C\u0B01\u0B02\u0B03\u0B4D'.split(''));
+const CON=new Set('\u0B15\u0B16\u0B17\u0B18\u0B19\u0B1A\u0B1B\u0B1C\u0B1D\u0B1E\u0B1F\u0B20\u0B21\u0B22\u0B23\u0B24\u0B25\u0B26\u0B27\u0B28\u0B2A\u0B2B\u0B2C\u0B2D\u0B2E\u0B5F\u0B30\u0B32\u0B33\u0B38\u0B36\u0B37\u0B39'.split(''));
+const isCon=c=>CON.has(c),isMT=c=>MT.has(c),isIV=c=>IV.has(c);
+
+// 36 LESSONS
 const ALL=[
-  // BEGINNER
-  {lv:'beg',name:'Home Row',        text:'କ ଗ ହ ଜ ଲ ସ ଦ ନ ମ ଫ'},
-  {lv:'beg',name:'Vowels A–U',      text:'ଅ ଆ ଇ ଈ ଉ ଊ'},
-  {lv:'beg',name:'Vowels E–O',      text:'ଏ ଐ ଓ ଔ'},
-  {lv:'beg',name:'Consonants 1',    text:'କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ'},
-  {lv:'beg',name:'Consonants 2',    text:'ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ'},
-  {lv:'beg',name:'Consonants 3',    text:'ୟ ର ଲ ଳ ସ ଶ ଷ ହ'},
-  {lv:'beg',name:'Numbers',         text:'୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯ ୦'},
-  {lv:'beg',name:'AA Matra',        text:'କା ଗା ହା ଜା ଲା ସା ନା ମା'},
-  {lv:'beg',name:'I Matra',         text:'କି ଗି ହି ଜି ଲି ସି ନି ମି'},
-  {lv:'beg',name:'U Matra',         text:'କୁ ଗୁ ହୁ ଜୁ ଲୁ ସୁ ନୁ ମୁ'},
-  {lv:'beg',name:'E Matra',         text:'କେ ଗେ ହେ ଜେ ଲେ ସେ ନେ ମେ'},
-  {lv:'beg',name:'O Matra',         text:'କୋ ଗୋ ହୋ ଜୋ ଲୋ ସୋ ନୋ ମୋ'},
-  // INTERMEDIATE
-  {lv:'int',name:'All Matras',      text:'କା କି କୀ କୁ କୂ କୃ କେ କୈ କୋ କୌ'},
-  {lv:'int',name:'Words 1',         text:'ଘର ଜଳ ନଦୀ ଆକାଶ ମାତା ପିତା'},
-  {lv:'int',name:'Words 2',         text:'ଭୂମି ଗଛ ଫୁଲ ଫଳ ଜଳ ବାୟୁ'},
-  {lv:'int',name:'Conjuncts',       text:'କ୍ତ କ୍ଲ ମ୍ପ ନ୍ତ ସ୍ତ ଦ୍ୱ'},
-  {lv:'int',name:'Ra-Phala',        text:'ଗ୍ର ପ୍ର କ୍ର ଦ୍ର ବ୍ର ସ୍ର'},
-  {lv:'int',name:'Ya-Phala',        text:'କ୍ୟ ଗ୍ୟ ସ୍ୟ ବ୍ୟ ଦ୍ୟ'},
-  {lv:'int',name:'Reph',            text:'ର୍କ ର୍ଗ ର୍ତ ର୍ଦ ର୍ପ'},
-  {lv:'int',name:'Anusvara',        text:'କଂ ଗଂ ହଂ ସଂ ଜଂ ଦଂ'},
-  {lv:'int',name:'Sentence 1',      text:'ଓଡ଼ିଆ ଆମ ମାତୃଭାଷା ।'},
-  {lv:'int',name:'Sentence 2',      text:'ଜ୍ଞାନ ହିଁ ଶକ୍ତି ।'},
-  {lv:'int',name:'Sentence 3',      text:'ଶ୍ରମ ହିଁ ଧର୍ମ ।'},
-  {lv:'int',name:'Sentence 4',      text:'ଜଳ ହିଁ ଜୀବନ ।'},
-  // EXPERT — full paragraphs
-  {lv:'exp',name:'ଭାରତ ସଂସ୍କୃତି',   text:'ଭାରତ ଏକ ବିଶାଳ ଓ ବିବିଧ ସଂସ୍କୃତିର ଦେଶ । ଏଠାରେ ଅନେକ ଭାଷା, ଧର୍ମ ଓ ଜାତି ଏକ ଛାତ ତଳେ ବାସ କରନ୍ତି । ଏ ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ହିଁ ଆମ ଦେଶର ସର୍ବଶ୍ରେଷ୍ଠ ଗୌରବ ।'},
-  {lv:'exp',name:'ଜଗନ୍ନାଥ ଧାମ',     text:'ପୁରୀ ସ୍ଥିତ ଜଗନ୍ନାଥ ମନ୍ଦିର ଭାରତର ଏକ ପ୍ରସିଦ୍ଧ ଚାର ଧାମ । ପ୍ରତ୍ୟେକ ବର୍ଷ ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତ ଦର୍ଶନ ପାଇଁ ଆସନ୍ତି । ଜଗନ୍ନାଥ ଙ୍କ ରଥ ଯାତ୍ରା ସାରା ଦୁନିଆ ।'},
-  {lv:'exp',name:'ଓଡ଼ିଶା ଐତିହ୍ୟ',   text:'ଓଡ଼ିଶୀ ନୃତ୍ୟ, ରଙ୍ଗ ବିରଙ୍ଗ ପଟ୍ଟ ଚିତ୍ର, ଅନନ୍ୟ ହସ୍ତ ଶିଳ୍ପ ଓ ଜଗ ବିଖ୍ୟାତ କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର ଆମ ଓଡ଼ିଶାର ଅହଂକାର ।'},
-  {lv:'exp',name:'ଦୟା ଓ ପ୍ରେମ',     text:'ଏହି ଜଗତରେ ଦୟା ଓ ନିଃସ୍ୱାର୍ଥ ପ୍ରେମ ହିଁ ସବୁଠୁ ବଡ଼ ଧର୍ମ । ଦୟାଳୁ ବ୍ୟକ୍ତି ଅଳ୍ପ ସ୍ନେହ ଦ୍ୱାରା ଅନ୍ୟ ଜଣଙ୍କ ଜୀବନ ବଦଳାଇ ଦେଇ ଥାଏ ।'},
-  {lv:'exp',name:'ସ୍ୱପ୍ନ ଓ ଲକ୍ଷ୍ୟ',  text:'ଜୀବନରେ ଉଚ୍ଚ ସ୍ୱପ୍ନ ଦେଖ ଓ ଦୃଢ଼ ଲକ୍ଷ୍ୟ ସ୍ଥିର କର । ପ୍ରତ୍ୟେକ ଦିନ ଗୋଟିଏ ଦୃଢ଼ ପଦ ଆଗ ଆଡ଼କୁ ବଢ଼ । ଧୈର୍ଯ୍ୟ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ।'},
-  {lv:'exp',name:'ମଣିଷ ସ୍ୱଭାବ',     text:'ମଣିଷ ସ୍ୱଭାବ ଦ୍ୱାରା ଏକ ସ୍ନେହ ପ୍ରବଣ ସାମାଜିକ ପ୍ରାଣୀ । ସ୍ନେହ, ଶ୍ରଦ୍ଧା ଓ ଦୟା ଦ୍ୱାରା ଜୀବନ ଅର୍ଥବହ ଓ ସୁନ୍ଦର ହୋଇଥାଏ ।'},
-  {lv:'exp',name:'ମନ ଓ ଭାବନା',      text:'ମଣିଷର ମନ ଏକ ଅଦ୍ଭୁତ ଓ ଅସୀମ ଶକ୍ତି । ଆମ ଚିନ୍ତା ଓ ଭାବନା ଆମ ଜୀବନ ଦିଗ ନିର୍ଣ୍ଣୟ କରିଥାଏ । ସଦ ଭାବ ରଖ, ଜୀବନ ଆଲୋକ ।'},
-  {lv:'exp',name:'ସାହସ ଓ ବଳ',       text:'ଦୁର୍ଗମ ପଥରେ ଯିଏ ଦୃଢ଼ ଭାବରେ ଆଗ ବଢ଼େ, ସଫଳତା ତା ପାଇଁ ଅପେକ୍ଷା କରେ । ଆତ୍ମ ବିଶ୍ୱାସ ଓ ସାହସ ହିଁ ଜୀବନର ସର୍ବଶ୍ରେଷ୍ଠ ଗୁଣ ।'},
-  {lv:'exp',name:'ଜ୍ଞାନ ଓ ଆଲୋ',     text:'ଜ୍ଞାନ ହିଁ ଅଜ୍ଞାନ ଅନ୍ଧାରୁ ମୁକ୍ତି ଦେଉଥିବା ଆଲୋକ । ଶ୍ରମ, ଅଧ୍ୟୟନ ଓ ଗୁରୁ ଭକ୍ତି ଦ୍ୱାରା ଜ୍ଞାନ ଆର୍ଜ୍ଜନ ।'},
-  {lv:'exp',name:'ପ୍ରକୃତି ଓ ଜଳ',    text:'ସବୁଜ ଗଛ, ବୋହୁଥିବା ନଦୀ ଓ ନୀଳ ଆକାଶ ଆମ ଜୀବନ ଧାରଣର ଆଧାର । ପ୍ରକୃତି ରକ୍ଷା ଆମ ସମସ୍ତଙ୍କ ଦାୟିତ୍ୱ ।'},
-  {lv:'exp',name:'ମାଆ ଓ ସ୍ନେହ',     text:'ମାଆ ହେଉଛନ୍ତି ଈଶ୍ୱରଙ୍କ ଶ୍ରେଷ୍ଠ ଉପହାର । ତାଙ୍କ ନିଃଶର୍ତ ସ୍ନେହ ଓ ତ୍ୟାଗ ତୁଳନାହୀନ ।'},
-  {lv:'exp',name:'ଶ୍ରମ ଓ ସଫଳ',      text:'ନିରଳସ ପରିଶ୍ରମ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ଯେ କୌଣସି ଲକ୍ଷ୍ୟ ହାସଲ ହୋଇଥାଏ । ସଫଳ ବ୍ୟକ୍ତି ସେ ଯିଏ ବିଫଳ ।'},
+  {lv:'beg',n:'Home Row',        t:'କ ଗ ହ ଜ ଲ ସ ଦ ନ ମ'},
+  {lv:'beg',n:'Vowels A–U',      t:'ଅ ଆ ଇ ଈ ଉ ଊ'},
+  {lv:'beg',n:'Vowels E–O',      t:'ଏ ଐ ଓ ଔ'},
+  {lv:'beg',n:'Consonants 1',    t:'କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ'},
+  {lv:'beg',n:'Consonants 2',    t:'ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ'},
+  {lv:'beg',n:'Consonants 3',    t:'ୟ ର ଲ ଳ ସ ଶ ଷ ହ'},
+  {lv:'beg',n:'Numbers',         t:'୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯ ୦'},
+  {lv:'beg',n:'AA Matra',        t:'କା ଗା ହା ଜା ଲା ସା ନା ମା'},
+  {lv:'beg',n:'I / II Matra',    t:'କି କୀ ଗି ଗୀ ସି ସୀ ନି ନୀ'},
+  {lv:'beg',n:'U / UU Matra',   t:'କୁ କୂ ଗୁ ଗୂ ସୁ ସୂ ନୁ ନୂ'},
+  {lv:'beg',n:'E / AI Matra',   t:'କେ କୈ ଗେ ଗୈ ସେ ସୈ ନେ ନୈ'},
+  {lv:'beg',n:'O / AU Matra',   t:'କୋ କୌ ଗୋ ଗୌ ସୋ ସୌ ନୋ ନୌ'},
+  {lv:'int',n:'All Matras',      t:'କା କି କୀ କୁ କୂ କୃ କେ କୈ କୋ କୌ'},
+  {lv:'int',n:'Words 1',         t:'ଘର ଜଳ ନଦୀ ଆକାଶ ମାତା ପିତା'},
+  {lv:'int',n:'Words 2',         t:'ଭୂମି ଗଛ ଫୁଲ ଫଳ ଜଳ ବାୟୁ'},
+  {lv:'int',n:'Conjuncts',       t:'କ୍ତ ନ୍ତ ସ୍ତ ଦ୍ୱ ଶ୍ଚ'},
+  {lv:'int',n:'Ra-Phala',        t:'ଗ୍ର ପ୍ର କ୍ର ଦ୍ର ବ୍ର ଶ୍ର'},
+  {lv:'int',n:'Ya-Phala',        t:'କ୍ୟ ଗ୍ୟ ସ୍ୟ ବ୍ୟ ଦ୍ୟ'},
+  {lv:'int',n:'Reph',            t:'ର୍କ ର୍ଗ ର୍ତ ର୍ଦ ର୍ପ'},
+  {lv:'int',n:'Anusvara',        t:'କଂ ଗଂ ହଂ ସଂ ଜଂ ଦଂ'},
+  {lv:'int',n:'Sentence 1',      t:'ଓଡ଼ିଆ ଆମ ମାତୃଭାଷା ।'},
+  {lv:'int',n:'Sentence 2',      t:'ଜ୍ଞାନ ହିଁ ଶକ୍ତି ।'},
+  {lv:'int',n:'Sentence 3',      t:'ଶ୍ରମ ହିଁ ଧର୍ମ ।'},
+  {lv:'int',n:'Sentence 4',      t:'ଜଳ ହିଁ ଜୀବନ ।'},
+  {lv:'exp',n:'ଭାରତ ସଂସ୍କୃତି',  t:'ଭାରତ ଏକ ବିଶାଳ ଓ ବିବିଧ ସଂସ୍କୃତିର ଦେଶ । ଏଠାରେ ଅନେକ ଭାଷା, ଧର୍ମ ଓ ଜାତି ଏକ ଛାତ ତଳେ ବାସ କରନ୍ତି । ଏ ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ହିଁ ଆମ ଦେଶର ସର୍ବଶ୍ରେଷ୍ଠ ଗୌରବ ।'},
+  {lv:'exp',n:'ଜଗନ୍ନାଥ ଧାମ',    t:'ପୁରୀ ସ୍ଥିତ ଜଗନ୍ନାଥ ମନ୍ଦିର ଭାରତର ଏକ ପ୍ରସିଦ୍ଧ ଚାର ଧାମ । ପ୍ରତ୍ୟେକ ବର୍ଷ ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତ ଦର୍ଶନ ପାଇଁ ଆସନ୍ତି । ଜଗନ୍ନାଥ ଙ୍କ ରଥ ଯାତ୍ରା ସାରା ଦୁନିଆ ।'},
+  {lv:'exp',n:'ଓଡ଼ିଶା ଐତିହ୍ୟ',  t:'ଓଡ଼ିଶୀ ନୃତ୍ୟ, ରଙ୍ଗ ବିରଙ୍ଗ ପଟ୍ଟ ଚିତ୍ର, ଅନନ୍ୟ ହସ୍ତ ଶିଳ୍ପ ଓ ଜଗ ବିଖ୍ୟାତ କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର ଆମ ଓଡ଼ିଶାର ଅହଂକାର ।'},
+  {lv:'exp',n:'ଦୟା ଓ ପ୍ରେମ',    t:'ଏହି ଜଗତରେ ଦୟା ଓ ନିଃସ୍ୱାର୍ଥ ପ୍ରେମ ହିଁ ସବୁଠୁ ବଡ଼ ଧର୍ମ । ଦୟାଳୁ ବ୍ୟକ୍ତି ଅଳ୍ପ ସ୍ନେହ ଦ୍ୱାରା ଅନ୍ୟ ଜଣଙ୍କ ଜୀବନ ବଦଳାଇ ଦେଇ ଥାଏ ।'},
+  {lv:'exp',n:'ସ୍ୱପ୍ନ ଓ ଲକ୍ଷ୍ୟ', t:'ଜୀବନରେ ଉଚ୍ଚ ସ୍ୱପ୍ନ ଦେଖ ଓ ଦୃଢ଼ ଲକ୍ଷ୍ୟ ସ୍ଥିର କର । ପ୍ରତ୍ୟେକ ଦିନ ଗୋଟିଏ ଦୃଢ଼ ପଦ ଆଗ ଆଡ଼କୁ ବଢ଼ । ଧୈର୍ଯ୍ୟ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ।'},
+  {lv:'exp',n:'ମଣିଷ ସ୍ୱଭାବ',    t:'ମଣିଷ ସ୍ୱଭାବ ଦ୍ୱାରା ଏକ ସ୍ନେହ ପ୍ରବଣ ସାମାଜିକ ପ୍ରାଣୀ । ସ୍ନେହ, ଶ୍ରଦ୍ଧା ଓ ଦୟା ଦ୍ୱାରା ଜୀବନ ଅର୍ଥବହ ଓ ସୁନ୍ଦର ହୋଇଥାଏ ।'},
+  {lv:'exp',n:'ମନ ଓ ଭାବନା',     t:'ମଣିଷର ମନ ଏକ ଅଦ୍ଭୁତ ଓ ଅସୀମ ଶକ୍ତି । ଆମ ଚିନ୍ତା ଓ ଭାବନା ଆମ ଜୀବନ ଦିଗ ନିର୍ଣ୍ଣୟ କରିଥାଏ ।'},
+  {lv:'exp',n:'ସାହସ ଓ ବଳ',      t:'ଦୁର୍ଗମ ପଥରେ ଯିଏ ଦୃଢ଼ ଭାବରେ ଆଗ ବଢ଼େ, ସଫଳତା ତା ପାଇଁ ଅପେକ୍ଷା କରେ । ଆତ୍ମ ବିଶ୍ୱାସ ଓ ସାହସ ହିଁ ଜୀବନର ସର୍ବଶ୍ରେଷ୍ଠ ଗୁଣ ।'},
+  {lv:'exp',n:'ଜ୍ଞାନ ଓ ଆଲୋ',    t:'ଜ୍ଞାନ ହିଁ ଅଜ୍ଞାନ ଅନ୍ଧାରୁ ମୁକ୍ତି ଦେଉଥିବା ଆଲୋକ । ଶ୍ରମ, ଅଧ୍ୟୟନ ଓ ଗୁରୁ ଭକ୍ତି ଦ୍ୱାରା ଜ୍ଞାନ ଆର୍ଜ୍ଜନ ।'},
+  {lv:'exp',n:'ପ୍ରକୃତି ଓ ଜଳ',   t:'ସବୁଜ ଗଛ, ବୋହୁଥିବା ନଦୀ ଓ ନୀଳ ଆକାଶ ଆମ ଜୀବନ ଧାରଣର ଆଧାର । ପ୍ରକୃତି ରକ୍ଷା ଆମ ସମସ୍ତଙ୍କ ଦାୟିତ୍ୱ ।'},
+  {lv:'exp',n:'ମାଆ ଓ ସ୍ନେହ',    t:'ମାଆ ହେଉଛନ୍ତି ଈଶ୍ୱରଙ୍କ ଶ୍ରେଷ୍ଠ ଉପହାର । ତାଙ୍କ ନିଃଶର୍ତ ସ୍ନେହ ଓ ତ୍ୟାଗ ତୁଳନାହୀନ ।'},
+  {lv:'exp',n:'ଶ୍ରମ ଓ ସଫଳ',     t:'ନିରଳସ ପରିଶ୍ରମ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ଯେ କୌଣସି ଲକ୍ଷ୍ୟ ହାସଲ ହୋଇଥାଏ । ସଫଳ ବ୍ୟକ୍ତି ସେ ଯିଏ ବିଫଳ ।'},
 ];
 
-let idx=0,out='',halant=false,shifted=false,isActive=false;
-let started=false,t0=null,lessonDone=false,totalAttempts=0,correctAttempts=0;
-const scores=JSON.parse(localStorage.getItem('odiaTypingV9')||'{}');
+// STATE
+let idx=0,out='',halant=false,shifted=false,active=false;
+let started=false,t0=null,done=false,total=0,correct=0;
+const SC=JSON.parse(localStorage.getItem('odiaV9')||'{}');
+let showHand=true,showOdia=true;
 
-function gSplit(s){
+// GRAPHEME SPLIT
+function gsplit(s){
   try{return[...new Intl.Segmenter('or',{granularity:'grapheme'}).segment(s)].map(x=>x.segment);}
-  catch{const r=[];let c='';for(const ch of s){const cp=ch.codePointAt(0);if(((cp>=0x0B00&&cp<=0x0B4D)||ch===ZWNJ)&&c)c+=ch;else{if(c)r.push(c);c=ch;}}if(c)r.push(c);return r;}
+  catch{return[...s];}
 }
-function lastChar(){for(let i=out.length-1;i>=0;i--)if(out[i]!==ZWNJ)return out[i];return '';}
+function lastCh(){for(let i=out.length-1;i>=0;i--)if(out[i]!==ZWNJ)return out[i];return '';}
 
+// PROCESS KEY
 function proc(k,sh){
-  if(lessonDone){if(k==='Enter'){advance();return;}return;}
-  if(k==='Backspace'){const g=gSplit(out);if(g.length){g.pop();out=g.join('');}halant=false;render();return;}
+  if(done){if(k==='Enter'){advance();return;}return;}
+  if(k==='Backspace'){
+    const g=gsplit(out);if(g.length){g.pop();out=g.join('');}
+    halant=false;render();return;
+  }
   if(k==='Enter')return;
-  if(k===' '){if(halant){out+=H;halant=false;}else out+=' ';countAcc();render();return;}
+  if(k===' '){
+    if(halant){out+=H;halant=false;}else out+=' ';
+    countAcc();render();return;
+  }
   if(sh&&k==='7'){out+='\u0B30'+H;render();return;}
   if(sh&&k==='y'){out+=H+'\u0B5F';halant=false;countAcc();render();return;}
-  if(!sh&&k==='f'){if(isCon(lastChar()))halant=true;render();return;}
+  if(!sh&&k==='f'){if(isCon(lastCh()))halant=true;render();return;}
   const m=KM[k];if(!m)return;
   const ch=sh?m[1]:m[0];if(!ch)return;
-  if(halant){if(isCon(ch)){out+=H+ch;}else out+=ch;halant=false;}
-  else{if(isMT(ch)&&isIV(lastChar()))out+=ZWNJ+ch;else out+=ch;}
+  if(halant){
+    if(isCon(ch)){out+=H+ch;}else out+=ch;
+    halant=false;
+  }else{
+    if(isMT(ch)&&isIV(lastCh()))out+=ZWNJ+ch;
+    else out+=ch;
+  }
   countAcc();render();
 }
 
 function countAcc(){
-  const tG=gSplit(ALL[idx].text),oG=gSplit(out);
+  if(!started&&out.replace(/[\s\u200C]/g,'').length>=3){started=true;t0=Date.now();}
+  const tG=gsplit(ALL[idx].t),oG=gsplit(out);
   const pos=oG.length-1;
-  if(pos>=0&&pos<tG.length){totalAttempts++;if(oG[pos]===tG[pos])correctAttempts++;}
+  if(pos>=0&&pos<tG.length){total++;if(oG[pos]===tG[pos])correct++;}
 }
 
+// RENDER
 function render(){
-  if(!started&&out.replace(/[\s\u200C]/g,'').length>=3){started=true;t0=Date.now();}
-  document.getElementById('typed-content').textContent=out;
-  const tb=document.getElementById('typed-box');
-  tb.className='typed-box'+(halant?' halant-on':'')+(isActive?' focused':'');
-  document.getElementById('halant-badge').style.display=halant?'flex':'none';
-  const tG=gSplit(ALL[idx].text),oG=gSplit(out);
-  let html='',correct=0;
-  tG.forEach((tc,i)=>{
-    const ty=oG[i];let cls='ch';
-    if(ty===undefined){if(i===oG.length)cls='ch cur';}
-    else if(ty===tc){cls='ch ok';correct++;}
+  document.getElementById('typed-out').textContent=out;
+  const tw=document.getElementById('typed-wrap');
+  tw.className='typed-wrap'+(halant?' halant':'')+(active?' active':'');
+
+  const shb=document.getElementById('shift-badge');
+  shb.className='badge'+(shifted?' on':'');
+  const hb=document.getElementById('halant-badge');
+  hb.className='badge danger'+(halant?' on':'');
+
+  const tG=gsplit(ALL[idx].t),oG=gsplit(out);
+  let html='',ok=0;
+  tG.forEach((c,i)=>{
+    const t=oG[i];let cls='ch';
+    if(t===undefined){if(i===oG.length)cls='ch cur';}
+    else if(t===c){cls='ch ok';ok++;}
     else cls='ch bad';
-    html+=`<span class="${cls}">${tc}</span>`;
+    html+=`<span class="${cls}">${c}</span>`;
   });
   document.getElementById('target-text').innerHTML=html;
   hlNext(tG,oG);
-  if(!lessonDone&&oG.length>=tG.length&&out.length>0){lessonDone=true;showResult(correct);}
+  if(!done&&oG.length>=tG.length&&out.length>0){done=true;showResult(ok);}
 }
 
-function showResult(correct){
+function showResult(ok){
   const el=started?Math.max((Date.now()-t0)/1000,1):1;
-  const wpm=Math.round((correct/5)/(el/60));
-  const acc=totalAttempts>0?Math.round((correctAttempts/totalAttempts)*100):100;
-  const score=Math.round(correct*10+wpm+(acc/2));
+  const wpm=Math.round((ok/5)/(el/60));
+  const acc=total>0?Math.round((correct/total)*100):100;
   const stars=acc>=95?3:acc>=80?2:acc>=60?1:0;
-  const prev=scores[idx]||{stars:0,wpm:0};
-  if(stars>prev.stars||(stars===prev.stars&&wpm>prev.wpm)){scores[idx]={stars,wpm,acc};localStorage.setItem('odiaTypingV9',JSON.stringify(scores));}
+  const prev=SC[idx]||{stars:0,wpm:0};
+  if(stars>prev.stars||(stars===prev.stars&&wpm>prev.wpm)){SC[idx]={stars,wpm,acc};localStorage.setItem('odiaV9',JSON.stringify(SC));}
   document.getElementById('r-wpm').textContent=wpm;
   document.getElementById('r-acc').textContent=acc+'%';
   document.getElementById('r-time').textContent=Math.round(el)+'s';
-  document.getElementById('r-score').textContent=score;
   document.getElementById('r-stars').textContent='★'.repeat(stars)+'☆'.repeat(3-stars);
-  const msgs=['ଆହୁରି ଅଭ୍ୟାସ କର 💪','ଭଲ! ଆଗ ବଢ଼ 👍','ଦୁର୍ଦ୍ଧାନ୍ତ! 🌟','ସାବାସ! Perfect! 🎉'];
-  document.getElementById('r-msg').textContent=msgs[stars];
+  document.getElementById('r-msg').textContent=['ଆହୁରି ଅଭ୍ୟାସ 💪','ଭଲ! 👍','ଦୁର୍ଦ୍ଧାନ୍ତ! 🌟','Perfect! 🎉'][stars];
   document.getElementById('result-bar').classList.add('show');
   buildStrip();
 }
 
-function advance(){if(idx<ALL.length-1)idx++;buildStrip();resetLesson();activate();}
-function nextLesson(){if(idx<ALL.length-1)idx++;buildStrip();resetLesson();}
-function prevLesson(){if(idx>0)idx--;buildStrip();resetLesson();}
+function advance(){if(idx<ALL.length-1)idx++;buildStrip();resetL();}
+function nextL(){if(idx<ALL.length-1)idx++;buildStrip();resetL();}
+function prevL(){if(idx>0)idx--;buildStrip();resetL();}
 
-function resetLesson(){
-  out='';halant=false;started=false;lessonDone=false;totalAttempts=0;correctAttempts=0;
-  document.getElementById('typed-content').textContent='';
+function resetL(){
+  out='';halant=false;started=false;done=false;total=0;correct=0;
+  document.getElementById('typed-out').textContent='';
   document.getElementById('result-bar').classList.remove('show');
-  const lvt=ALL[idx].lv==='beg'?'🌱':ALL[idx].lv==='int'?'⚡':'🏆';
-  document.getElementById('lesson-title').textContent=lvt+' '+ALL[idx].name;
-  document.getElementById('lesson-counter').textContent=(idx+1)+' / '+ALL.length;
+  const L=ALL[idx];
+  const tag=L.lv==='beg'?'🌱':L.lv==='int'?'⚡':'🏆';
+  document.getElementById('lname').textContent=tag+' '+L.n;
+  document.getElementById('lcount').textContent=(idx+1)+'/'+ALL.length;
   document.querySelectorAll('.key.glow').forEach(k=>k.classList.remove('glow'));
-  document.getElementById('next-hint-bar').textContent='';
+  document.getElementById('kb-hint').innerHTML='<i class="fa-solid fa-hand-point-right"></i> Click the box above and start typing';
   render();
 }
 
+// STRIP
 function buildStrip(){
-  const strip=document.getElementById('lesson-strip');strip.innerHTML='';
+  const s=document.getElementById('strip');s.innerHTML='';
   ALL.forEach((l,i)=>{
-    const s=scores[i]||{stars:0};
-    const lv=l.lv;const tag=lv==='beg'?'🌱':lv==='int'?'⚡':'🏆';
+    const sc=SC[i]||{stars:0};
     const div=document.createElement('div');
-    div.className='lc'+(i===idx?' active':'')+(s.stars>0?' done':'');
-    div.innerHTML=`<span class="lv-tag ${lv}">${tag}</span><div class="lc-name">${l.name}</div><div class="lc-stars">${'★'.repeat(s.stars)}${'☆'.repeat(3-s.stars)}</div>`;
-    div.onclick=()=>{idx=i;buildStrip();resetLesson();};
-    strip.appendChild(div);
+    div.className='lc'+(i===idx?' active':'')+(sc.stars>0?' done':'');
+    const tag=l.lv==='beg'?'beg':l.lv==='int'?'int':'exp';
+    const em=l.lv==='beg'?'🌱':l.lv==='int'?'⚡':'🏆';
+    div.innerHTML=`<span class="lc-tag ${tag}">${em}</span><div class="lc-name">${l.n}</div><div class="lc-stars">${'★'.repeat(sc.stars)}${'☆'.repeat(3-sc.stars)}</div>`;
+    div.onclick=()=>{idx=i;buildStrip();resetL();};
+    s.appendChild(div);
     if(i===idx)setTimeout(()=>div.scrollIntoView({block:'nearest',inline:'center'}),50);
   });
 }
 
+// HIGHLIGHT NEXT KEY
 function hlNext(tG,oG){
   document.querySelectorAll('.key.glow').forEach(k=>k.classList.remove('glow'));
-  const bar=document.getElementById('next-hint-bar');bar.innerHTML='';
+  const bar=document.getElementById('kb-hint');
   if(oG.length>=tG.length)return;
   const nc=tG[oG.length];if(!nc||nc===' ')return;
   const fc=[...nc.replace(ZWNJ,'')][0];if(!fc)return;
   for(const[k,v]of Object.entries(KM)){
     if(v[0]===fc||v[1]===fc){
-      const el=document.getElementById('key-'+k);if(el)el.classList.add('glow');
-      const isS=v[1]===fc,fi=FM[k];
-      const col=FDOT_COLORS[fi];
-      bar.innerHTML=`<span style="color:${col}"><i class="fa-solid fa-hand-point-right"></i> ${isS?'⇧+':''}<b>${k.toUpperCase()}</b> — ${FNAMES[fi]}</span>`;
-      break;
+      const el=document.getElementById('key-'+k);
+      if(el){el.classList.add('glow');}
+      const isS=v[1]===fc;
+      const fi=FK[k]??4;
+      const col=FCOLS[fi]||'#fff';
+      const fn=FNAMES[fi]||'';
+      bar.innerHTML=`<span style="color:${col}"><i class="fa-solid fa-hand-point-right"></i> ${isS?'Shift + ':''}<b style="font-size:13px;">${k.toUpperCase()}</b> &nbsp;·&nbsp; ${fn}</span>`;
+      return;
     }
   }
 }
 
+// ACTIVATE
 function activate(){
   document.getElementById('hidden-input').focus();
-  isActive=true;
-  document.getElementById('typed-box').classList.add('focused');
+  active=true;
+  document.getElementById('typed-wrap').classList.add('active');
   document.getElementById('bcur').classList.add('show');
 }
 document.getElementById('hidden-input').addEventListener('blur',()=>{
-  isActive=false;
-  document.getElementById('typed-box').classList.remove('focused');
+  active=false;
+  document.getElementById('typed-wrap').classList.remove('active');
   document.getElementById('bcur').classList.remove('show');
 });
 
-// Mobile handling
-const isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-const hiddenInp=document.getElementById('hidden-input');
-if(isMobile){
-  hiddenInp.setAttribute('inputmode','text');
-  hiddenInp.setAttribute('autocapitalize','none');
-  let lastVal='';
-  hiddenInp.addEventListener('input',function(){
-    const cur=this.value;
-    if(cur.length<lastVal.length){proc('Backspace',false);}
-    else{
-      const added=cur.slice(lastVal.length);
-      for(const ch of added){
-        const lo=ch.toLowerCase();
-        if(lo===' ')proc(' ',false);
-        else if(lo==='\n'||lo==='\r'){if(lessonDone)advance();}
-        else if(KM[lo]!==undefined)proc(lo,ch!==lo&&ch===ch.toUpperCase());
-        else if(ch==='।')proc('.',false);
-      }
-    }
-    lastVal=cur;
-    if(this.value.length>10){this.value='';lastVal='';}
-  });
-  hiddenInp.addEventListener('keydown',function(e){
-    if(e.key==='Backspace'){e.preventDefault();proc('Backspace',false);this.value=this.value.slice(0,-1);lastVal=this.value;}
-    if(e.key==='Enter'){e.preventDefault();if(lessonDone)advance();}
-  });
-}else{
-  hiddenInp.setAttribute('inputmode','none');
-}
-
-// Desktop keyboard
+// DESKTOP KEYBOARD
 document.addEventListener('keydown',e=>{
-  if(e.key==='Shift'){shifted=true;updateShift();return;}
+  if(e.key==='Shift'){shifted=true;document.getElementById('shift-badge').classList.add('on');return;}
   if(['F5','F12','F1','F2','F3','F4','Tab'].includes(e.key))return;
   if(e.ctrlKey||e.metaKey||e.altKey)return;
   e.preventDefault();
-  if(!isActive)activate();
+  if(!active)activate();
   const sp={'Backspace':'Backspace',' ':' ','Enter':'Enter','=':'=','-':'-','.':'.',',':',','[':'[',']':']',';':';',"'":"'",'/':"/",'`':'`'};
   const k=sp[e.key]||(e.key.length===1?e.key.toLowerCase():null);
   if(!k)return;
   proc(k,e.shiftKey);
-  if(k!=='Enter'&&k!=='Backspace'){const el=document.getElementById('key-'+k);if(el){el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),120);}}
-  if(e.shiftKey&&e.key!=='Shift'){shifted=false;updateShift();}
+  const el=document.getElementById('key-'+k);
+  if(el){el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);}
+  if(e.shiftKey&&k!=='Backspace'&&k!=='Enter'){shifted=false;document.getElementById('shift-badge').classList.remove('on');}
 });
-document.addEventListener('keyup',e=>{if(e.key==='Shift'){shifted=false;updateShift();}});
+document.addEventListener('keyup',e=>{
+  if(e.key==='Shift'){shifted=false;document.getElementById('shift-badge').classList.remove('on');}
+});
 
-// Build keyboard
+// MOBILE
+const isMob=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+const hi=document.getElementById('hidden-input');
+if(isMob){
+  hi.setAttribute('inputmode','text');
+  hi.setAttribute('autocapitalize','none');
+  let lv='';
+  hi.addEventListener('input',function(){
+    const cur=this.value;
+    if(cur.length<lv.length){proc('Backspace',false);}
+    else{
+      const added=cur.slice(lv.length);
+      for(const ch of added){
+        const lo=ch.toLowerCase();
+        if(lo===' ')proc(' ',false);
+        else if(lo==='\n'){if(done)advance();}
+        else if(KM[lo])proc(lo,ch!==lo&&ch===ch.toUpperCase());
+        else if(ch==='।')proc('.',false);
+      }
+    }
+    lv=cur;
+    if(this.value.length>10){this.value='';lv='';}
+  });
+  hi.addEventListener('keydown',function(e){
+    if(e.key==='Backspace'){e.preventDefault();proc('Backspace',false);this.value=this.value.slice(0,-1);lv=this.value;}
+    if(e.key==='Enter'){e.preventDefault();if(done)advance();}
+  });
+}else{
+  hi.setAttribute('inputmode','none');
+}
+
+// BUILD MINIMALIST KEYBOARD
 const ROWS=[
   ['`','1','2','3','4','5','6','7','8','9','0','-','='],
   ['q','w','e','r','t','y','u','i','o','p','[',']'],
-  ['a','s','d','f','g','h','j','k','l',';',"'"],
+  ['a','s','d','f','g','h','j','k','l',";",'\''],
   ['z','x','c','v','b','n','m',',','.','/',]
 ];
 const HOME_BUMP=new Set(['f','j']);
+const FKEY=new Set(['f']);
 
 function buildKB(){
   const kb=document.getElementById('kb');
+  kb.style.cssText='display:flex;flex-direction:column;gap:4px;';
+
   ROWS.forEach((row,ri)=>{
-    const div=document.createElement('div');div.className='kb-row';
+    const div=document.createElement('div');
+    div.className=`kb-row r${ri+1}`;
+    div.style.cssText='display:flex;gap:4px;align-items:center;';
+
     // Left special
-    if(ri===0){div.appendChild(mkSp('Esc','wide'));}
-    else if(ri===1){div.appendChild(mkSp('Tab ⇥','wide'));}
-    else if(ri===2){div.appendChild(mkSp('Caps','wider'));}
-    else{const s=mkSp('⇧ Shift','widest',true);div.appendChild(s);}
-    // Keys
-    row.forEach(k=>div.appendChild(mkKey(k)));
+    const lsp=mkSp(ri===0?'Esc':ri===1?'Tab':ri===2?'Caps':ri===3?'Shift':'Ctrl',
+      ri===0?'w-fn':ri===1?'w-tab':ri===2?'w-caps':ri===3?'w-shift-l':'w-fn');
+    div.appendChild(lsp);
+
+    row.forEach(k=>div.appendChild(mkKey(k,ri)));
+
     // Right special
-    if(ri===0){div.appendChild(mkSp('⌫','wide'));}
-    else if(ri===1){div.appendChild(mkSp('\\','wide'));}
-    else if(ri===2){div.appendChild(mkSp('Enter ↵','wider'));}
-    else{div.appendChild(mkSp('⇧ Shift','widest',true));}
+    const rsp=mkSp(ri===0?'Bksp':ri===1?'\\':ri===2?'Enter':ri===3?'Shift':'',
+      ri===0?'w-bksp':ri===1?'w-fn':ri===2?'w-enter':ri===3?'w-shift-r':'w-fn');
+    if(ri===0)rsp.onclick=()=>{proc('Backspace',false);activate();};
+    if(ri===2)rsp.onclick=()=>{if(done)advance();else activate();};
+    if(ri===3)rsp.onclick=()=>{shifted=!shifted;document.getElementById('shift-badge').classList.toggle('on',shifted);};
+    div.appendChild(rsp);
     kb.appendChild(div);
   });
+
   // Space row
-  const sr=document.createElement('div');sr.className='kb-row';
-  sr.appendChild(mkSp('Ctrl','wide'));
-  sr.appendChild(mkSp('Alt','wide'));
-  const sp=document.createElement('div');sp.className='key spacebar';
-  const sc=document.createElement('div');sc.className='key-cap';
-  sc.innerHTML='<span class="key-bot">SPACE</span>';
-  sp.appendChild(sc);sp.onclick=()=>{proc(' ',false);activate();};
+  const sr=document.createElement('div');
+  sr.style.cssText='display:flex;gap:4px;justify-content:center;align-items:center;';
+  ['Ctrl','Alt'].forEach(l=>{sr.appendChild(mkSp(l,'w-fn'));});
+  const sp=document.createElement('div');
+  sp.className='key w-space';
+  sp.style.cssText='--fcol:rgba(180,200,240,0.4);';
+  sp.innerHTML='<span class="sp-label">SPACE</span>';
+  sp.onclick=()=>{proc(' ',false);activate();};
   sr.appendChild(sp);
-  sr.appendChild(mkSp('Alt','wide'));
-  sr.appendChild(mkSp('Ctrl','wide'));
+  ['Alt','Ctrl'].forEach(l=>{sr.appendChild(mkSp(l,'w-fn'));});
   kb.appendChild(sr);
 }
 
-function mkKey(k){
-  const m=KM[k]||['',''],fi=FM[k]||0;
+function mkKey(k,ri){
+  const m=KM[k]||['',''];
+  const fi=FK[k]??4;
+  const col=FCOLS[fi];
   const el=document.createElement('div');
-  el.className='key'+(HOME_BUMP.has(k)?' home-bump':'')+(k==='f'?' fkey':'');
+  el.className='key'+(HOME_BUMP.has(k)?' home':'')+(FKEY.has(k)?' fkey':'');
   el.id='key-'+k;
-  const cap=document.createElement('div');cap.className='key-cap';
-  const bot=k==='f'?'HL↓':m[0];
-  const top=k==='y'?'Ya↑':m[1];
-  const dotCol=FDOT_COLORS[fi];
-  cap.innerHTML=`
-    <span class="key-top">${top||''}</span>
-    <span class="key-eng">${k.toUpperCase()}</span>
-    <span class="key-bot">${bot||k.toUpperCase()}</span>
-    <span style="position:absolute;bottom:3px;right:3px;width:4px;height:4px;border-radius:50%;background:${dotCol};opacity:.7"></span>
-  `;
-  el.appendChild(cap);
-  el.onclick=()=>{proc(k,shifted);if(shifted){shifted=false;updateShift();}el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),120);activate();};
+  el.style.setProperty('--fcol',col);
+  const shiftLabel=k==='y'?'Ya↑':m[1]||'';
+  const mainLabel=k==='f'?'HL':m[0]||k.toUpperCase();
+  el.innerHTML=
+    `<span class="k-shift odia-label">${shiftLabel}</span>`+
+    `<span class="k-eng">${k.toUpperCase()}</span>`+
+    `<span class="k-main odia-label">${mainLabel}</span>`;
+  el.onclick=()=>{proc(k,shifted);if(shifted){shifted=false;document.getElementById('shift-badge').classList.remove('on');}el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);activate();};
   return el;
 }
 
-function mkSp(label,cls,isShift){
-  const el=document.createElement('div');el.className='key sp-key '+cls;
-  const cap=document.createElement('div');cap.className='key-cap';
-  cap.innerHTML=`<span class="key-bot">${label}</span>`;
-  el.appendChild(cap);
-  if(isShift)el.onclick=()=>{shifted=!shifted;updateShift();};
+function mkSp(label,cls){
+  const el=document.createElement('div');
+  el.className='key sp-label '+cls;
+  el.innerHTML=`<span class="sp-label">${label}</span>`;
   return el;
 }
 
-function updateShift(){
-  document.getElementById('shift-badge').className='badge'+(shifted?' active-badge':'');
-  document.getElementById('shift-badge').innerHTML=(shifted?'<i class="fa-solid fa-arrow-up"></i> Shift ON':'<i class="fa-solid fa-arrow-up"></i> Shift OFF');
-  document.querySelectorAll('.key').forEach(k=>{shifted?k.classList.add('shifted'):k.classList.remove('shifted');});
+// TOGGLES
+function toggleHand(){
+  showHand=!showHand;
+  document.getElementById('hand-overlay').classList.toggle('hidden',!showHand);
+  document.getElementById('toggle-hand').classList.toggle('on',showHand);
+}
+function toggleOdia(){
+  showOdia=!showOdia;
+  document.querySelectorAll('.odia-label').forEach(el=>{el.style.opacity=showOdia?'1':'0';});
+  document.getElementById('toggle-odia').classList.toggle('on',showOdia);
 }
 
-buildKB();buildStrip();resetLesson();
-document.getElementById('bcur').style.display='none';
+buildKB();buildStrip();resetL();
 </script>
 </body>
 </html>
