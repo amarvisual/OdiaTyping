@@ -123,68 +123,78 @@ body{display:flex;flex-direction:column;}
 .kctrl:hover{color:var(--text2);}
 .kctrl.on{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:var(--text);}
 
-/* ── THE KEYBOARD ── */
+/* ── THE KEYBOARD — Akruti style ── */
 .kb-wrap{
-  flex:1;
-  min-height:0;
-  display:flex;
-  flex-direction:column;
-  padding:4px 10px 2px;
-  gap:4px;
+  flex:1;min-height:0;
+  display:flex;flex-direction:column;
+  padding:6px 10px 2px;gap:3px;
   position:relative;
 }
+.krow{display:flex;gap:3px;align-items:flex-end;}
 
-/* keyboard rows */
-.krow{display:flex;gap:3px;align-items:center;}
-
-/* BASE KEY — flat minimalist */
+/* BASE KEY — 3D tan/gold style like Akruti reference */
 .key{
   position:relative;
-  display:flex;flex-direction:column;
-  align-items:flex-start;justify-content:space-between;
-  width:44px;height:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  width:44px;height:42px;
   border-radius:4px;
-  background:var(--card);
-  border:1px solid rgba(255,255,255,.07);
+  background:linear-gradient(160deg,#2a2f3e 0%,#1e2330 60%,#171b26 100%);
+  border:1px solid rgba(255,255,255,.1);
+  border-top-color:rgba(255,255,255,.18);
+  border-left-color:rgba(255,255,255,.14);
+  border-bottom:2px solid rgba(0,0,0,.5);
   cursor:pointer;user-select:none;
-  transition:background .08s,border-color .08s,transform .06s;
+  transition:all .07s;
   flex-shrink:0;
-  padding:3px 4px;
+  padding:3px 3px 2px;
   overflow:hidden;
+  box-shadow:0 2px 4px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.07);
 }
-/* bottom colour bar = finger indicator */
+/* finger colour strip at bottom */
 .key::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2.5px;
-  background:var(--fc,transparent);
-  border-radius:0 0 4px 4px;
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--fc,transparent);opacity:.7;
 }
-.key:hover{background:rgba(255,255,255,.05);}
-.key:active,.key.pressed{transform:translateY(1px);background:rgba(255,255,255,.03);}
-
-/* next key glow */
+.key:hover{background:linear-gradient(160deg,#313749,#252a39,#1c2030);border-top-color:rgba(255,255,255,.22);}
+.key:active,.key.pressed{
+  transform:translateY(2px);
+  border-bottom-width:0px;
+  box-shadow:0 0 2px rgba(0,0,0,.4);
+  background:linear-gradient(160deg,#1e2330,#171b26);
+}
+/* GLOW = next key */
 .key.glow{
-  background:rgba(240,165,0,.07);
-  border-color:rgba(240,165,0,.4);
-  box-shadow:0 0 10px var(--accent-glow),inset 0 0 6px rgba(240,165,0,.04);
+  background:linear-gradient(160deg,#2d3420,#1e2415,#161c10);
+  border-color:rgba(240,165,0,.5);
+  border-top-color:rgba(240,165,0,.7);
+  box-shadow:0 2px 4px rgba(0,0,0,.4),0 0 12px rgba(240,165,0,.3),inset 0 1px 0 rgba(240,165,0,.15);
   animation:kp .75s ease-in-out infinite;
 }
-@keyframes kp{0%,100%{box-shadow:0 0 8px var(--accent-glow);}50%{box-shadow:0 0 18px rgba(240,165,0,.5);}}
-
-/* Home row bump (F,J) */
-.key.hbump::before{
-  content:'';position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
-  width:9px;height:1.5px;background:rgba(255,255,255,.22);border-radius:1px;
+@keyframes kp{
+  0%,100%{box-shadow:0 2px 4px rgba(0,0,0,.4),0 0 8px rgba(240,165,0,.25);}
+  50%{box-shadow:0 2px 4px rgba(0,0,0,.4),0 0 18px rgba(240,165,0,.5);}
 }
-/* labels */
-.ks{font-size:8px;color:var(--text3);font-family:'Noto Sans Oriya',serif;line-height:1;align-self:flex-end;min-height:9px;}
-.ke{position:absolute;top:2px;left:3px;font-size:7px;color:var(--text3);font-weight:700;letter-spacing:.2px;}
-.km{font-size:12px;color:var(--text2);font-family:'Noto Sans Oriya',serif;font-weight:700;line-height:1;min-height:13px;margin-top:auto;}
+/* Home row bump */
+.key.hbump::before{
+  content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);
+  width:8px;height:1.5px;background:rgba(255,255,255,.25);border-radius:1px;
+}
+
+/* KEY LABEL LAYOUT — 4 quadrants like reference image */
+/* top-left = shift Odia | top-right = shift English */
+/* bottom-left = normal Odia | bottom-right = normal English */
+.k-tl{grid-column:1;grid-row:1;font-size:9px;font-family:'Noto Sans Oriya',serif;color:#a0aec0;line-height:1;align-self:start;justify-self:start;}
+.k-tr{grid-column:2;grid-row:1;font-size:7px;font-family:'Segoe UI',sans-serif;color:#5a6480;font-weight:700;line-height:1;align-self:start;justify-self:end;}
+.k-bl{grid-column:1;grid-row:2;font-size:11px;font-family:'Noto Sans Oriya',serif;color:#dde4f0;font-weight:700;line-height:1;align-self:end;justify-self:start;}
+.k-br{grid-column:2;grid-row:2;font-size:8px;font-family:'Segoe UI',sans-serif;color:#4a5470;font-weight:700;line-height:1;align-self:end;justify-self:end;}
 
 /* special wide keys */
-.key.wtab{width:62px;}.key.wcaps{width:68px;}.key.wshl{width:82px;}.key.wshr{width:82px;}
-.key.wbk{width:62px;}.key.went{width:72px;}.key.wsp{width:210px;height:34px;}
-.key.wfn{width:38px;opacity:.4;}
-.splab{font-size:8px;color:var(--text3);font-family:'Segoe UI',sans-serif;font-weight:400;align-self:center;margin:auto;}
+.key.wtab{width:60px;}.key.wcaps{width:68px;}.key.wshl{width:84px;}.key.wshr{width:84px;}
+.key.wbk{width:60px;}.key.went{width:72px;}.key.wsp{width:220px;height:36px;}
+.key.wfn{width:38px;opacity:.45;}
+.splab{font-size:8px;color:var(--text3);font-family:'Segoe UI',sans-serif;font-weight:500;grid-column:1/-1;grid-row:1/-1;display:flex;align-items:center;justify-content:center;}
 
 /* ═══ TRANSPARENT HANDS ═══ */
 .hands-wrap{
@@ -685,18 +695,81 @@ function buildKB(){
   kb.appendChild(sr);
 }
 
+// Full Akruti map with BOTH normal and shift Odia chars — from reference image
+const AK={
+  '`': ['\u0B13','\u0B14','~','\u0B01'],   // ଓ ଔ ~ ଁ
+  '1': ['\u0B67','!','1','!'],
+  '2': ['\u0B68','@','2','@'],
+  '3': ['\u0B69','\u0B37','3','#'],
+  '4': ['\u0B6A','$','4','$'],
+  '5': ['\u0B6B','\u0B1E','5','%'],
+  '6': ['\u0B6C','\u0B3C','6','^'],
+  '7': ['\u0B6D','&','7','&'],
+  '8': ['\u0B6E','\u0B19','8','*'],
+  '9': ['\u0B6F','(','9','('],
+  '0': ['\u0B66',')','0',')'],
+  '-': ['\u0B2D','\u0B33','-','_'],
+  '=': ['\u0B43','+','=','+'],
+  'q': ['\u0B09','\u0B0A','Q',''],
+  'w': ['\u0B0F','\u0B10','W',''],
+  'e': ['\u0B47','\u0B48','E',''],
+  'r': ['\u0B30','','R',''],
+  't': ['\u0B24','\u0B25','T',''],
+  'y': ['\u0B5F','\u0B2F','Y',''],
+  'u': ['\u0B41','\u0B42','U','\u0B43'],
+  'i': ['\u0B3F','\u0B40','I',''],
+  'o': ['\u0B4B','\u0B4C','O','\u0B11'],
+  'p': ['\u0B2A','\u0B2B','P','\u0B13'],
+  '[': ['\u0B21','\u0B22','[','{'],
+  ']': ['','\u0B26',']','}'],
+  'a': ['\u0B3E','\u0B05','A',''],
+  's': ['\u0B38','\u0B36','S',''],
+  'd': ['\u0B26','\u0B27','D',''],
+  'f': ['\u0B4D','','F',''],   // Halant
+  'g': ['\u0B17','\u0B18','G',''],
+  'h': ['\u0B39','\u0B37','H',''],
+  'j': ['\u0B1C','\u0B1D','J','\u0B15\u0B4D\u0B37'],
+  'k': ['\u0B15','\u0B16','K',''],
+  'l': ['\u0B32','\u0B33','L',''],
+  ';': ['\u0B03','\u0B02',';',':'],
+  "'": ['\u0B1F','\u0B20',"'",''],
+  'z': ['\u0B07','\u0B08','Z',''],
+  'x': ['\u0B02','\u0B01','X',''],
+  'c': ['\u0B1A','\u0B1B','C',''],
+  'v': ['\u0B2C','\u0B2D','V',''],
+  'b': ['\u0B2C','\u0B2D','B',''],
+  'n': ['\u0B28','\u0B23','N',''],
+  'm': ['\u0B2E','\u0B2E','M',''],
+  ',': ['\u0B06',',',',','<'],
+  '.': ['\u0964','.','.','।'],
+  '/': ['','?','/','?'],
+};
+
 function mkKey(k){
-  const m=KM[k]||['',''];
+  const m=AK[k]||KM[k]||['','','',''];
   const fi=FK[k]??4;
   const col=FCOL[fi];
   const el=document.createElement('div');
   el.className='key'+(HBUMP.has(k)?' hbump':'');
   el.id='key-'+k;
   el.style.setProperty('--fc',col);
-  const main=k==='f'?'HL↓':m[0]||'';
-  const shift=k==='y'?'Ya↑':m[1]||'';
-  el.innerHTML=`<span class="ks olabel">${shift}</span><span class="ke">${k.toUpperCase()}</span><span class="km olabel">${main}</span>`;
-  el.onclick=()=>{proc(k,shifted);if(shifted){shifted=false;document.getElementById('sbdg').classList.remove('on');}el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);activate();};
+  // top-left=shift odia, top-right=eng letter, bottom-left=normal odia, bottom-right=eng key
+  const shOdia = k==='f'?'':k==='y'?'\u0B5F':m[1]||'';
+  const normOdia = k==='f'?'HL':m[0]||'';
+  const engUp = k.toUpperCase();
+  const engLo = m[2]||k;
+  el.innerHTML=
+    `<span class="k-tl olabel">${shOdia}</span>`+
+    `<span class="k-tr">${engUp}</span>`+
+    `<span class="k-bl olabel">${normOdia}</span>`+
+    `<span class="k-br">${engLo}</span>`;
+  el.onclick=()=>{
+    proc(k,shifted);
+    if(shifted){shifted=false;document.getElementById('sbdg').classList.remove('on');}
+    el.classList.add('pressed');
+    setTimeout(()=>el.classList.remove('pressed'),100);
+    activate();
+  };
   return el;
 }
 function mkSp(lbl,cls){
