@@ -3,485 +3,369 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ | Learn Odia Typing Free Online | Akruti Keyboard 36 Lessons</title>
-<meta name="description" content="Practice Odia typing free with 36 lessons, transparent hand guide, minimalist keyboard and 10-finger technique. Akruti English Phonetic layout. Track WPM and accuracy. No software needed."/>
-<meta name="keywords" content="Odia typing practice, Akruti keyboard, learn Odia typing, Odia typing test, OSSC typing, 10 finger Odia typing"/>
+<title>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ | Free Odia Typing Tutor | Akruti Keyboard 36 Lessons</title>
+<meta name="description" content="Practice Odia typing free online with 36 lessons, transparent hand guide, minimalist keyboard and 10-finger technique. Akruti English Phonetic layout. Track WPM and accuracy."/>
 <link rel="canonical" href="https://odiatyping.in/learn"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Odia Typing Tutor","url":"https://odiatyping.in/learn","description":"Free Odia typing tutor with 36 lessons, transparent hand guide, minimalist keyboard and 10-finger technique using Akruti English Phonetic layout.","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"inLanguage":"or"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା","url":"https://odiatyping.in"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Odia Typing Tutor","url":"https://odiatyping.in/learn","description":"Free Odia typing tutor with 36 lessons, transparent hand guide and minimalist keyboard using Akruti English Phonetic layout.","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
 <style>
-/* ═══ TOKENS ═══ */
 :root{
-  --bg:#0a0c14;
-  --panel:#0f1220;
-  --card:#141828;
-  --border:rgba(255,255,255,.07);
-  --border2:rgba(255,255,255,.04);
-  --accent:#f59e0b;
-  --accent-dim:rgba(245,158,11,.15);
-  --green:#10b981;
-  --green-dim:rgba(16,185,129,.15);
-  --blue:#3b82f6;
+  --bg:#111318;
+  --panel:#16191f;
+  --card:#1c2028;
+  --border:rgba(255,255,255,.06);
+  --accent:#f0a500;
+  --accent-glow:rgba(240,165,0,.25);
+  --green:#22c55e;
   --red:#ef4444;
-  --text:#dde4f0;
-  --text2:#6b7a99;
-  --text3:#3d4a66;
+  --blue:#60a5fa;
+  --text:#c8d0e0;
+  --text2:#5a6480;
+  --text3:#363d52;
   --white:#fff;
-
-  /* finger colours — subtle, not garish */
-  --f0:rgba(148,163,184,.6);  /* pinky */
-  --f1:rgba(167,139,250,.6);  /* ring */
-  --f2:rgba(96,165,250,.6);   /* middle */
-  --f3:rgba(52,211,153,.6);   /* index L */
-  --f4:rgba(251,191,36,.6);   /* index R */
-  --f5:rgba(96,165,250,.6);   /* middle R */
-  --f6:rgba(167,139,250,.6);  /* ring R */
-  --f7:rgba(148,163,184,.6);  /* pinky R */
+  /* finger palette — matches hand SVG */
+  --lp:#94a3b8; --lr:#a78bfa; --lm:#60a5fa; --li:#34d399;
+  --ri:#fbbf24; --rm:#60a5fa; --rr:#a78bfa; --rp:#94a3b8;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{height:100%;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow:hidden;}
+html,body{height:100%;overflow:hidden;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);}
 @media(max-width:767px){html,body{overflow-y:auto;}}
 
-/* ═══ NAV ═══ */
-nav{
-  height:48px;flex-shrink:0;
-  background:var(--panel);
-  border-bottom:1px solid var(--border);
-  padding:0 16px;
-  display:flex;align-items:center;justify-content:space-between;
-  position:relative;z-index:50;
-}
-.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;}
-.nav-logo{width:28px;height:28px;background:linear-gradient(135deg,var(--accent),#d97706);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;}
-.nav-title{font-size:12px;font-weight:700;color:var(--white);}
-.nav-links{display:flex;gap:1px;align-items:center;}
-.nav-links a{color:var(--text2);text-decoration:none;padding:5px 10px;border-radius:6px;font-size:11px;font-weight:500;transition:all .15s;display:flex;align-items:center;gap:4px;}
-.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.05);color:var(--text);}
-.nav-links a.active{color:var(--accent);}
-.nav-cta{background:var(--accent)!important;color:#000!important;font-weight:700!important;border-radius:7px!important;font-size:11px!important;}
-.hamburger{display:none;background:none;border:none;color:var(--text);font-size:16px;cursor:pointer;}
-@media(max-width:700px){
-  .hamburger{display:block;}
-  .nav-links{display:none;position:absolute;top:48px;left:0;right:0;background:var(--panel);flex-direction:column;padding:8px;gap:2px;border-bottom:1px solid var(--border);z-index:200;}
-  .nav-links.open{display:flex;}
-}
+/* NAV */
+nav{height:46px;flex-shrink:0;background:var(--panel);border-bottom:1px solid var(--border);padding:0 14px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:50;}
+.nb{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.nl2{width:26px;height:26px;background:linear-gradient(135deg,var(--accent),#d97706);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;}
+.nt{font-size:12px;font-weight:700;color:var(--white);}
+.nlinks{display:flex;gap:1px;}
+.nlinks a{color:var(--text2);text-decoration:none;padding:5px 9px;border-radius:5px;font-size:11px;font-weight:500;transition:all .15s;display:flex;align-items:center;gap:3px;}
+.nlinks a:hover,.nlinks a.active{background:rgba(255,255,255,.05);color:var(--text);}
+.nlinks a.active{color:var(--accent);}
+.ncta{background:var(--accent)!important;color:#000!important;font-weight:700!important;border-radius:6px!important;}
+.hbg{display:none;background:none;border:none;color:var(--text);font-size:16px;cursor:pointer;}
+@media(max-width:700px){.hbg{display:block;}.nlinks{display:none;position:absolute;top:46px;left:0;right:0;background:var(--panel);flex-direction:column;padding:6px;border-bottom:1px solid var(--border);z-index:200;}.nlinks.open{display:flex;}}
 
-/* ═══ MAIN LAYOUT ═══ */
+/* BODY LAYOUT */
 body{display:flex;flex-direction:column;}
-.main{flex:1;display:grid;grid-template-rows:auto auto auto auto 1fr;gap:0;min-height:0;overflow:hidden;}
-@media(max-width:767px){.main{display:flex;flex-direction:column;overflow-y:auto;gap:8px;padding:8px;}}
+.app{flex:1;display:grid;grid-template-rows:auto auto auto 1fr;min-height:0;overflow:hidden;}
+@media(max-width:767px){.app{display:flex;flex-direction:column;overflow-y:auto;padding:8px;gap:8px;}}
 
-/* ═══ LESSON BAR ═══ */
-.lesson-bar{
-  background:var(--panel);
-  border-bottom:1px solid var(--border);
-  padding:6px 12px;
-  display:flex;align-items:center;gap:10px;
-  flex-shrink:0;
-}
-.lb-label{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;}
-.lesson-strip{display:flex;gap:4px;overflow-x:auto;flex:1;}
-.lesson-strip::-webkit-scrollbar{height:2px;}
-.lesson-strip::-webkit-scrollbar-thumb{background:var(--border);border-radius:1px;}
-.lc{
-  flex-shrink:0;
-  padding:4px 10px;
-  border-radius:6px;
-  cursor:pointer;
-  font-size:10px;font-weight:600;
-  color:var(--text2);
-  background:transparent;
-  border:1px solid transparent;
-  transition:all .15s;
-  display:flex;flex-direction:column;align-items:center;gap:1px;
-  min-width:72px;
-}
+/* LESSON STRIP */
+.lbar{background:var(--panel);border-bottom:1px solid var(--border);padding:5px 10px;display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.lbar-lbl{font-size:8px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1.2px;white-space:nowrap;}
+.lstrip{display:flex;gap:3px;overflow-x:auto;flex:1;}
+.lstrip::-webkit-scrollbar{height:2px;}
+.lstrip::-webkit-scrollbar-thumb{background:var(--border);}
+.lc{flex-shrink:0;padding:3px 9px;border-radius:5px;cursor:pointer;font-size:9px;font-weight:600;color:var(--text2);background:transparent;border:1px solid transparent;transition:all .12s;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:68px;}
 .lc:hover{background:var(--card);border-color:var(--border);color:var(--text);}
-.lc.active{background:var(--accent-dim);border-color:rgba(245,158,11,.3);color:var(--accent);}
-.lc.done{border-color:rgba(16,185,129,.2);}
-.lc-tag{font-size:7px;font-weight:700;padding:1px 5px;border-radius:3px;text-transform:uppercase;letter-spacing:.5px;}
-.lc-tag.beg{background:var(--green-dim);color:var(--green);}
-.lc-tag.int{background:rgba(59,130,246,.12);color:var(--blue);}
-.lc-tag.exp{background:var(--accent-dim);color:var(--accent);}
-.lc-name{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:80px;}
-.lc-stars{font-size:8px;color:var(--accent);}
-.lb-nav{display:flex;gap:4px;flex-shrink:0;}
-.lb-btn{padding:4px 8px;background:transparent;border:1px solid var(--border);border-radius:5px;color:var(--text2);cursor:pointer;font-size:10px;font-weight:600;transition:all .15s;white-space:nowrap;}
-.lb-btn:hover{background:var(--card);color:var(--text);}
-#lcount{font-size:10px;color:var(--accent);font-weight:700;padding:0 6px;white-space:nowrap;}
+.lc.active{background:rgba(240,165,0,.1);border-color:rgba(240,165,0,.25);color:var(--accent);}
+.lc.done{border-color:rgba(34,197,94,.15);}
+.ltag{font-size:6px;font-weight:700;padding:1px 4px;border-radius:2px;text-transform:uppercase;letter-spacing:.4px;}
+.ltag.beg{background:rgba(34,197,94,.12);color:var(--green);}
+.ltag.int{background:rgba(96,165,250,.12);color:var(--blue);}
+.ltag.exp{background:rgba(240,165,0,.12);color:var(--accent);}
+.lc-n{font-size:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:76px;}
+.lc-s{font-size:7px;color:var(--accent);}
+.lnav{display:flex;gap:3px;flex-shrink:0;align-items:center;}
+.lbtn{padding:3px 7px;background:transparent;border:1px solid var(--border);border-radius:4px;color:var(--text2);cursor:pointer;font-size:10px;font-weight:600;transition:all .12s;}
+.lbtn:hover{background:var(--card);color:var(--text);}
+#lcnt{font-size:9px;color:var(--accent);font-weight:700;padding:0 4px;white-space:nowrap;}
 
-/* ═══ PRACTICE TEXT ═══ */
-.practice-zone{
-  background:var(--panel);
-  border-bottom:1px solid var(--border);
-  padding:10px 16px;
-  flex-shrink:0;
-}
-.pz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
-.pz-label{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
-.lesson-name-badge{font-size:10px;font-weight:600;color:var(--accent);background:var(--accent-dim);padding:2px 8px;border-radius:4px;}
-#target-text{
-  font-size:22px;
-  font-family:'Noto Sans Oriya',serif;
-  line-height:1.9;
-  word-break:break-all;
-  min-height:28px;
-}
-@media(max-width:600px){#target-text{font-size:17px;}}
+/* PRACTICE TEXT */
+.pzone{background:var(--panel);border-bottom:1px solid var(--border);padding:8px 14px;flex-shrink:0;}
+.pzone-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;}
+.pzone-lbl{font-size:8px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.lbadge{font-size:9px;font-weight:600;color:var(--accent);background:rgba(240,165,0,.1);padding:2px 7px;border-radius:3px;}
+#target{font-size:21px;font-family:'Noto Sans Oriya',serif;line-height:1.85;word-break:break-all;min-height:26px;}
+@media(max-width:600px){#target{font-size:16px;}}
 .ch{color:var(--text3);}
 .ch.ok{color:var(--green);}
-.ch.bad{color:var(--red);background:rgba(239,68,68,.1);border-radius:2px;}
-.ch.cur{color:var(--white);border-bottom:2px solid var(--accent);border-radius:1px;}
+.ch.bad{color:var(--red);background:rgba(239,68,68,.09);border-radius:2px;}
+.ch.cur{color:var(--white);border-bottom:2px solid var(--accent);}
 
-/* ═══ INPUT ZONE ═══ */
-.input-zone{
-  background:var(--panel);
-  border-bottom:1px solid var(--border);
-  padding:8px 12px;
-  flex-shrink:0;
-  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
-}
-#hidden-input{position:fixed;opacity:0;width:1px;height:1px;top:-999px;left:-999px;}
-.typed-wrap{
-  flex:1;min-width:200px;
-  background:var(--card);
-  border:1.5px solid var(--border);
-  border-radius:8px;
-  padding:6px 12px;
-  font-size:20px;
-  font-family:'Noto Sans Oriya',serif;
-  color:var(--text);
-  min-height:40px;
-  cursor:text;
-  word-break:break-all;
-  line-height:1.6;
-  transition:border-color .2s;
-}
-.typed-wrap.active{border-color:rgba(245,158,11,.4);}
-.typed-wrap.halant{border-color:rgba(239,68,68,.5);}
-@media(max-width:600px){.typed-wrap{font-size:17px;}}
-.bcur{display:none;width:2px;height:.85em;background:var(--accent);vertical-align:middle;animation:blink 1s infinite;margin-left:1px;}
+/* INPUT ZONE */
+.izone{background:var(--panel);border-bottom:1px solid var(--border);padding:6px 10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;flex-shrink:0;}
+#hi{position:fixed;opacity:0;width:1px;height:1px;top:-999px;left:-999px;}
+.tbox{flex:1;min-width:180px;background:var(--card);border:1.5px solid var(--border);border-radius:7px;padding:5px 10px;font-size:19px;font-family:'Noto Sans Oriya',serif;color:var(--text);min-height:36px;cursor:text;word-break:break-all;line-height:1.6;transition:border-color .18s;}
+.tbox.on{border-color:rgba(240,165,0,.35);}
+.tbox.hl{border-color:rgba(239,68,68,.45);}
+@media(max-width:600px){.tbox{font-size:16px;}}
+.bcur{display:none;width:2px;height:.82em;background:var(--accent);vertical-align:middle;animation:bl 1s infinite;margin-left:1px;}
 .bcur.show{display:inline-block;}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-.input-badges{display:flex;gap:4px;flex-shrink:0;flex-wrap:wrap;}
-.badge{font-size:9px;padding:3px 8px;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--text2);font-weight:500;cursor:pointer;display:flex;align-items:center;gap:3px;transition:all .15s;}
-.badge:hover{border-color:var(--accent);color:var(--text);}
-.badge.on{background:var(--accent-dim);border-color:rgba(245,158,11,.3);color:var(--accent);}
-.badge.danger.on{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:var(--red);}
-.mobile-hint{display:none;font-size:10px;color:var(--accent);padding:4px 10px;background:var(--accent-dim);border-radius:5px;margin-top:4px;width:100%;}
-@media(max-width:767px){.mobile-hint{display:block;}}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:0;}}
+.ibadges{display:flex;gap:3px;flex-shrink:0;flex-wrap:wrap;}
+.bdg{font-size:9px;padding:3px 7px;border-radius:4px;border:1px solid var(--border);background:var(--card);color:var(--text2);font-weight:500;cursor:pointer;display:flex;align-items:center;gap:3px;transition:all .12s;white-space:nowrap;}
+.bdg:hover{border-color:rgba(240,165,0,.3);color:var(--text);}
+.bdg.on{background:rgba(240,165,0,.1);border-color:rgba(240,165,0,.25);color:var(--accent);}
+.bdg.red.on{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.25);color:var(--red);}
+.mob-hint{display:none;font-size:9px;color:var(--accent);padding:3px 8px;background:rgba(240,165,0,.08);border-radius:4px;margin-top:3px;width:100%;}
+@media(max-width:767px){.mob-hint{display:block;}}
 
-/* ═══ RESULT BAR ═══ */
-.result-bar{
-  display:none;
-  background:linear-gradient(90deg,rgba(16,185,129,.06),rgba(59,130,246,.04));
-  border-bottom:1px solid rgba(16,185,129,.15);
-  padding:8px 16px;
-  align-items:center;
-  gap:16px;flex-wrap:wrap;
-  flex-shrink:0;
-  animation:slideIn .3s ease;
-}
-@keyframes slideIn{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
-.result-bar.show{display:flex;}
-.r-stars{font-size:18px;color:var(--accent);}
-.r-stat{text-align:center;}
-.r-val{font-size:20px;font-weight:800;color:var(--white);}
-.r-lbl{font-size:8px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;}
-.r-msg{flex:1;font-size:12px;font-weight:600;color:var(--text);}
-.r-next{font-size:10px;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:4px;animation:pulse .9s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+/* RESULT */
+.rbar{display:none;background:rgba(34,197,94,.05);border-bottom:1px solid rgba(34,197,94,.12);padding:6px 14px;align-items:center;gap:14px;flex-wrap:wrap;flex-shrink:0;animation:sli .3s ease;}
+@keyframes sli{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+.rbar.show{display:flex;}
+.rstars{font-size:16px;color:var(--accent);}
+.rstat{text-align:center;}
+.rval{font-size:19px;font-weight:800;color:var(--white);}
+.rlbl{font-size:7px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;}
+.rmsg{flex:1;font-size:11px;font-weight:600;color:var(--text);}
+.rnxt{font-size:9px;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:3px;animation:p .9s infinite;}
+@keyframes p{0%,100%{opacity:1;}50%{opacity:.3;}}
 
-/* ═══ KEYBOARD SECTION ═══ */
-.kb-section{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  min-height:0;
-  overflow:hidden;
-}
-@media(max-width:767px){.kb-section{display:none;}}
+/* ═══ KEYBOARD + HANDS SECTION ═══ */
+.kb-sec{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;padding:0;}
+@media(max-width:767px){.kb-sec{display:none;}}
 
-.kb-header{
-  padding:5px 12px;
-  display:flex;align-items:center;justify-content:space-between;
-  flex-shrink:0;
-  gap:8px;
-}
-.kb-hint{font-size:11px;color:var(--accent);font-weight:600;min-height:16px;display:flex;align-items:center;gap:5px;}
-.kb-toggles{display:flex;gap:4px;}
-.kb-toggle{font-size:9px;padding:3px 8px;border-radius:4px;background:transparent;border:1px solid var(--border);color:var(--text3);cursor:pointer;transition:all .15s;font-weight:600;}
-.kb-toggle:hover{border-color:var(--border);color:var(--text2);}
-.kb-toggle.on{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--text);}
+.kb-header{padding:5px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:6px;}
+.kb-hint-bar{font-size:11px;color:var(--accent);font-weight:600;min-height:15px;display:flex;align-items:center;gap:5px;}
+.kb-controls{display:flex;gap:4px;}
+.kctrl{font-size:9px;padding:3px 8px;border-radius:4px;background:transparent;border:1px solid var(--border);color:var(--text3);cursor:pointer;transition:all .12s;font-weight:600;}
+.kctrl:hover{color:var(--text2);}
+.kctrl.on{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:var(--text);}
 
 /* ── THE KEYBOARD ── */
-.kb-body{
+.kb-wrap{
   flex:1;
   min-height:0;
-  padding:8px 12px 10px;
   display:flex;
   flex-direction:column;
-  gap:5px;
+  padding:4px 10px 2px;
+  gap:4px;
   position:relative;
 }
-.kb-row{display:flex;gap:4px;align-items:flex-end;}
-.kb-row.r1{padding-left:0;}
-.kb-row.r2{padding-left:28px;}
-.kb-row.r3{padding-left:10px;}  /* caps offset */
-.kb-row.r4{padding-left:0;}
-.kb-row.r5{justify-content:center;}
 
-/* ── MINIMALIST KEY ── */
+/* keyboard rows */
+.krow{display:flex;gap:3px;align-items:center;}
+
+/* BASE KEY — flat minimalist */
 .key{
   position:relative;
   display:flex;flex-direction:column;
-  align-items:center;justify-content:flex-end;
-  width:46px;height:42px;
-  border-radius:5px;
+  align-items:flex-start;justify-content:space-between;
+  width:44px;height:40px;
+  border-radius:4px;
   background:var(--card);
-  border:1px solid var(--border2);
-  cursor:pointer;
-  user-select:none;
-  transition:background .1s,border-color .1s,transform .08s;
+  border:1px solid rgba(255,255,255,.07);
+  cursor:pointer;user-select:none;
+  transition:background .08s,border-color .08s,transform .06s;
   flex-shrink:0;
+  padding:3px 4px;
   overflow:hidden;
 }
-/* Finger colour dot — bottom edge strip */
+/* bottom colour bar = finger indicator */
 .key::after{
-  content:'';
-  position:absolute;bottom:0;left:0;right:0;
-  height:2px;
-  border-radius:0 0 5px 5px;
-  background:var(--fcol,transparent);
-  transition:background .2s;
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2.5px;
+  background:var(--fc,transparent);
+  border-radius:0 0 4px 4px;
 }
-.key:hover{background:rgba(255,255,255,.06);}
-.key:active,.key.pressed{transform:translateY(2px);background:rgba(255,255,255,.04);}
+.key:hover{background:rgba(255,255,255,.05);}
+.key:active,.key.pressed{transform:translateY(1px);background:rgba(255,255,255,.03);}
 
-/* Glow = next key */
+/* next key glow */
 .key.glow{
-  background:rgba(245,158,11,.08);
-  border-color:rgba(245,158,11,.35);
-  box-shadow:0 0 12px rgba(245,158,11,.2),inset 0 0 8px rgba(245,158,11,.06);
-  animation:key-pulse .7s ease-in-out infinite;
+  background:rgba(240,165,0,.07);
+  border-color:rgba(240,165,0,.4);
+  box-shadow:0 0 10px var(--accent-glow),inset 0 0 6px rgba(240,165,0,.04);
+  animation:kp .75s ease-in-out infinite;
 }
-@keyframes key-pulse{0%,100%{box-shadow:0 0 8px rgba(245,158,11,.2);}50%{box-shadow:0 0 20px rgba(245,158,11,.4);}}
+@keyframes kp{0%,100%{box-shadow:0 0 8px var(--accent-glow);}50%{box-shadow:0 0 18px rgba(240,165,0,.5);}}
 
-/* home row bump on F and J */
-.key.home::before{
-  content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);
-  width:10px;height:2px;background:rgba(255,255,255,.2);border-radius:1px;
+/* Home row bump (F,J) */
+.key.hbump::before{
+  content:'';position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
+  width:9px;height:1.5px;background:rgba(255,255,255,.22);border-radius:1px;
 }
+/* labels */
+.ks{font-size:8px;color:var(--text3);font-family:'Noto Sans Oriya',serif;line-height:1;align-self:flex-end;min-height:9px;}
+.ke{position:absolute;top:2px;left:3px;font-size:7px;color:var(--text3);font-weight:700;letter-spacing:.2px;}
+.km{font-size:12px;color:var(--text2);font-family:'Noto Sans Oriya',serif;font-weight:700;line-height:1;min-height:13px;margin-top:auto;}
 
-/* Key labels */
-.k-shift{font-size:8px;color:var(--text3);align-self:flex-end;margin-right:3px;margin-top:3px;font-family:'Noto Sans Oriya',serif;line-height:1;min-height:10px;}
-.k-main{font-size:13px;color:var(--text2);align-self:flex-start;margin-left:3px;margin-bottom:3px;font-family:'Noto Sans Oriya',serif;font-weight:700;line-height:1;}
-.k-eng{position:absolute;top:2px;right:3px;font-size:7px;color:var(--text3);font-weight:700;letter-spacing:.2px;}
+/* special wide keys */
+.key.wtab{width:62px;}.key.wcaps{width:68px;}.key.wshl{width:82px;}.key.wshr{width:82px;}
+.key.wbk{width:62px;}.key.went{width:72px;}.key.wsp{width:210px;height:34px;}
+.key.wfn{width:38px;opacity:.4;}
+.splab{font-size:8px;color:var(--text3);font-family:'Segoe UI',sans-serif;font-weight:400;align-self:center;margin:auto;}
 
-/* WIDE KEYS */
-.key.w-tab{width:66px;}
-.key.w-caps{width:72px;}
-.key.w-shift-l{width:86px;}
-.key.w-shift-r{width:86px;}
-.key.w-bksp{width:66px;}
-.key.w-enter{width:76px;}
-.key.w-space{width:220px;height:36px;}
-.key.w-fn{width:40px;opacity:.45;}
-.key.sp-label{font-size:9px;color:var(--text3);font-family:'Segoe UI',sans-serif;font-weight:500;}
-
-/* ── TRANSPARENT HAND SVG OVERLAY ── */
-.hand-overlay{
-  position:absolute;
-  bottom:0;left:0;right:0;
-  height:100%;
-  pointer-events:none;
-  transition:opacity .3s;
+/* ═══ TRANSPARENT HANDS ═══ */
+.hands-wrap{
+  flex-shrink:0;
+  height:110px;
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:0 10px 4px;
 }
-.hand-overlay.hidden{opacity:0;}
-.hand-svg{
-  width:100%;height:100%;
-  filter:drop-shadow(0 2px 8px rgba(0,0,0,.6));
-}
+.hands-svg{width:100%;height:100%;}
 
-/* ── FINGER LEGEND ── */
-.finger-legend{
-  display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
-  padding:4px 12px 6px;flex-shrink:0;
+/* finger highlight — animated when active */
+.finger-path{
+  transition:opacity .15s,filter .15s;
+  opacity:.35;
 }
-.fl-item{display:flex;align-items:center;gap:3px;font-size:8px;color:var(--text3);}
-.fl-dot{width:6px;height:6px;border-radius:50%;}
-
-/* ── SEO TEXT (hidden visually, visible to Google) ── */
-.seo-block{
-  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+.finger-path.active{
+  opacity:.85;
+  filter:drop-shadow(0 0 6px var(--fc,#fff));
 }
 
 /* FOOTER */
-.footer-strip{
-  background:var(--panel);
-  border-top:1px solid var(--border);
-  padding:3px 14px;
-  font-size:9px;
-  display:flex;justify-content:space-between;align-items:center;
-  flex-shrink:0;flex-wrap:wrap;gap:4px;
-  color:var(--text3);
-}
-.footer-strip a{color:var(--accent);text-decoration:none;}
+.fstrip{background:var(--panel);border-top:1px solid var(--border);padding:3px 12px;font-size:8px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;flex-wrap:wrap;gap:3px;color:var(--text3);}
+.fstrip a{color:var(--accent);text-decoration:none;}
+
+/* SEO hidden text */
+.seo-hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
 </style>
 </head>
 <body>
 
-<!-- SEO BLOCK — visible to Google, not users -->
-<div class="seo-block" aria-hidden="true">
-  <h1>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ — Free Odia Typing Practice Online with Akruti English Phonetic Keyboard</h1>
-  <p>Practice Odia typing online free with 36 progressive lessons using the Akruti English Phonetic keyboard layout — the standard used in Odisha government offices, DTP centres and newspapers. Beginner to Expert levels with transparent hand guide, minimalist keyboard, WPM tracking and accuracy score. Perfect for OSSC and OPSC government exam typing test preparation. No software installation needed — type English letters and they automatically convert to Odia in your browser using the Akruti layout. Special keys: f = Halant joiner, Shift+Y = Ya-phala, f+r = Ra-phala, r+f = Reph, x = Anusvara.</p>
+<div class="seo-hidden">
+  <h1>ଓଡ଼ିଆ ଟାଇପିଂ ଅଭ୍ୟାସ — Free Odia Typing Practice with Akruti English Phonetic Keyboard</h1>
+  <p>Practice Odia typing online free with 36 progressive lessons. Transparent hand guide shows which finger to press. Minimalist keyboard with 10-finger technique. Perfect for OSSC OPSC government exam typing test preparation. Akruti English Phonetic keyboard layout. f=Halant, Shift+Y=Ya-phala, f+r=Ra-phala.</p>
 </div>
 
-<!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-brand">
-    <div class="nav-logo">🏛</div>
-    <div class="nav-title">ଓଡ଼ିଆ ଟାଇପିଂ</div>
-  </a>
-  <button class="hamburger" onclick="document.getElementById('nl').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
-  <div class="nav-links" id="nl">
+  <a href="index.html" class="nb"><div class="nl2">🏛</div><div class="nt">ଓଡ଼ିଆ ଟାଇପିଂ</div></a>
+  <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
+  <div class="nlinks" id="nl">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="learn.html" class="active"><i class="fa-solid fa-keyboard"></i> Learn</a>
     <a href="guide.html"><i class="fa-solid fa-hand"></i> Guide</a>
     <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
     <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
-    <a href="index.html" class="nav-cta"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="learn.html" class="ncta"><i class="fa-solid fa-play"></i> Start Free</a>
   </div>
 </nav>
 
-<!-- MAIN -->
-<div class="main">
+<div class="app">
 
-  <!-- LESSON BAR -->
-  <div class="lesson-bar">
-    <span class="lb-label">Lessons</span>
-    <div class="lesson-strip" id="strip"></div>
-    <div class="lb-nav">
-      <button class="lb-btn" onclick="prevL()">←</button>
-      <span id="lcount">1/36</span>
-      <button class="lb-btn" onclick="nextL()">→</button>
+  <!-- LESSON STRIP -->
+  <div class="lbar">
+    <span class="lbar-lbl">Lessons</span>
+    <div class="lstrip" id="strip"></div>
+    <div class="lnav">
+      <button class="lbtn" onclick="prevL()">←</button>
+      <span id="lcnt">1/36</span>
+      <button class="lbtn" onclick="nextL()">→</button>
     </div>
   </div>
 
   <!-- PRACTICE TEXT -->
-  <div class="practice-zone">
-    <div class="pz-top">
-      <span class="pz-label"><i class="fa-solid fa-align-left"></i> Practice</span>
-      <span class="lesson-name-badge" id="lname"></span>
+  <div class="pzone">
+    <div class="pzone-top">
+      <span class="pzone-lbl"><i class="fa-solid fa-align-left"></i> Practice Text</span>
+      <span class="lbadge" id="lbadge"></span>
     </div>
-    <div id="target-text"></div>
+    <div id="target"></div>
   </div>
 
   <!-- INPUT ZONE -->
-  <div class="input-zone">
-    <input id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <div class="typed-wrap" id="typed-wrap" onclick="activate()">
-      <span id="typed-out"></span><span class="bcur" id="bcur"></span>
+  <div class="izone">
+    <input id="hi" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+    <div class="tbox" id="tbox" onclick="activate()">
+      <span id="tout"></span><span class="bcur" id="bcur"></span>
     </div>
-    <div class="input-badges">
-      <div class="badge" id="shift-badge"><i class="fa-solid fa-arrow-up"></i> Shift</div>
-      <div class="badge danger" id="halant-badge"><i class="fa-solid fa-link"></i> HL</div>
-      <div class="badge" onclick="proc('Backspace',false)" title="Backspace"><i class="fa-solid fa-delete-left"></i></div>
-      <div class="badge" onclick="resetL()" title="Restart"><i class="fa-solid fa-rotate-left"></i></div>
+    <div class="ibadges">
+      <div class="bdg" id="sbdg"><i class="fa-solid fa-arrow-up"></i> Shift</div>
+      <div class="bdg red" id="hbdg"><i class="fa-solid fa-link"></i> HL</div>
+      <div class="bdg" onclick="proc('Backspace',false)" title="Backspace"><i class="fa-solid fa-delete-left"></i></div>
+      <div class="bdg" onclick="resetL()" title="Restart"><i class="fa-solid fa-rotate-left"></i></div>
     </div>
-    <div class="mobile-hint"><i class="fa-solid fa-mobile-screen"></i> Tap box → type English → converts to Odia automatically</div>
+    <div class="mob-hint"><i class="fa-solid fa-mobile-screen"></i> Tap box → type English letters → auto-converts to Odia</div>
   </div>
 
-  <!-- RESULT BAR -->
-  <div class="result-bar" id="result-bar">
-    <div class="r-stars" id="r-stars"></div>
-    <div class="r-stat"><div class="r-val" id="r-wpm">0</div><div class="r-lbl">WPM</div></div>
-    <div class="r-stat"><div class="r-val" id="r-acc">0%</div><div class="r-lbl">Accuracy</div></div>
-    <div class="r-stat"><div class="r-val" id="r-time">0s</div><div class="r-lbl">Time</div></div>
-    <div class="r-msg" id="r-msg"></div>
-    <div class="r-next"><i class="fa-solid fa-turn-down"></i> Enter = Next lesson</div>
+  <!-- RESULT -->
+  <div class="rbar" id="rbar">
+    <div class="rstars" id="rstars"></div>
+    <div class="rstat"><div class="rval" id="rwpm">0</div><div class="rlbl">WPM</div></div>
+    <div class="rstat"><div class="rval" id="racc">0%</div><div class="rlbl">Accuracy</div></div>
+    <div class="rstat"><div class="rval" id="rtime">0s</div><div class="rlbl">Time</div></div>
+    <div class="rmsg" id="rmsg"></div>
+    <div class="rnxt"><i class="fa-solid fa-turn-down"></i> Enter = Next</div>
   </div>
 
-  <!-- KEYBOARD SECTION -->
-  <div class="kb-section">
+  <!-- KEYBOARD + HANDS -->
+  <div class="kb-sec">
+
     <div class="kb-header">
-      <div class="kb-hint" id="kb-hint"><i class="fa-solid fa-hand-point-right"></i> Click the box above and start typing</div>
-      <div class="kb-toggles">
-        <button class="kb-toggle on" id="toggle-hand" onclick="toggleHand()"><i class="fa-solid fa-hand"></i> Hand Guide</button>
-        <button class="kb-toggle on" id="toggle-odia" onclick="toggleOdia()"><i class="fa-solid fa-font"></i> Odia Labels</button>
+      <div class="kb-hint-bar" id="hintbar"><i class="fa-solid fa-hand-point-right"></i> Click the box above and start typing</div>
+      <div class="kb-controls">
+        <button class="kctrl on" id="thand" onclick="toggleHand()"><i class="fa-solid fa-hand"></i> Hands</button>
+        <button class="kctrl on" id="tlabels" onclick="toggleLabels()"><i class="fa-solid fa-font"></i> Labels</button>
       </div>
     </div>
 
-    <!-- FINGER LEGEND -->
-    <div class="finger-legend">
-      <div class="fl-item"><div class="fl-dot" style="background:#94a3b8"></div>L.Pinky</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#a78bfa"></div>L.Ring</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#60a5fa"></div>L.Middle</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#34d399"></div>L.Index</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#fbbf24"></div>R.Index</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#60a5fa"></div>R.Middle</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#a78bfa"></div>R.Ring</div>
-      <div class="fl-item"><div class="fl-dot" style="background:#94a3b8"></div>R.Pinky</div>
-    </div>
-
-    <div class="kb-body" id="kb-body">
+    <!-- KEYBOARD ROWS -->
+    <div class="kb-wrap" id="kbwrap">
       <div id="kb"></div>
-      <!-- TRANSPARENT HAND SVG -->
-      <div class="hand-overlay" id="hand-overlay">
-        <svg class="hand-svg" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+
+      <!-- TRANSPARENT HANDS SVG -->
+      <div class="hands-wrap" id="handswrap">
+        <svg class="hands-svg" viewBox="0 0 860 110" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <filter id="glow-hand"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <filter id="fg"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <!-- LEFT FINGER GRADIENTS -->
+            <linearGradient id="glp" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94a3b8" stop-opacity=".9"/><stop offset="100%" stop-color="#94a3b8" stop-opacity=".3"/></linearGradient>
+            <linearGradient id="glr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a78bfa" stop-opacity=".9"/><stop offset="100%" stop-color="#a78bfa" stop-opacity=".3"/></linearGradient>
+            <linearGradient id="glm" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60a5fa" stop-opacity=".9"/><stop offset="100%" stop-color="#60a5fa" stop-opacity=".3"/></linearGradient>
+            <linearGradient id="gli" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity=".9"/><stop offset="100%" stop-color="#34d399" stop-opacity=".3"/></linearGradient>
+            <!-- RIGHT FINGER GRADIENTS -->
+            <linearGradient id="gri" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbbf24" stop-opacity=".9"/><stop offset="100%" stop-color="#fbbf24" stop-opacity=".3"/></linearGradient>
+            <linearGradient id="grm" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60a5fa" stop-opacity=".9"/><stop offset="100%" stop-color="#60a5fa" stop-opacity=".3"/></linearGradient>
+            <linearGradient id="grr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a78bfa" stop-opacity=".9"/><stop offset="100%" stop-color="#a78bfa" stop-opacity=".3"/></linearGradient>
+            <linearGradient id="grp" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94a3b8" stop-opacity=".9"/><stop offset="100%" stop-color="#94a3b8" stop-opacity=".3"/></linearGradient>
           </defs>
 
-          <!-- LEFT HAND — fingers pointing down onto keyboard -->
-          <g opacity="0.55" filter="url(#glow-hand)">
-            <!-- Palm left -->
-            <ellipse cx="220" cy="195" rx="72" ry="28" fill="rgba(180,200,240,0.12)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
-            <!-- Pinky L -->
-            <path d="M155,195 Q152,165 150,140 Q149,128 153,122 Q157,116 163,120 Q168,124 166,138 L164,195Z" fill="rgba(148,163,184,0.18)" stroke="rgba(148,163,184,0.5)" stroke-width="1.2"/>
-            <!-- Ring L -->
-            <path d="M172,195 Q170,158 168,128 Q167,114 172,108 Q178,102 185,107 Q191,112 188,128 L186,195Z" fill="rgba(167,139,250,0.18)" stroke="rgba(167,139,250,0.5)" stroke-width="1.2"/>
-            <!-- Middle L -->
-            <path d="M192,195 Q190,152 188,118 Q187,103 193,97 Q200,91 207,97 Q213,103 210,118 L208,195Z" fill="rgba(96,165,250,0.18)" stroke="rgba(96,165,250,0.5)" stroke-width="1.2"/>
-            <!-- Index L -->
-            <path d="M213,195 Q213,158 213,128 Q213,113 219,107 Q226,101 233,107 Q239,113 237,128 L236,195Z" fill="rgba(52,211,153,0.18)" stroke="rgba(52,211,153,0.5)" stroke-width="1.2"/>
-            <!-- Thumb L (pointing right toward space) -->
-            <path d="M220,195 Q238,192 255,195 Q265,198 262,205 Q258,212 245,210 L220,205Z" fill="rgba(180,200,240,0.14)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
+          <!-- ══ LEFT HAND ══ -->
+          <g filter="url(#fg)">
+            <!-- Palm -->
+            <ellipse cx="175" cy="100" rx="68" ry="14" fill="rgba(160,180,220,0.08)" stroke="rgba(160,180,220,0.15)" stroke-width="1"/>
+            <!-- Pinky -->
+            <path id="fl-lp" class="finger-path" d="M112,100 Q110,78 109,60 Q108,50 112,45 Q116,40 121,44 Q126,48 124,60 L122,100Z" fill="url(#glp)" stroke="rgba(148,163,184,0.5)" stroke-width="1"/>
+            <!-- Ring -->
+            <path id="fl-lr" class="finger-path" d="M130,100 Q128,72 127,47 Q126,36 131,30 Q137,24 143,30 Q149,36 146,50 L144,100Z" fill="url(#glr)" stroke="rgba(167,139,250,0.5)" stroke-width="1"/>
+            <!-- Middle -->
+            <path id="fl-lm" class="finger-path" d="M150,100 Q149,66 148,37 Q147,24 153,18 Q159,12 166,18 Q172,24 169,40 L167,100Z" fill="url(#glm)" stroke="rgba(96,165,250,0.5)" stroke-width="1"/>
+            <!-- Index -->
+            <path id="fl-li" class="finger-path" d="M172,100 Q172,68 173,42 Q174,28 180,22 Q187,16 193,22 Q199,28 196,44 L194,100Z" fill="url(#gli)" stroke="rgba(52,211,153,0.5)" stroke-width="1"/>
+            <!-- Thumb L -->
+            <path d="M178,100 Q196,96 215,100 Q224,103 221,108 Q217,113 204,111 L178,107Z" fill="rgba(160,180,220,0.1)" stroke="rgba(160,180,220,0.2)" stroke-width="1"/>
+            <!-- Home bump F -->
+            <circle cx="183" cy="105" r="3" fill="rgba(52,211,153,0.7)"/>
+            <text x="183" y="108" text-anchor="middle" font-size="4" fill="white" font-weight="bold">F</text>
           </g>
 
-          <!-- RIGHT HAND -->
-          <g opacity="0.55" filter="url(#glow-hand)">
-            <!-- Palm right -->
-            <ellipse cx="680" cy="195" rx="72" ry="28" fill="rgba(180,200,240,0.12)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
-            <!-- Index R -->
-            <path d="M664,195 Q663,158 662,128 Q661,113 668,107 Q675,101 682,107 Q688,113 686,128 L685,195Z" fill="rgba(251,191,36,0.18)" stroke="rgba(251,191,36,0.5)" stroke-width="1.2"/>
-            <!-- Middle R -->
-            <path d="M690,195 Q689,152 689,118 Q690,103 697,97 Q704,91 710,97 Q716,103 713,118 L712,195Z" fill="rgba(96,165,250,0.18)" stroke="rgba(96,165,250,0.5)" stroke-width="1.2"/>
-            <!-- Ring R -->
-            <path d="M715,195 Q714,158 713,128 Q712,114 718,108 Q725,102 731,107 Q737,112 734,128 L732,195Z" fill="rgba(167,139,250,0.18)" stroke="rgba(167,139,250,0.5)" stroke-width="1.2"/>
-            <!-- Pinky R -->
-            <path d="M737,195 Q735,165 734,140 Q733,128 737,122 Q742,116 748,120 Q753,124 751,138 L749,195Z" fill="rgba(148,163,184,0.18)" stroke="rgba(148,163,184,0.5)" stroke-width="1.2"/>
+          <!-- ══ RIGHT HAND ══ -->
+          <g filter="url(#fg)">
+            <!-- Palm -->
+            <ellipse cx="685" cy="100" rx="68" ry="14" fill="rgba(160,180,220,0.08)" stroke="rgba(160,180,220,0.15)" stroke-width="1"/>
+            <!-- Index -->
+            <path id="fl-ri" class="finger-path" d="M668,100 Q666,68 666,42 Q666,28 673,22 Q680,16 686,22 Q692,28 689,44 L687,100Z" fill="url(#gri)" stroke="rgba(251,191,36,0.5)" stroke-width="1"/>
+            <!-- Middle -->
+            <path id="fl-rm" class="finger-path" d="M693,100 Q692,66 692,37 Q693,24 699,18 Q706,12 712,18 Q718,24 715,40 L713,100Z" fill="url(#grm)" stroke="rgba(96,165,250,0.5)" stroke-width="1"/>
+            <!-- Ring -->
+            <path id="fl-rr" class="finger-path" d="M716,100 Q714,72 714,47 Q714,36 720,30 Q726,24 731,30 Q737,36 734,50 L732,100Z" fill="url(#grr)" stroke="rgba(167,139,250,0.5)" stroke-width="1"/>
+            <!-- Pinky -->
+            <path id="fl-rp" class="finger-path" d="M737,100 Q736,78 735,60 Q735,50 739,45 Q743,40 748,44 Q753,48 751,60 L749,100Z" fill="url(#grp)" stroke="rgba(148,163,184,0.5)" stroke-width="1"/>
             <!-- Thumb R -->
-            <path d="M680,195 Q662,192 645,195 Q635,198 638,205 Q642,212 655,210 L680,205Z" fill="rgba(180,200,240,0.14)" stroke="rgba(180,200,240,0.3)" stroke-width="1"/>
+            <path d="M682,100 Q664,96 645,100 Q636,103 639,108 Q643,113 656,111 L682,107Z" fill="rgba(160,180,220,0.1)" stroke="rgba(160,180,220,0.2)" stroke-width="1"/>
+            <!-- Home bump J -->
+            <circle cx="677" cy="105" r="3" fill="rgba(251,191,36,0.7)"/>
+            <text x="677" y="108" text-anchor="middle" font-size="4" fill="white" font-weight="bold">J</text>
           </g>
 
-          <!-- HOME ROW INDICATORS -->
-          <circle cx="248" cy="212" r="5" fill="rgba(52,211,153,0.6)" opacity="0.8"/>
-          <circle cx="668" cy="212" r="5" fill="rgba(251,191,36,0.6)" opacity="0.8"/>
-          <text x="248" y="216" text-anchor="middle" font-size="5" fill="white" opacity="0.9">F</text>
-          <text x="668" y="216" text-anchor="middle" font-size="5" fill="white" opacity="0.9">J</text>
+          <!-- SPACEBAR thumbs indicator -->
+          <text x="430" y="108" text-anchor="middle" font-size="7" fill="rgba(160,180,220,0.4)" font-weight="500">SPACE — Both Thumbs</text>
         </svg>
       </div>
-    </div>
-  </div>
 
-</div>
+    </div><!-- /kb-wrap -->
+  </div><!-- /kb-sec -->
 
-<!-- FOOTER -->
-<div class="footer-strip">
+</div><!-- /app -->
+
+<div class="fstrip">
   <span>ଓଡ଼ିଆ ଟାଇପିଂ ଶିକ୍ଷା · <a href="https://www.amarvisualstudio.in" target="_blank">Amar Visual Studio</a> · <a href="https://wa.me/916372885071" target="_blank">+91 63728 85071</a></span>
-  <span style="color:var(--text3);font-size:8px;">f=Halant · Shift+Y=Ya-phala · f+r=Ra-phala · r+f=Reph · Enter=Next</span>
+  <span>f=Halant · Shift+Y=Ya-phala · f+r=Ra-phala · r+f=Reph · Enter=Next</span>
 </div>
 
 <script>
@@ -490,7 +374,7 @@ const H='\u0B4D',ZWNJ='\u200C';
 const KM={
   '`':['\u0B13','\u0B14'],'1':['\u0B67','!'],'2':['\u0B68','@'],'3':['\u0B69','\u0B37'],
   '4':['\u0B6A','$'],'5':['\u0B6B','\u0B1E'],'6':['\u0B6C','^'],'7':['\u0B6D','&'],
-  '8':['\u0B6E','\u0B19'],'9':['\u0B6F','('],'0':['\u0B66',')'],'-':['','\u0B1E'],
+  '8':['\u0B6E','\u0B19'],'9':['\u0B6F','('],'0':['\u0B66',')'],'-':['',''],
   '=':['\u0B43','+'],
   'q':['\u0B09','\u0B0A'],'w':['\u0B0F','\u0B10'],'e':['\u0B47','\u0B48'],
   'r':['\u0B30',''],'t':['\u0B24','\u0B25'],'y':['\u0B5F',''],
@@ -506,15 +390,16 @@ const KM={
   ' ':[' ',' ']
 };
 
-// Finger index 0-7
+// finger index 0-7 + 8=thumb
 const FK={
   '`':0,'1':0,'2':1,'3':2,'4':3,'5':3,'6':4,'7':4,'8':5,'9':6,'0':7,'-':7,'=':7,
   'q':0,'w':1,'e':2,'r':3,'t':3,'y':4,'u':4,'i':5,'o':6,'p':7,'[':7,']':7,
   'a':0,'s':1,'d':2,'f':3,'g':3,'h':4,'j':4,'k':5,'l':6,';':7,"'":7,
-  'z':0,'x':1,'c':2,'v':3,'b':3,'n':4,'m':5,',':6,'.':7,'/':7,' ':9
+  'z':0,'x':1,'c':2,'v':3,'b':3,'n':4,'m':5,',':6,'.':7,'/':7,' ':8
 };
-const FCOLS=['#94a3b8','#a78bfa','#60a5fa','#34d399','#fbbf24','#60a5fa','#a78bfa','#94a3b8'];
-const FNAMES=['L.Pinky','L.Ring','L.Middle','L.Index','R.Index','R.Middle','R.Ring','R.Pinky'];
+const FCOL=['#94a3b8','#a78bfa','#60a5fa','#34d399','#fbbf24','#60a5fa','#a78bfa','#94a3b8','#c8d0e0'];
+const FSVG=['fl-lp','fl-lr','fl-lm','fl-li','fl-ri','fl-rm','fl-rr','fl-rp',null];
+const FNAME=['L.Pinky','L.Ring','L.Middle','L.Index','R.Index','R.Middle','R.Ring','R.Pinky','Thumbs'];
 
 const IV=new Set('\u0B05\u0B06\u0B07\u0B08\u0B09\u0B0A\u0B0B\u0B0C\u0B0F\u0B10\u0B13\u0B14'.split(''));
 const MT=new Set('\u0B3E\u0B3F\u0B40\u0B41\u0B42\u0B43\u0B47\u0B48\u0B4B\u0B4C\u0B01\u0B02\u0B03\u0B4D'.split(''));
@@ -523,51 +408,50 @@ const isCon=c=>CON.has(c),isMT=c=>MT.has(c),isIV=c=>IV.has(c);
 
 // 36 LESSONS
 const ALL=[
-  {lv:'beg',n:'Home Row',        t:'କ ଗ ହ ଜ ଲ ସ ଦ ନ ମ'},
-  {lv:'beg',n:'Vowels A–U',      t:'ଅ ଆ ଇ ଈ ଉ ଊ'},
-  {lv:'beg',n:'Vowels E–O',      t:'ଏ ଐ ଓ ଔ'},
-  {lv:'beg',n:'Consonants 1',    t:'କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ'},
-  {lv:'beg',n:'Consonants 2',    t:'ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ'},
-  {lv:'beg',n:'Consonants 3',    t:'ୟ ର ଲ ଳ ସ ଶ ଷ ହ'},
-  {lv:'beg',n:'Numbers',         t:'୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯ ୦'},
-  {lv:'beg',n:'AA Matra',        t:'କା ଗା ହା ଜା ଲା ସା ନା ମା'},
-  {lv:'beg',n:'I / II Matra',    t:'କି କୀ ଗି ଗୀ ସି ସୀ ନି ନୀ'},
-  {lv:'beg',n:'U / UU Matra',   t:'କୁ କୂ ଗୁ ଗୂ ସୁ ସୂ ନୁ ନୂ'},
-  {lv:'beg',n:'E / AI Matra',   t:'କେ କୈ ଗେ ଗୈ ସେ ସୈ ନେ ନୈ'},
-  {lv:'beg',n:'O / AU Matra',   t:'କୋ କୌ ଗୋ ଗୌ ସୋ ସୌ ନୋ ନୌ'},
-  {lv:'int',n:'All Matras',      t:'କା କି କୀ କୁ କୂ କୃ କେ କୈ କୋ କୌ'},
-  {lv:'int',n:'Words 1',         t:'ଘର ଜଳ ନଦୀ ଆକାଶ ମାତା ପିତା'},
-  {lv:'int',n:'Words 2',         t:'ଭୂମି ଗଛ ଫୁଲ ଫଳ ଜଳ ବାୟୁ'},
-  {lv:'int',n:'Conjuncts',       t:'କ୍ତ ନ୍ତ ସ୍ତ ଦ୍ୱ ଶ୍ଚ'},
-  {lv:'int',n:'Ra-Phala',        t:'ଗ୍ର ପ୍ର କ୍ର ଦ୍ର ବ୍ର ଶ୍ର'},
-  {lv:'int',n:'Ya-Phala',        t:'କ୍ୟ ଗ୍ୟ ସ୍ୟ ବ୍ୟ ଦ୍ୟ'},
-  {lv:'int',n:'Reph',            t:'ର୍କ ର୍ଗ ର୍ତ ର୍ଦ ର୍ପ'},
-  {lv:'int',n:'Anusvara',        t:'କଂ ଗଂ ହଂ ସଂ ଜଂ ଦଂ'},
-  {lv:'int',n:'Sentence 1',      t:'ଓଡ଼ିଆ ଆମ ମାତୃଭାଷା ।'},
-  {lv:'int',n:'Sentence 2',      t:'ଜ୍ଞାନ ହିଁ ଶକ୍ତି ।'},
-  {lv:'int',n:'Sentence 3',      t:'ଶ୍ରମ ହିଁ ଧର୍ମ ।'},
-  {lv:'int',n:'Sentence 4',      t:'ଜଳ ହିଁ ଜୀବନ ।'},
-  {lv:'exp',n:'ଭାରତ ସଂସ୍କୃତି',  t:'ଭାରତ ଏକ ବିଶାଳ ଓ ବିବିଧ ସଂସ୍କୃତିର ଦେଶ । ଏଠାରେ ଅନେକ ଭାଷା, ଧର୍ମ ଓ ଜାତି ଏକ ଛାତ ତଳେ ବାସ କରନ୍ତି । ଏ ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ହିଁ ଆମ ଦେଶର ସର୍ବଶ୍ରେଷ୍ଠ ଗୌରବ ।'},
-  {lv:'exp',n:'ଜଗନ୍ନାଥ ଧାମ',    t:'ପୁରୀ ସ୍ଥିତ ଜଗନ୍ନାଥ ମନ୍ଦିର ଭାରତର ଏକ ପ୍ରସିଦ୍ଧ ଚାର ଧାମ । ପ୍ରତ୍ୟେକ ବର୍ଷ ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତ ଦର୍ଶନ ପାଇଁ ଆସନ୍ତି । ଜଗନ୍ନାଥ ଙ୍କ ରଥ ଯାତ୍ରା ସାରା ଦୁନିଆ ।'},
-  {lv:'exp',n:'ଓଡ଼ିଶା ଐତିହ୍ୟ',  t:'ଓଡ଼ିଶୀ ନୃତ୍ୟ, ରଙ୍ଗ ବିରଙ୍ଗ ପଟ୍ଟ ଚିତ୍ର, ଅନନ୍ୟ ହସ୍ତ ଶିଳ୍ପ ଓ ଜଗ ବିଖ୍ୟାତ କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର ଆମ ଓଡ଼ିଶାର ଅହଂକାର ।'},
-  {lv:'exp',n:'ଦୟା ଓ ପ୍ରେମ',    t:'ଏହି ଜଗତରେ ଦୟା ଓ ନିଃସ୍ୱାର୍ଥ ପ୍ରେମ ହିଁ ସବୁଠୁ ବଡ଼ ଧର୍ମ । ଦୟାଳୁ ବ୍ୟକ୍ତି ଅଳ୍ପ ସ୍ନେହ ଦ୍ୱାରା ଅନ୍ୟ ଜଣଙ୍କ ଜୀବନ ବଦଳାଇ ଦେଇ ଥାଏ ।'},
-  {lv:'exp',n:'ସ୍ୱପ୍ନ ଓ ଲକ୍ଷ୍ୟ', t:'ଜୀବନରେ ଉଚ୍ଚ ସ୍ୱପ୍ନ ଦେଖ ଓ ଦୃଢ଼ ଲକ୍ଷ୍ୟ ସ୍ଥିର କର । ପ୍ରତ୍ୟେକ ଦିନ ଗୋଟିଏ ଦୃଢ଼ ପଦ ଆଗ ଆଡ଼କୁ ବଢ଼ । ଧୈର୍ଯ୍ୟ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ।'},
-  {lv:'exp',n:'ମଣିଷ ସ୍ୱଭାବ',    t:'ମଣିଷ ସ୍ୱଭାବ ଦ୍ୱାରା ଏକ ସ୍ନେହ ପ୍ରବଣ ସାମାଜିକ ପ୍ରାଣୀ । ସ୍ନେହ, ଶ୍ରଦ୍ଧା ଓ ଦୟା ଦ୍ୱାରା ଜୀବନ ଅର୍ଥବହ ଓ ସୁନ୍ଦର ହୋଇଥାଏ ।'},
-  {lv:'exp',n:'ମନ ଓ ଭାବନା',     t:'ମଣିଷର ମନ ଏକ ଅଦ୍ଭୁତ ଓ ଅସୀମ ଶକ୍ତି । ଆମ ଚିନ୍ତା ଓ ଭାବନା ଆମ ଜୀବନ ଦିଗ ନିର୍ଣ୍ଣୟ କରିଥାଏ ।'},
-  {lv:'exp',n:'ସାହସ ଓ ବଳ',      t:'ଦୁର୍ଗମ ପଥରେ ଯିଏ ଦୃଢ଼ ଭାବରେ ଆଗ ବଢ଼େ, ସଫଳତା ତା ପାଇଁ ଅପେକ୍ଷା କରେ । ଆତ୍ମ ବିଶ୍ୱାସ ଓ ସାହସ ହିଁ ଜୀବନର ସର୍ବଶ୍ରେଷ୍ଠ ଗୁଣ ।'},
-  {lv:'exp',n:'ଜ୍ଞାନ ଓ ଆଲୋ',    t:'ଜ୍ଞାନ ହିଁ ଅଜ୍ଞାନ ଅନ୍ଧାରୁ ମୁକ୍ତି ଦେଉଥିବା ଆଲୋକ । ଶ୍ରମ, ଅଧ୍ୟୟନ ଓ ଗୁରୁ ଭକ୍ତି ଦ୍ୱାରା ଜ୍ଞାନ ଆର୍ଜ୍ଜନ ।'},
-  {lv:'exp',n:'ପ୍ରକୃତି ଓ ଜଳ',   t:'ସବୁଜ ଗଛ, ବୋହୁଥିବା ନଦୀ ଓ ନୀଳ ଆକାଶ ଆମ ଜୀବନ ଧାରଣର ଆଧାର । ପ୍ରକୃତି ରକ୍ଷା ଆମ ସମସ୍ତଙ୍କ ଦାୟିତ୍ୱ ।'},
-  {lv:'exp',n:'ମାଆ ଓ ସ୍ନେହ',    t:'ମାଆ ହେଉଛନ୍ତି ଈଶ୍ୱରଙ୍କ ଶ୍ରେଷ୍ଠ ଉପହାର । ତାଙ୍କ ନିଃଶର୍ତ ସ୍ନେହ ଓ ତ୍ୟାଗ ତୁଳନାହୀନ ।'},
-  {lv:'exp',n:'ଶ୍ରମ ଓ ସଫଳ',     t:'ନିରଳସ ପରିଶ୍ରମ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ଯେ କୌଣସି ଲକ୍ଷ୍ୟ ହାସଲ ହୋଇଥାଏ । ସଫଳ ବ୍ୟକ୍ତି ସେ ଯିଏ ବିଫଳ ।'},
+  {lv:'beg',n:'Home Row',t:'କ ଗ ହ ଜ ଲ ସ ଦ ନ ମ'},
+  {lv:'beg',n:'Vowels A–U',t:'ଅ ଆ ଇ ଈ ଉ ଊ'},
+  {lv:'beg',n:'Vowels E–O',t:'ଏ ଐ ଓ ଔ'},
+  {lv:'beg',n:'Consonants 1',t:'କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ'},
+  {lv:'beg',n:'Consonants 2',t:'ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ'},
+  {lv:'beg',n:'Consonants 3',t:'ୟ ର ଲ ଳ ସ ଶ ଷ ହ'},
+  {lv:'beg',n:'Numbers',t:'୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯ ୦'},
+  {lv:'beg',n:'AA Matra',t:'କା ଗା ହା ଜା ଲା ସା ନା ମା'},
+  {lv:'beg',n:'I/II Matra',t:'କି କୀ ଗି ଗୀ ସି ସୀ ନି ନୀ'},
+  {lv:'beg',n:'U/UU Matra',t:'କୁ କୂ ଗୁ ଗୂ ସୁ ସୂ ନୁ ନୂ'},
+  {lv:'beg',n:'E/AI Matra',t:'କେ କୈ ଗେ ଗୈ ସେ ସୈ ନେ ନୈ'},
+  {lv:'beg',n:'O/AU Matra',t:'କୋ କୌ ଗୋ ଗୌ ସୋ ସୌ ନୋ ନୌ'},
+  {lv:'int',n:'All Matras',t:'କା କି କୀ କୁ କୂ କୃ କେ କୈ କୋ କୌ'},
+  {lv:'int',n:'Words 1',t:'ଘର ଜଳ ନଦୀ ଆକାଶ ମାତା ପିତା'},
+  {lv:'int',n:'Words 2',t:'ଭୂମି ଗଛ ଫୁଲ ଫଳ ଜଳ ବାୟୁ'},
+  {lv:'int',n:'Conjuncts',t:'କ୍ତ ନ୍ତ ସ୍ତ ଦ୍ୱ ଶ୍ଚ'},
+  {lv:'int',n:'Ra-Phala',t:'ଗ୍ର ପ୍ର କ୍ର ଦ୍ର ବ୍ର ଶ୍ର'},
+  {lv:'int',n:'Ya-Phala',t:'କ୍ୟ ଗ୍ୟ ସ୍ୟ ବ୍ୟ ଦ୍ୟ'},
+  {lv:'int',n:'Reph',t:'ର୍କ ର୍ଗ ର୍ତ ର୍ଦ ର୍ପ'},
+  {lv:'int',n:'Anusvara',t:'କଂ ଗଂ ହଂ ସଂ ଜଂ ଦଂ'},
+  {lv:'int',n:'Sentence 1',t:'ଓଡ଼ିଆ ଆମ ମାତୃଭାଷା ।'},
+  {lv:'int',n:'Sentence 2',t:'ଜ୍ଞାନ ହିଁ ଶକ୍ତି ।'},
+  {lv:'int',n:'Sentence 3',t:'ଶ୍ରମ ହିଁ ଧର୍ମ ।'},
+  {lv:'int',n:'Sentence 4',t:'ଜଳ ହିଁ ଜୀବନ ।'},
+  {lv:'exp',n:'ଭାରତ ସଂସ୍କୃତି',t:'ଭାରତ ଏକ ବିଶାଳ ଓ ବିବିଧ ସଂସ୍କୃତିର ଦେଶ । ଏଠାରେ ଅନେକ ଭାଷା, ଧର୍ମ ଓ ଜାତି ଏକ ଛାତ ତଳେ ବାସ କରନ୍ତି । ଏ ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ହିଁ ଆମ ଦେଶର ସର୍ବଶ୍ରେଷ୍ଠ ଗୌରବ ।'},
+  {lv:'exp',n:'ଜଗନ୍ନାଥ ଧାମ',t:'ପୁରୀ ସ୍ଥିତ ଜଗନ୍ନାଥ ମନ୍ଦିର ଭାରତର ଏକ ପ୍ରସିଦ୍ଧ ଚାର ଧାମ । ପ୍ରତ୍ୟେକ ବର୍ଷ ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତ ଦର୍ଶନ ପାଇଁ ଆସନ୍ତି । ଜଗନ୍ନାଥ ଙ୍କ ରଥ ଯାତ୍ରା ।'},
+  {lv:'exp',n:'ଓଡ଼ିଶା ଐତିହ୍ୟ',t:'ଓଡ଼ିଶୀ ନୃତ୍ୟ, ରଙ୍ଗ ବିରଙ୍ଗ ପଟ୍ଟ ଚିତ୍ର, ଅନନ୍ୟ ହସ୍ତ ଶିଳ୍ପ ଓ ଜଗ ବିଖ୍ୟାତ କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର ଆମ ଓଡ଼ିଶାର ଅହଂକାର ।'},
+  {lv:'exp',n:'ଦୟା ଓ ପ୍ରେମ',t:'ଏହି ଜଗତରେ ଦୟା ଓ ନିଃସ୍ୱାର୍ଥ ପ୍ରେମ ହିଁ ସବୁଠୁ ବଡ଼ ଧର୍ମ । ଦୟାଳୁ ବ୍ୟକ୍ତି ଅଳ୍ପ ସ୍ନେହ ଦ୍ୱାରା ।'},
+  {lv:'exp',n:'ସ୍ୱପ୍ନ ଓ ଲକ୍ଷ୍ୟ',t:'ଜୀବନରେ ଉଚ୍ଚ ସ୍ୱପ୍ନ ଦେଖ ଓ ଦୃଢ଼ ଲକ୍ଷ୍ୟ ସ୍ଥିର କର । ପ୍ରତ୍ୟେକ ଦିନ ଗୋଟିଏ ଦୃଢ଼ ପଦ ।'},
+  {lv:'exp',n:'ମଣିଷ ସ୍ୱଭାବ',t:'ମଣିଷ ସ୍ୱଭାବ ଦ୍ୱାରା ଏକ ସ୍ନେହ ପ୍ରବଣ ସାମାଜିକ ପ୍ରାଣୀ । ସ୍ନେହ, ଶ୍ରଦ୍ଧା ଓ ଦୟା ।'},
+  {lv:'exp',n:'ମନ ଓ ଭାବନା',t:'ମଣିଷର ମନ ଏକ ଅଦ୍ଭୁତ ଓ ଅସୀମ ଶକ୍ତି । ଆମ ଚିନ୍ତା ଓ ଭାବନା ।'},
+  {lv:'exp',n:'ସାହସ ଓ ବଳ',t:'ଦୁର୍ଗମ ପଥରେ ଯିଏ ଦୃଢ଼ ଭାବରେ ଆଗ ବଢ଼େ, ସଫଳତା ତା ପାଇଁ ।'},
+  {lv:'exp',n:'ଜ୍ଞାନ ଓ ଆଲୋ',t:'ଜ୍ଞାନ ହିଁ ଅଜ୍ଞାନ ଅନ୍ଧାରୁ ମୁକ୍ତି ଦେଉଥିବା ଆଲୋକ । ଶ୍ରମ, ଅଧ୍ୟୟନ ।'},
+  {lv:'exp',n:'ପ୍ରକୃତି ଓ ଜଳ',t:'ସବୁଜ ଗଛ, ବୋହୁଥିବା ନଦୀ ଓ ନୀଳ ଆକାଶ ଆମ ଜୀବନ ଧାରଣର ଆଧାର ।'},
+  {lv:'exp',n:'ମାଆ ଓ ସ୍ନେହ',t:'ମାଆ ହେଉଛନ୍ତି ଈଶ୍ୱରଙ୍କ ଶ୍ରେଷ୍ଠ ଉପହାର । ତାଙ୍କ ନିଃଶର୍ତ ସ୍ନେହ ।'},
+  {lv:'exp',n:'ଶ୍ରମ ଓ ସଫଳ',t:'ନିରଳସ ପରିଶ୍ରମ ଓ ନିଷ୍ଠା ଦ୍ୱାରା ଯେ କୌଣସି ଲକ୍ଷ୍ୟ ହାସଲ ।'},
 ];
 
 // STATE
-let idx=0,out='',halant=false,shifted=false,active=false;
-let started=false,t0=null,done=false,total=0,correct=0;
+let idx=0,out='',halant=false,shifted=false,isOn=false;
+let started=false,t0=null,ldone=false,tot=0,cor=0;
 const SC=JSON.parse(localStorage.getItem('odiaV9')||'{}');
-let showHand=true,showOdia=true;
+let showHand=true,showLabels=true;
 
-// GRAPHEME SPLIT
 function gsplit(s){
   try{return[...new Intl.Segmenter('or',{granularity:'grapheme'}).segment(s)].map(x=>x.segment);}
   catch{return[...s];}
@@ -576,49 +460,34 @@ function lastCh(){for(let i=out.length-1;i>=0;i--)if(out[i]!==ZWNJ)return out[i]
 
 // PROCESS KEY
 function proc(k,sh){
-  if(done){if(k==='Enter'){advance();return;}return;}
-  if(k==='Backspace'){
-    const g=gsplit(out);if(g.length){g.pop();out=g.join('');}
-    halant=false;render();return;
-  }
+  if(ldone){if(k==='Enter'){advance();return;}return;}
+  if(k==='Backspace'){const g=gsplit(out);if(g.length){g.pop();out=g.join('');}halant=false;render();return;}
   if(k==='Enter')return;
-  if(k===' '){
-    if(halant){out+=H;halant=false;}else out+=' ';
-    countAcc();render();return;
-  }
+  if(k===' '){if(halant){out+=H;halant=false;}else out+=' ';countA();render();return;}
   if(sh&&k==='7'){out+='\u0B30'+H;render();return;}
-  if(sh&&k==='y'){out+=H+'\u0B5F';halant=false;countAcc();render();return;}
+  if(sh&&k==='y'){out+=H+'\u0B5F';halant=false;countA();render();return;}
   if(!sh&&k==='f'){if(isCon(lastCh()))halant=true;render();return;}
   const m=KM[k];if(!m)return;
   const ch=sh?m[1]:m[0];if(!ch)return;
-  if(halant){
-    if(isCon(ch)){out+=H+ch;}else out+=ch;
-    halant=false;
-  }else{
-    if(isMT(ch)&&isIV(lastCh()))out+=ZWNJ+ch;
-    else out+=ch;
-  }
-  countAcc();render();
+  if(halant){isCon(ch)?out+=H+ch:out+=ch;halant=false;}
+  else{(isMT(ch)&&isIV(lastCh()))?out+=ZWNJ+ch:out+=ch;}
+  countA();render();
 }
 
-function countAcc(){
+function countA(){
   if(!started&&out.replace(/[\s\u200C]/g,'').length>=3){started=true;t0=Date.now();}
   const tG=gsplit(ALL[idx].t),oG=gsplit(out);
   const pos=oG.length-1;
-  if(pos>=0&&pos<tG.length){total++;if(oG[pos]===tG[pos])correct++;}
+  if(pos>=0&&pos<tG.length){tot++;if(oG[pos]===tG[pos])cor++;}
 }
 
 // RENDER
 function render(){
-  document.getElementById('typed-out').textContent=out;
-  const tw=document.getElementById('typed-wrap');
-  tw.className='typed-wrap'+(halant?' halant':'')+(active?' active':'');
-
-  const shb=document.getElementById('shift-badge');
-  shb.className='badge'+(shifted?' on':'');
-  const hb=document.getElementById('halant-badge');
-  hb.className='badge danger'+(halant?' on':'');
-
+  document.getElementById('tout').textContent=out;
+  const tb=document.getElementById('tbox');
+  tb.className='tbox'+(halant?' hl':'')+(isOn?' on':'');
+  document.getElementById('sbdg').className='bdg'+(shifted?' on':'');
+  document.getElementById('hbdg').className='bdg red'+(halant?' on':'');
   const tG=gsplit(ALL[idx].t),oG=gsplit(out);
   let html='',ok=0;
   tG.forEach((c,i)=>{
@@ -628,24 +497,24 @@ function render(){
     else cls='ch bad';
     html+=`<span class="${cls}">${c}</span>`;
   });
-  document.getElementById('target-text').innerHTML=html;
+  document.getElementById('target').innerHTML=html;
   hlNext(tG,oG);
-  if(!done&&oG.length>=tG.length&&out.length>0){done=true;showResult(ok);}
+  if(!ldone&&oG.length>=tG.length&&out.length>0){ldone=true;showResult(ok);}
 }
 
 function showResult(ok){
   const el=started?Math.max((Date.now()-t0)/1000,1):1;
   const wpm=Math.round((ok/5)/(el/60));
-  const acc=total>0?Math.round((correct/total)*100):100;
+  const acc=tot>0?Math.round((cor/tot)*100):100;
   const stars=acc>=95?3:acc>=80?2:acc>=60?1:0;
   const prev=SC[idx]||{stars:0,wpm:0};
   if(stars>prev.stars||(stars===prev.stars&&wpm>prev.wpm)){SC[idx]={stars,wpm,acc};localStorage.setItem('odiaV9',JSON.stringify(SC));}
-  document.getElementById('r-wpm').textContent=wpm;
-  document.getElementById('r-acc').textContent=acc+'%';
-  document.getElementById('r-time').textContent=Math.round(el)+'s';
-  document.getElementById('r-stars').textContent='★'.repeat(stars)+'☆'.repeat(3-stars);
-  document.getElementById('r-msg').textContent=['ଆହୁରି ଅଭ୍ୟାସ 💪','ଭଲ! 👍','ଦୁର୍ଦ୍ଧାନ୍ତ! 🌟','Perfect! 🎉'][stars];
-  document.getElementById('result-bar').classList.add('show');
+  document.getElementById('rwpm').textContent=wpm;
+  document.getElementById('racc').textContent=acc+'%';
+  document.getElementById('rtime').textContent=Math.round(el)+'s';
+  document.getElementById('rstars').textContent='★'.repeat(stars)+'☆'.repeat(3-stars);
+  document.getElementById('rmsg').textContent=['ଆହୁରି ଅଭ୍ୟାସ 💪','ଭଲ! 👍','ଦୁର୍ଦ୍ଧାନ୍ତ! 🌟','Perfect! 🎉'][stars];
+  document.getElementById('rbar').classList.add('show');
   buildStrip();
 }
 
@@ -654,19 +523,19 @@ function nextL(){if(idx<ALL.length-1)idx++;buildStrip();resetL();}
 function prevL(){if(idx>0)idx--;buildStrip();resetL();}
 
 function resetL(){
-  out='';halant=false;started=false;done=false;total=0;correct=0;
-  document.getElementById('typed-out').textContent='';
-  document.getElementById('result-bar').classList.remove('show');
+  out='';halant=false;started=false;ldone=false;tot=0;cor=0;
+  document.getElementById('tout').textContent='';
+  document.getElementById('rbar').classList.remove('show');
   const L=ALL[idx];
-  const tag=L.lv==='beg'?'🌱':L.lv==='int'?'⚡':'🏆';
-  document.getElementById('lname').textContent=tag+' '+L.n;
-  document.getElementById('lcount').textContent=(idx+1)+'/'+ALL.length;
+  const em=L.lv==='beg'?'🌱':L.lv==='int'?'⚡':'🏆';
+  document.getElementById('lbadge').textContent=em+' '+L.n;
+  document.getElementById('lcnt').textContent=(idx+1)+'/'+ALL.length;
   document.querySelectorAll('.key.glow').forEach(k=>k.classList.remove('glow'));
-  document.getElementById('kb-hint').innerHTML='<i class="fa-solid fa-hand-point-right"></i> Click the box above and start typing';
+  clearFingers();
+  document.getElementById('hintbar').innerHTML='<i class="fa-solid fa-hand-point-right"></i> Click the box above and start typing';
   render();
 }
 
-// STRIP
 function buildStrip(){
   const s=document.getElementById('strip');s.innerHTML='';
   ALL.forEach((l,i)=>{
@@ -675,29 +544,48 @@ function buildStrip(){
     div.className='lc'+(i===idx?' active':'')+(sc.stars>0?' done':'');
     const tag=l.lv==='beg'?'beg':l.lv==='int'?'int':'exp';
     const em=l.lv==='beg'?'🌱':l.lv==='int'?'⚡':'🏆';
-    div.innerHTML=`<span class="lc-tag ${tag}">${em}</span><div class="lc-name">${l.n}</div><div class="lc-stars">${'★'.repeat(sc.stars)}${'☆'.repeat(3-sc.stars)}</div>`;
+    div.innerHTML=`<span class="ltag ${tag}">${em}</span><div class="lc-n">${l.n}</div><div class="lc-s">${'★'.repeat(sc.stars)}${'☆'.repeat(3-sc.stars)}</div>`;
     div.onclick=()=>{idx=i;buildStrip();resetL();};
     s.appendChild(div);
     if(i===idx)setTimeout(()=>div.scrollIntoView({block:'nearest',inline:'center'}),50);
   });
 }
 
-// HIGHLIGHT NEXT KEY
+// HIGHLIGHT NEXT KEY + FINGER
+let activeFingerIdx=-1;
+function clearFingers(){
+  document.querySelectorAll('.finger-path').forEach(el=>{
+    el.classList.remove('active');
+    el.style.removeProperty('--fc');
+  });
+  activeFingerIdx=-1;
+}
+
 function hlNext(tG,oG){
   document.querySelectorAll('.key.glow').forEach(k=>k.classList.remove('glow'));
-  const bar=document.getElementById('kb-hint');
+  clearFingers();
+  const bar=document.getElementById('hintbar');
   if(oG.length>=tG.length)return;
   const nc=tG[oG.length];if(!nc||nc===' ')return;
   const fc=[...nc.replace(ZWNJ,'')][0];if(!fc)return;
   for(const[k,v]of Object.entries(KM)){
     if(v[0]===fc||v[1]===fc){
-      const el=document.getElementById('key-'+k);
-      if(el){el.classList.add('glow');}
-      const isS=v[1]===fc;
+      // Glow key
+      const kEl=document.getElementById('key-'+k);
+      if(kEl)kEl.classList.add('glow');
+      // Glow finger
       const fi=FK[k]??4;
-      const col=FCOLS[fi]||'#fff';
-      const fn=FNAMES[fi]||'';
-      bar.innerHTML=`<span style="color:${col}"><i class="fa-solid fa-hand-point-right"></i> ${isS?'Shift + ':''}<b style="font-size:13px;">${k.toUpperCase()}</b> &nbsp;·&nbsp; ${fn}</span>`;
+      const fid=FSVG[fi];
+      const col=FCOL[fi];
+      if(fid){
+        const fEl=document.getElementById(fid);
+        if(fEl){
+          fEl.classList.add('active');
+          fEl.style.setProperty('--fc',col);
+        }
+      }
+      const isS=v[1]===fc;
+      bar.innerHTML=`<span style="color:${col}"><i class="fa-solid fa-hand-point-right"></i> ${isS?'<b>Shift</b> + ':''}<b style="font-size:14px;color:#fff;">${k.toUpperCase()}</b>&nbsp;&nbsp;·&nbsp;&nbsp;${FNAME[fi]}</span>`;
       return;
     }
   }
@@ -705,152 +593,129 @@ function hlNext(tG,oG){
 
 // ACTIVATE
 function activate(){
-  document.getElementById('hidden-input').focus();
-  active=true;
-  document.getElementById('typed-wrap').classList.add('active');
+  document.getElementById('hi').focus();
+  isOn=true;
+  document.getElementById('tbox').classList.add('on');
   document.getElementById('bcur').classList.add('show');
 }
-document.getElementById('hidden-input').addEventListener('blur',()=>{
-  active=false;
-  document.getElementById('typed-wrap').classList.remove('active');
+document.getElementById('hi').addEventListener('blur',()=>{
+  isOn=false;
+  document.getElementById('tbox').classList.remove('on');
   document.getElementById('bcur').classList.remove('show');
 });
 
-// DESKTOP KEYBOARD
+// DESKTOP KEYS
 document.addEventListener('keydown',e=>{
-  if(e.key==='Shift'){shifted=true;document.getElementById('shift-badge').classList.add('on');return;}
+  if(e.key==='Shift'){shifted=true;document.getElementById('sbdg').classList.add('on');return;}
   if(['F5','F12','F1','F2','F3','F4','Tab'].includes(e.key))return;
   if(e.ctrlKey||e.metaKey||e.altKey)return;
   e.preventDefault();
-  if(!active)activate();
+  if(!isOn)activate();
   const sp={'Backspace':'Backspace',' ':' ','Enter':'Enter','=':'=','-':'-','.':'.',',':',','[':'[',']':']',';':';',"'":"'",'/':"/",'`':'`'};
   const k=sp[e.key]||(e.key.length===1?e.key.toLowerCase():null);
   if(!k)return;
   proc(k,e.shiftKey);
   const el=document.getElementById('key-'+k);
   if(el){el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);}
-  if(e.shiftKey&&k!=='Backspace'&&k!=='Enter'){shifted=false;document.getElementById('shift-badge').classList.remove('on');}
+  if(e.shiftKey&&k!=='Backspace'&&k!=='Enter'){shifted=false;document.getElementById('sbdg').classList.remove('on');}
 });
-document.addEventListener('keyup',e=>{
-  if(e.key==='Shift'){shifted=false;document.getElementById('shift-badge').classList.remove('on');}
-});
+document.addEventListener('keyup',e=>{if(e.key==='Shift'){shifted=false;document.getElementById('sbdg').classList.remove('on');}});
 
 // MOBILE
 const isMob=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-const hi=document.getElementById('hidden-input');
+const hiEl=document.getElementById('hi');
 if(isMob){
-  hi.setAttribute('inputmode','text');
-  hi.setAttribute('autocapitalize','none');
+  hiEl.setAttribute('inputmode','text');hiEl.setAttribute('autocapitalize','none');
   let lv='';
-  hi.addEventListener('input',function(){
+  hiEl.addEventListener('input',function(){
     const cur=this.value;
     if(cur.length<lv.length){proc('Backspace',false);}
-    else{
-      const added=cur.slice(lv.length);
-      for(const ch of added){
-        const lo=ch.toLowerCase();
-        if(lo===' ')proc(' ',false);
-        else if(lo==='\n'){if(done)advance();}
-        else if(KM[lo])proc(lo,ch!==lo&&ch===ch.toUpperCase());
-        else if(ch==='।')proc('.',false);
-      }
-    }
-    lv=cur;
-    if(this.value.length>10){this.value='';lv='';}
+    else{const added=cur.slice(lv.length);for(const ch of added){const lo=ch.toLowerCase();if(lo===' ')proc(' ',false);else if(lo==='\n'){if(ldone)advance();}else if(KM[lo])proc(lo,ch!==lo&&ch===ch.toUpperCase());else if(ch==='।')proc('.',false);}}
+    lv=cur;if(this.value.length>10){this.value='';lv='';}
   });
-  hi.addEventListener('keydown',function(e){
+  hiEl.addEventListener('keydown',function(e){
     if(e.key==='Backspace'){e.preventDefault();proc('Backspace',false);this.value=this.value.slice(0,-1);lv=this.value;}
-    if(e.key==='Enter'){e.preventDefault();if(done)advance();}
+    if(e.key==='Enter'){e.preventDefault();if(ldone)advance();}
   });
-}else{
-  hi.setAttribute('inputmode','none');
-}
+}else{hiEl.setAttribute('inputmode','none');}
 
-// BUILD MINIMALIST KEYBOARD
+// BUILD KEYBOARD
 const ROWS=[
   ['`','1','2','3','4','5','6','7','8','9','0','-','='],
   ['q','w','e','r','t','y','u','i','o','p','[',']'],
-  ['a','s','d','f','g','h','j','k','l',";",'\''],
+  ['a','s','d','f','g','h','j','k','l',';',"'"],
   ['z','x','c','v','b','n','m',',','.','/',]
 ];
-const HOME_BUMP=new Set(['f','j']);
-const FKEY=new Set(['f']);
+const HBUMP=new Set(['f','j']);
 
 function buildKB(){
   const kb=document.getElementById('kb');
-  kb.style.cssText='display:flex;flex-direction:column;gap:4px;';
-
+  kb.style.cssText='display:flex;flex-direction:column;gap:3px;';
   ROWS.forEach((row,ri)=>{
     const div=document.createElement('div');
-    div.className=`kb-row r${ri+1}`;
-    div.style.cssText='display:flex;gap:4px;align-items:center;';
-
-    // Left special
-    const lsp=mkSp(ri===0?'Esc':ri===1?'Tab':ri===2?'Caps':ri===3?'Shift':'Ctrl',
-      ri===0?'w-fn':ri===1?'w-tab':ri===2?'w-caps':ri===3?'w-shift-l':'w-fn');
-    div.appendChild(lsp);
-
-    row.forEach(k=>div.appendChild(mkKey(k,ri)));
-
-    // Right special
-    const rsp=mkSp(ri===0?'Bksp':ri===1?'\\':ri===2?'Enter':ri===3?'Shift':'',
-      ri===0?'w-bksp':ri===1?'w-fn':ri===2?'w-enter':ri===3?'w-shift-r':'w-fn');
-    if(ri===0)rsp.onclick=()=>{proc('Backspace',false);activate();};
-    if(ri===2)rsp.onclick=()=>{if(done)advance();else activate();};
-    if(ri===3)rsp.onclick=()=>{shifted=!shifted;document.getElementById('shift-badge').classList.toggle('on',shifted);};
-    div.appendChild(rsp);
+    div.className='krow';div.style.cssText='display:flex;gap:3px;align-items:center;';
+    // left special
+    [['Esc','wfn'],['Tab','wtab'],['Caps','wcaps'],['Shift','wshl']][ri].slice(0,2).forEach(([lbl,cls])=>{
+      const sp=mkSp(lbl,cls);
+      if(ri===3)sp.onclick=()=>{shifted=!shifted;document.getElementById('sbdg').classList.toggle('on',shifted);};
+      div.appendChild(sp);
+    });
+    row.forEach(k=>div.appendChild(mkKey(k)));
+    // right special
+    [['Bksp','wbk'],['\\','wfn'],['Enter','went'],['Shift','wshr']][ri].slice(0,2).forEach(([lbl,cls])=>{
+      const sp=mkSp(lbl,cls);
+      if(ri===0)sp.onclick=()=>{proc('Backspace',false);activate();};
+      if(ri===2)sp.onclick=()=>{if(ldone)advance();else activate();};
+      if(ri===3)sp.onclick=()=>{shifted=!shifted;document.getElementById('sbdg').classList.toggle('on',shifted);};
+      div.appendChild(sp);
+    });
     kb.appendChild(div);
   });
-
-  // Space row
+  // space row
   const sr=document.createElement('div');
-  sr.style.cssText='display:flex;gap:4px;justify-content:center;align-items:center;';
-  ['Ctrl','Alt'].forEach(l=>{sr.appendChild(mkSp(l,'w-fn'));});
+  sr.style.cssText='display:flex;gap:3px;justify-content:center;align-items:center;';
+  [mkSp('Ctrl','wfn'),mkSp('Alt','wfn')].forEach(s=>sr.appendChild(s));
   const sp=document.createElement('div');
-  sp.className='key w-space';
-  sp.style.cssText='--fcol:rgba(180,200,240,0.4);';
-  sp.innerHTML='<span class="sp-label">SPACE</span>';
+  sp.className='key wsp';
+  sp.style.setProperty('--fc','rgba(160,180,220,0.4)');
+  sp.innerHTML='<span class="splab">SPACE</span>';
   sp.onclick=()=>{proc(' ',false);activate();};
   sr.appendChild(sp);
-  ['Alt','Ctrl'].forEach(l=>{sr.appendChild(mkSp(l,'w-fn'));});
+  [mkSp('Alt','wfn'),mkSp('Ctrl','wfn')].forEach(s=>sr.appendChild(s));
   kb.appendChild(sr);
 }
 
-function mkKey(k,ri){
+function mkKey(k){
   const m=KM[k]||['',''];
   const fi=FK[k]??4;
-  const col=FCOLS[fi];
+  const col=FCOL[fi];
   const el=document.createElement('div');
-  el.className='key'+(HOME_BUMP.has(k)?' home':'')+(FKEY.has(k)?' fkey':'');
+  el.className='key'+(HBUMP.has(k)?' hbump':'');
   el.id='key-'+k;
-  el.style.setProperty('--fcol',col);
-  const shiftLabel=k==='y'?'Ya↑':m[1]||'';
-  const mainLabel=k==='f'?'HL':m[0]||k.toUpperCase();
-  el.innerHTML=
-    `<span class="k-shift odia-label">${shiftLabel}</span>`+
-    `<span class="k-eng">${k.toUpperCase()}</span>`+
-    `<span class="k-main odia-label">${mainLabel}</span>`;
-  el.onclick=()=>{proc(k,shifted);if(shifted){shifted=false;document.getElementById('shift-badge').classList.remove('on');}el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);activate();};
+  el.style.setProperty('--fc',col);
+  const main=k==='f'?'HL↓':m[0]||'';
+  const shift=k==='y'?'Ya↑':m[1]||'';
+  el.innerHTML=`<span class="ks olabel">${shift}</span><span class="ke">${k.toUpperCase()}</span><span class="km olabel">${main}</span>`;
+  el.onclick=()=>{proc(k,shifted);if(shifted){shifted=false;document.getElementById('sbdg').classList.remove('on');}el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);activate();};
   return el;
 }
-
-function mkSp(label,cls){
+function mkSp(lbl,cls){
   const el=document.createElement('div');
-  el.className='key sp-label '+cls;
-  el.innerHTML=`<span class="sp-label">${label}</span>`;
+  el.className='key '+cls;
+  el.innerHTML=`<span class="splab">${lbl}</span>`;
   return el;
 }
 
 // TOGGLES
 function toggleHand(){
   showHand=!showHand;
-  document.getElementById('hand-overlay').classList.toggle('hidden',!showHand);
-  document.getElementById('toggle-hand').classList.toggle('on',showHand);
+  document.getElementById('handswrap').style.display=showHand?'flex':'none';
+  document.getElementById('thand').classList.toggle('on',showHand);
 }
-function toggleOdia(){
-  showOdia=!showOdia;
-  document.querySelectorAll('.odia-label').forEach(el=>{el.style.opacity=showOdia?'1':'0';});
-  document.getElementById('toggle-odia').classList.toggle('on',showOdia);
+function toggleLabels(){
+  showLabels=!showLabels;
+  document.querySelectorAll('.olabel').forEach(el=>{el.style.opacity=showLabels?'1':'0';});
+  document.getElementById('tlabels').classList.toggle('on',showLabels);
 }
 
 buildKB();buildStrip();resetL();
