@@ -123,78 +123,61 @@ body{display:flex;flex-direction:column;}
 .kctrl:hover{color:var(--text2);}
 .kctrl.on{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:var(--text);}
 
-/* ── THE KEYBOARD — Akruti style ── */
+/* ── THE KEYBOARD — Akruti tan/gold 3D style ── */
 .kb-wrap{
   flex:1;min-height:0;
   display:flex;flex-direction:column;
-  padding:6px 10px 2px;gap:3px;
+  padding:8px 10px 6px;gap:4px;
   position:relative;
+  background:linear-gradient(160deg,#7a5e3c,#6b5234);
+  border-radius:8px;
+  margin:4px 8px;
+  box-shadow:inset 0 2px 6px rgba(0,0,0,.5),0 2px 8px rgba(0,0,0,.4);
 }
 .krow{display:flex;gap:3px;align-items:flex-end;}
 
-/* BASE KEY — 3D tan/gold style like Akruti reference */
+/* BASE KEY — exact Akruti tan/gold 3D style */
 .key{
   position:relative;
   display:grid;
   grid-template-columns:1fr 1fr;
   grid-template-rows:1fr 1fr;
-  width:44px;height:42px;
-  border-radius:4px;
-  background:linear-gradient(160deg,#2a2f3e 0%,#1e2330 60%,#171b26 100%);
-  border:1px solid rgba(255,255,255,.1);
-  border-top-color:rgba(255,255,255,.18);
-  border-left-color:rgba(255,255,255,.14);
-  border-bottom:2px solid rgba(0,0,0,.5);
+  min-width:42px;height:42px;
+  border-radius:5px;
+  background:linear-gradient(170deg,#d4b896 0%,#c4a478 45%,#b8956a 100%);
+  border-top:2px solid #e8cca8;
+  border-left:1.5px solid #d0b088;
+  border-right:1.5px solid #8b6040;
+  border-bottom:3px solid #6b4a28;
+  box-shadow:0 3px 5px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.35);
   cursor:pointer;user-select:none;
-  transition:all .07s;
+  transition:transform .07s,box-shadow .07s;
   flex-shrink:0;
-  padding:3px 3px 2px;
+  padding:3px 4px 2px;
   overflow:hidden;
-  box-shadow:0 2px 4px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.07);
 }
-/* finger colour strip at bottom */
-.key::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
-  background:var(--fc,transparent);opacity:.7;
-}
-.key:hover{background:linear-gradient(160deg,#313749,#252a39,#1c2030);border-top-color:rgba(255,255,255,.22);}
-.key:active,.key.pressed{
-  transform:translateY(2px);
-  border-bottom-width:0px;
-  box-shadow:0 0 2px rgba(0,0,0,.4);
-  background:linear-gradient(160deg,#1e2330,#171b26);
-}
-/* GLOW = next key */
+.key:hover{background:linear-gradient(170deg,#dcc09e,#ccac80,#c09870);}
+.key:active,.key.pressed{transform:translateY(2px);border-bottom-width:1px;box-shadow:0 1px 2px rgba(0,0,0,.4);}
 .key.glow{
-  background:linear-gradient(160deg,#2d3420,#1e2415,#161c10);
-  border-color:rgba(240,165,0,.5);
-  border-top-color:rgba(240,165,0,.7);
-  box-shadow:0 2px 4px rgba(0,0,0,.4),0 0 12px rgba(240,165,0,.3),inset 0 1px 0 rgba(240,165,0,.15);
-  animation:kp .75s ease-in-out infinite;
+  background:linear-gradient(170deg,#ffe0a0,#f0c860,#e0b040);
+  border-top-color:#fff8e0;border-bottom-color:#8b6800;
+  box-shadow:0 3px 5px rgba(0,0,0,.4),0 0 16px rgba(255,200,0,.7),inset 0 1px 0 rgba(255,255,255,.5);
+  animation:kglow .75s ease-in-out infinite;
 }
-@keyframes kp{
-  0%,100%{box-shadow:0 2px 4px rgba(0,0,0,.4),0 0 8px rgba(240,165,0,.25);}
-  50%{box-shadow:0 2px 4px rgba(0,0,0,.4),0 0 18px rgba(240,165,0,.5);}
-}
-/* Home row bump */
-.key.hbump::before{
-  content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);
-  width:8px;height:1.5px;background:rgba(255,255,255,.25);border-radius:1px;
-}
+@keyframes kglow{0%,100%{box-shadow:0 3px 5px rgba(0,0,0,.4),0 0 10px rgba(255,200,0,.5);}50%{box-shadow:0 3px 5px rgba(0,0,0,.4),0 0 24px rgba(255,210,0,.9);}}
+.key.hbump::before{content:'';position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:10px;height:2px;background:rgba(60,30,0,.5);border-radius:1px;}
+.key::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2.5px;background:var(--fc,transparent);border-radius:0 0 4px 4px;opacity:.85;}
 
-/* KEY LABEL LAYOUT — 4 quadrants like reference image */
-/* top-left = shift Odia | top-right = shift English */
-/* bottom-left = normal Odia | bottom-right = normal English */
-.k-tl{grid-column:1;grid-row:1;font-size:9px;font-family:'Noto Sans Oriya',serif;color:#a0aec0;line-height:1;align-self:start;justify-self:start;}
-.k-tr{grid-column:2;grid-row:1;font-size:7px;font-family:'Segoe UI',sans-serif;color:#5a6480;font-weight:700;line-height:1;align-self:start;justify-self:end;}
-.k-bl{grid-column:1;grid-row:2;font-size:11px;font-family:'Noto Sans Oriya',serif;color:#dde4f0;font-weight:700;line-height:1;align-self:end;justify-self:start;}
-.k-br{grid-column:2;grid-row:2;font-size:8px;font-family:'Segoe UI',sans-serif;color:#4a5470;font-weight:700;line-height:1;align-self:end;justify-self:end;}
-
-/* special wide keys */
-.key.wtab{width:60px;}.key.wcaps{width:68px;}.key.wshl{width:84px;}.key.wshr{width:84px;}
-.key.wbk{width:60px;}.key.went{width:72px;}.key.wsp{width:220px;height:36px;}
-.key.wfn{width:38px;opacity:.45;}
-.splab{font-size:8px;color:var(--text3);font-family:'Segoe UI',sans-serif;font-weight:500;grid-column:1/-1;grid-row:1/-1;display:flex;align-items:center;justify-content:center;}
+/* KEY LABELS — 4 quadrants like the reference image */
+.k-tl{grid-column:1;grid-row:1;font-size:9px;font-family:'Noto Sans Oriya',serif;color:#3a1a00;line-height:1;align-self:start;justify-self:start;font-weight:600;}
+.k-tr{grid-column:2;grid-row:1;font-size:7px;color:#7a5030;font-weight:700;line-height:1;align-self:start;justify-self:end;}
+.k-bl{grid-column:1;grid-row:2;font-size:13px;font-family:'Noto Sans Oriya',serif;color:#1a0800;font-weight:700;line-height:1;align-self:end;justify-self:start;}
+.k-br{grid-column:2;grid-row:2;font-size:8px;color:#5a3818;font-weight:700;line-height:1;align-self:end;justify-self:end;}
+.key.wtab{min-width:60px;}.key.wcaps{min-width:70px;}.key.wshl{min-width:86px;}.key.wshr{min-width:86px;}
+.key.wbk{min-width:62px;}.key.went{min-width:74px;}.key.wsp{min-width:240px;height:36px;}
+.key.wfn{min-width:38px;opacity:.5;}
+.splab{font-size:9px;color:#3a1a00;font-weight:700;grid-column:1/-1;grid-row:1/-1;display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;}
+.kb-footer{text-align:center;font-size:9px;color:#e8cca8;font-weight:600;letter-spacing:.5px;padding:3px 0 0;}
 
 /* ═══ TRANSPARENT HANDS ═══ */
 .hands-wrap{
@@ -307,6 +290,9 @@ body{display:flex;flex-direction:column;}
     <!-- KEYBOARD ROWS -->
     <div class="kb-wrap" id="kbwrap">
       <div id="kb"></div>
+
+      <!-- AKRUTI FOOTER LABEL -->
+      <div class="kb-footer">Keyboard Layout — Akruti English Phonetic &nbsp;·&nbsp; Halant = f &nbsp;·&nbsp; Nukta = ]</div>
 
       <!-- TRANSPARENT HANDS SVG -->
       <div class="hands-wrap" id="handswrap">
@@ -695,7 +681,7 @@ function buildKB(){
   kb.appendChild(sr);
 }
 
-// Full Akruti map with BOTH normal and shift Odia chars — from reference image
+// Akruti full map: [normalOdia, shiftOdia, engLower, engUpper]
 const AK={
   '`': ['\u0B13','\u0B14','~','\u0B01'],   // ଓ ଔ ~ ଁ
   '1': ['\u0B67','!','1','!'],
