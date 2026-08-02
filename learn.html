@@ -126,15 +126,22 @@ body{display:flex;flex-direction:column;}
 /* ── THE KEYBOARD — Akruti tan/gold 3D style ── */
 .kb-wrap{
   flex:1;min-height:0;
-  display:flex;flex-direction:column;
-  padding:8px 10px 6px;gap:4px;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:10px 14px 6px;gap:5px;
   position:relative;
-  background:linear-gradient(160deg,#7a5e3c,#6b5234);
-  border-radius:8px;
-  margin:4px 8px;
-  box-shadow:inset 0 2px 6px rgba(0,0,0,.5),0 2px 8px rgba(0,0,0,.4);
+  background:linear-gradient(170deg,#8B7355 0%,#7a6245 50%,#6b5234 100%);
+  border-radius:10px;
+  margin:4px 10px;
+  box-shadow:inset 0 3px 8px rgba(0,0,0,.6),0 3px 10px rgba(0,0,0,.5);
 }
-.krow{display:flex;gap:3px;align-items:flex-end;}
+/* Every row center-aligned */
+.krow{
+  display:flex;
+  gap:4px;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
 
 /* BASE KEY — exact Akruti tan/gold 3D style */
 .key{
@@ -173,11 +180,29 @@ body{display:flex;flex-direction:column;}
 .k-tr{grid-column:2;grid-row:1;font-size:7px;color:#7a5030;font-weight:700;line-height:1;align-self:start;justify-self:end;}
 .k-bl{grid-column:1;grid-row:2;font-size:13px;font-family:'Noto Sans Oriya',serif;color:#1a0800;font-weight:700;line-height:1;align-self:end;justify-self:start;}
 .k-br{grid-column:2;grid-row:2;font-size:8px;color:#5a3818;font-weight:700;line-height:1;align-self:end;justify-self:end;}
-.key.wtab{min-width:60px;}.key.wcaps{min-width:70px;}.key.wshl{min-width:86px;}.key.wshr{min-width:86px;}
-.key.wbk{min-width:62px;}.key.went{min-width:74px;}.key.wsp{min-width:240px;height:36px;}
-.key.wfn{min-width:38px;opacity:.5;}
-.splab{font-size:9px;color:#3a1a00;font-weight:700;grid-column:1/-1;grid-row:1/-1;display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;}
-.kb-footer{text-align:center;font-size:9px;color:#e8cca8;font-weight:600;letter-spacing:.5px;padding:3px 0 0;}
+/* Standard key = 44px wide × 44px tall */
+.key{min-width:44px;width:44px;height:44px;}
+/* Wide keys — sized to fill rows to same total width */
+.key.w-bksp  {width:86px;}
+.key.w-tab   {width:74px;}
+.key.w-backsl{width:58px;}
+.key.w-caps  {width:84px;}
+.key.w-enter {width:96px;}
+.key.w-lshift{width:108px;}
+.key.w-rshift{width:108px;}
+.key.w-fn    {width:52px;opacity:.55;}
+.key.w-space {width:300px;height:38px;}
+.splab{
+  font-size:9px;color:#3a1a00;font-weight:700;
+  grid-column:1/-1;grid-row:1/-1;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Segoe UI',sans-serif;
+  text-align:center;
+}
+.kb-footer{
+  text-align:center;font-size:9px;color:#e8cca8;
+  font-weight:600;letter-spacing:.5px;padding:4px 0 0;flex-shrink:0;
+}
 
 /* ═══ TRANSPARENT HANDS ═══ */
 .hands-wrap{
@@ -635,50 +660,61 @@ if(isMob){
   });
 }else{hiEl.setAttribute('inputmode','none');}
 
-// BUILD KEYBOARD
-const ROWS=[
-  ['`','1','2','3','4','5','6','7','8','9','0','-','='],
-  ['q','w','e','r','t','y','u','i','o','p','[',']'],
-  ['a','s','d','f','g','h','j','k','l',';',"'"],
-  ['z','x','c','v','b','n','m',',','.','/',]
-];
+// BUILD KEYBOARD — proper QWERTY, all rows center-aligned
 const HBUMP=new Set(['f','j']);
+
+function mkSp(lbl,cls,fn){
+  const el=document.createElement('div');
+  el.className='key '+cls;
+  el.innerHTML=`<span class="splab">${lbl}</span>`;
+  if(fn)el.onclick=fn;
+  return el;
+}
 
 function buildKB(){
   const kb=document.getElementById('kb');
-  kb.style.cssText='display:flex;flex-direction:column;gap:3px;';
-  ROWS.forEach((row,ri)=>{
-    const div=document.createElement('div');
-    div.className='krow';div.style.cssText='display:flex;gap:3px;align-items:center;';
-    // left special
-    [['Esc','wfn'],['Tab','wtab'],['Caps','wcaps'],['Shift','wshl']][ri].slice(0,2).forEach(([lbl,cls])=>{
-      const sp=mkSp(lbl,cls);
-      if(ri===3)sp.onclick=()=>{shifted=!shifted;document.getElementById('sbdg').classList.toggle('on',shifted);};
-      div.appendChild(sp);
-    });
-    row.forEach(k=>div.appendChild(mkKey(k)));
-    // right special
-    [['Bksp','wbk'],['\\','wfn'],['Enter','went'],['Shift','wshr']][ri].slice(0,2).forEach(([lbl,cls])=>{
-      const sp=mkSp(lbl,cls);
-      if(ri===0)sp.onclick=()=>{proc('Backspace',false);activate();};
-      if(ri===2)sp.onclick=()=>{if(ldone)advance();else activate();};
-      if(ri===3)sp.onclick=()=>{shifted=!shifted;document.getElementById('sbdg').classList.toggle('on',shifted);};
-      div.appendChild(sp);
-    });
-    kb.appendChild(div);
-  });
-  // space row
-  const sr=document.createElement('div');
-  sr.style.cssText='display:flex;gap:3px;justify-content:center;align-items:center;';
-  [mkSp('Ctrl','wfn'),mkSp('Alt','wfn')].forEach(s=>sr.appendChild(s));
+  kb.style.cssText='display:flex;flex-direction:column;gap:5px;width:100%;';
+
+  // ROW 1 — number row (14 keys + Bksp)
+  const r1=document.createElement('div');r1.className='krow';
+  ['`','1','2','3','4','5','6','7','8','9','0','-','='].forEach(k=>r1.appendChild(mkKey(k)));
+  r1.appendChild(mkSp('⌫','w-bksp',()=>{proc('Backspace',false);activate();}));
+  kb.appendChild(r1);
+
+  // ROW 2 — QWERTY (Tab + 12 keys + \)
+  const r2=document.createElement('div');r2.className='krow';
+  r2.appendChild(mkSp('Tab ⇥','w-tab'));
+  ['q','w','e','r','t','y','u','i','o','p','[',']'].forEach(k=>r2.appendChild(mkKey(k)));
+  r2.appendChild(mkSp('\\','w-backsl'));
+  kb.appendChild(r2);
+
+  // ROW 3 — home row (Caps + 11 keys + Enter)
+  const r3=document.createElement('div');r3.className='krow';
+  r3.appendChild(mkSp('Caps','w-caps'));
+  ['a','s','d','f','g','h','j','k','l',';',"'"].forEach(k=>r3.appendChild(mkKey(k)));
+  r3.appendChild(mkSp('Enter ↵','w-enter',()=>{if(ldone)advance();else activate();}));
+  kb.appendChild(r3);
+
+  // ROW 4 — ZXCV (Shift + 10 keys + Shift)
+  const r4=document.createElement('div');r4.className='krow';
+  r4.appendChild(mkSp('⇧ Shift','w-lshift',()=>{shifted=!shifted;document.getElementById('sbdg').classList.toggle('on',shifted);}));
+  ['z','x','c','v','b','n','m',',','.','/',].forEach(k=>r4.appendChild(mkKey(k)));
+  r4.appendChild(mkSp('⇧ Shift','w-rshift',()=>{shifted=!shifted;document.getElementById('sbdg').classList.toggle('on',shifted);}));
+  kb.appendChild(r4);
+
+  // ROW 5 — space row
+  const r5=document.createElement('div');r5.className='krow';
+  r5.appendChild(mkSp('Ctrl','w-fn'));
+  r5.appendChild(mkSp('Alt','w-fn'));
   const sp=document.createElement('div');
-  sp.className='key wsp';
-  sp.style.setProperty('--fc','rgba(160,180,220,0.4)');
-  sp.innerHTML='<span class="splab">SPACE</span>';
+  sp.className='key w-space';
+  sp.style.setProperty('--fc','rgba(200,190,160,0.5)');
+  sp.innerHTML='<span class="splab" style="font-size:12px;font-weight:700;">SPACE</span>';
   sp.onclick=()=>{proc(' ',false);activate();};
-  sr.appendChild(sp);
-  [mkSp('Alt','wfn'),mkSp('Ctrl','wfn')].forEach(s=>sr.appendChild(s));
-  kb.appendChild(sr);
+  r5.appendChild(sp);
+  r5.appendChild(mkSp('Alt','w-fn'));
+  r5.appendChild(mkSp('Ctrl','w-fn'));
+  kb.appendChild(r5);
 }
 
 // Akruti full map: [normalOdia, shiftOdia, engLower, engUpper]
@@ -732,36 +768,28 @@ const AK={
 };
 
 function mkKey(k){
-  const m=AK[k]||KM[k]||['','','',''];
+  const m=AK[k]||['','',k.toUpperCase(),''];
   const fi=FK[k]??4;
   const col=FCOL[fi];
   const el=document.createElement('div');
   el.className='key'+(HBUMP.has(k)?' hbump':'');
   el.id='key-'+k;
   el.style.setProperty('--fc',col);
-  // top-left=shift odia, top-right=eng letter, bottom-left=normal odia, bottom-right=eng key
-  const shOdia = k==='f'?'':k==='y'?'\u0B5F':m[1]||'';
-  const normOdia = k==='f'?'HL':m[0]||'';
-  const engUp = k.toUpperCase();
-  const engLo = m[2]||k;
+  // top-left=shift Odia, top-right=Eng key, bottom-left=normal Odia, bottom-right=Eng lower
+  const shOdia  = m[1]||'';
+  const normOdia= k==='f'?'HL↓':m[0]||'';
+  const engKey  = k.toUpperCase();
   el.innerHTML=
     `<span class="k-tl olabel">${shOdia}</span>`+
-    `<span class="k-tr">${engUp}</span>`+
+    `<span class="k-tr">${engKey}</span>`+
     `<span class="k-bl olabel">${normOdia}</span>`+
-    `<span class="k-br">${engLo}</span>`;
+    `<span class="k-br">${k}</span>`;
   el.onclick=()=>{
     proc(k,shifted);
     if(shifted){shifted=false;document.getElementById('sbdg').classList.remove('on');}
-    el.classList.add('pressed');
-    setTimeout(()=>el.classList.remove('pressed'),100);
+    el.classList.add('pressed');setTimeout(()=>el.classList.remove('pressed'),100);
     activate();
   };
-  return el;
-}
-function mkSp(lbl,cls){
-  const el=document.createElement('div');
-  el.className='key '+cls;
-  el.innerHTML=`<span class="splab">${lbl}</span>`;
   return el;
 }
 
