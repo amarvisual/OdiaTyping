@@ -46,7 +46,13 @@ nav{height:46px;flex-shrink:0;background:var(--panel);border-bottom:1px solid va
 
 /* BODY LAYOUT */
 body{display:flex;flex-direction:column;}
-.app{flex:1;display:grid;grid-template-rows:auto auto auto 1fr;min-height:0;overflow:hidden;}
+.app{
+  flex:1;
+  display:grid;
+  grid-template-rows:auto auto auto 1fr;
+  min-height:0;overflow:hidden;
+  width:100%;
+}
 @media(max-width:767px){.app{display:flex;flex-direction:column;overflow-y:auto;padding:8px;gap:8px;}}
 
 /* LESSON STRIP */
@@ -112,35 +118,48 @@ body{display:flex;flex-direction:column;}
 .rnxt{font-size:9px;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:3px;animation:p .9s infinite;}
 @keyframes p{0%,100%{opacity:1;}50%{opacity:.3;}}
 
-/* ═══ KEYBOARD + HANDS SECTION ═══ */
-.kb-sec{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;padding:0;}
+/* ═══ KEYBOARD + HANDS SECTION — full width ═══ */
+.kb-sec{
+  flex:1;display:flex;flex-direction:column;
+  min-height:0;overflow:hidden;
+  width:100%;
+}
 @media(max-width:767px){.kb-sec{display:none;}}
 
-.kb-header{padding:5px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:6px;}
+.kb-header{
+  padding:4px 16px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;gap:6px;
+  width:100%;
+}
 .kb-hint-bar{font-size:11px;color:var(--accent);font-weight:600;min-height:15px;display:flex;align-items:center;gap:5px;}
 .kb-controls{display:flex;gap:4px;}
 .kctrl{font-size:9px;padding:3px 8px;border-radius:4px;background:transparent;border:1px solid var(--border);color:var(--text3);cursor:pointer;transition:all .12s;font-weight:600;}
 .kctrl:hover{color:var(--text2);}
 .kctrl.on{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:var(--text);}
 
-/* ── THE KEYBOARD — Akruti tan/gold 3D style ── */
+/* ── THE KEYBOARD — full width, centered, smaller keys ── */
 .kb-wrap{
   flex:1;min-height:0;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:10px 14px 6px;gap:5px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:8px 12px 6px;gap:4px;
   position:relative;
   background:linear-gradient(170deg,#8B7355 0%,#7a6245 50%,#6b5234 100%);
   border-radius:10px;
-  margin:4px 10px;
+  margin:4px 8px;
   box-shadow:inset 0 3px 8px rgba(0,0,0,.6),0 3px 10px rgba(0,0,0,.5);
+  width:calc(100% - 16px);
+  box-sizing:border-box;
+  overflow:hidden;
 }
-/* Every row center-aligned */
+/* Every row center-aligned, full width */
 .krow{
   display:flex;
-  gap:4px;
+  gap:3px;
   align-items:center;
   justify-content:center;
   width:100%;
+  flex-wrap:nowrap;
 }
 
 /* BASE KEY — exact Akruti tan/gold 3D style */
@@ -180,39 +199,77 @@ body{display:flex;flex-direction:column;}
 .k-tr{grid-column:2;grid-row:1;font-size:7px;color:#7a5030;font-weight:700;line-height:1;align-self:start;justify-self:end;}
 .k-bl{grid-column:1;grid-row:2;font-size:13px;font-family:'Noto Sans Oriya',serif;color:#1a0800;font-weight:700;line-height:1;align-self:end;justify-self:start;}
 .k-br{grid-column:2;grid-row:2;font-size:8px;color:#5a3818;font-weight:700;line-height:1;align-self:end;justify-self:end;}
-/* Standard key = 44px wide × 44px tall */
-.key{min-width:44px;width:44px;height:44px;}
-/* Wide keys — sized to fill rows to same total width */
-.key.w-bksp  {width:86px;}
-.key.w-tab   {width:74px;}
-.key.w-backsl{width:58px;}
-.key.w-caps  {width:84px;}
-.key.w-enter {width:96px;}
-.key.w-lshift{width:108px;}
-.key.w-rshift{width:108px;}
-.key.w-fn    {width:52px;opacity:.55;}
-.key.w-space {width:300px;height:38px;}
+/* Keys — smaller, scale with container using vw clamp */
+.key{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  width:clamp(30px, 4.5vw, 48px);
+  height:clamp(30px, 4.2vw, 44px);
+  border-radius:4px;
+  background:linear-gradient(170deg,#d4b896 0%,#c4a478 45%,#b8956a 100%);
+  border-top:2px solid #e8cca8;
+  border-left:1.5px solid #d0b088;
+  border-right:1.5px solid #8b6040;
+  border-bottom:3px solid #6b4a28;
+  box-shadow:0 3px 5px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.35);
+  cursor:pointer;user-select:none;
+  transition:transform .07s,box-shadow .07s;
+  flex-shrink:0;
+  padding:2px 3px 2px;
+  overflow:hidden;
+}
+.key:hover{background:linear-gradient(170deg,#dcc09e,#ccac80,#c09870);}
+.key:active,.key.pressed{transform:translateY(2px);border-bottom-width:1px;box-shadow:0 1px 2px rgba(0,0,0,.4);}
+.key.glow{
+  background:linear-gradient(170deg,#ffe0a0,#f0c860,#e0b040);
+  border-top-color:#fff8e0;border-bottom-color:#8b6800;
+  box-shadow:0 3px 5px rgba(0,0,0,.4),0 0 16px rgba(255,200,0,.7),inset 0 1px 0 rgba(255,255,255,.5);
+  animation:kglow .75s ease-in-out infinite;
+}
+@keyframes kglow{0%,100%{box-shadow:0 3px 5px rgba(0,0,0,.4),0 0 10px rgba(255,200,0,.5);}50%{box-shadow:0 3px 5px rgba(0,0,0,.4),0 0 24px rgba(255,210,0,.9);}}
+.key.hbump::before{content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:8px;height:1.5px;background:rgba(60,30,0,.5);border-radius:1px;}
+.key::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--fc,transparent);border-radius:0 0 4px 4px;opacity:.85;}
+
+/* KEY LABELS — 4 quadrants */
+.k-tl{grid-column:1;grid-row:1;font-size:clamp(6px,0.8vw,9px);font-family:'Noto Sans Oriya',serif;color:#3a1a00;line-height:1;align-self:start;justify-self:start;font-weight:600;}
+.k-tr{grid-column:2;grid-row:1;font-size:clamp(5px,0.7vw,8px);color:#7a5030;font-weight:700;line-height:1;align-self:start;justify-self:end;}
+.k-bl{grid-column:1;grid-row:2;font-size:clamp(8px,1.2vw,13px);font-family:'Noto Sans Oriya',serif;color:#1a0800;font-weight:700;line-height:1;align-self:end;justify-self:start;}
+.k-br{grid-column:2;grid-row:2;font-size:clamp(5px,0.7vw,8px);color:#5a3818;font-weight:700;line-height:1;align-self:end;justify-self:end;}
+
+/* Wide keys — proportional */
+.key.w-bksp  {width:clamp(52px,8vw,86px);}
+.key.w-tab   {width:clamp(48px,7vw,74px);}
+.key.w-backsl{width:clamp(40px,5.5vw,58px);}
+.key.w-caps  {width:clamp(56px,8.5vw,84px);}
+.key.w-enter {width:clamp(60px,9vw,96px);}
+.key.w-lshift{width:clamp(72px,11vw,108px);}
+.key.w-rshift{width:clamp(72px,11vw,108px);}
+.key.w-fn    {width:clamp(32px,4vw,52px);opacity:.55;}
+.key.w-space {width:clamp(160px,25vw,300px);height:clamp(28px,3.5vw,38px);}
 .splab{
-  font-size:9px;color:#3a1a00;font-weight:700;
+  font-size:clamp(7px,0.9vw,10px);color:#3a1a00;font-weight:700;
   grid-column:1/-1;grid-row:1/-1;
   display:flex;align-items:center;justify-content:center;
-  font-family:'Segoe UI',sans-serif;
-  text-align:center;
+  font-family:'Segoe UI',sans-serif;text-align:center;
+  white-space:nowrap;
 }
 .kb-footer{
-  text-align:center;font-size:9px;color:#e8cca8;
-  font-weight:600;letter-spacing:.5px;padding:4px 0 0;flex-shrink:0;
+  text-align:center;font-size:clamp(7px,0.9vw,9px);color:#e8cca8;
+  font-weight:600;letter-spacing:.5px;padding:3px 0 0;flex-shrink:0;
 }
 
 /* ═══ TRANSPARENT HANDS ═══ */
 .hands-wrap{
   flex-shrink:0;
-  height:110px;
+  height:100px;
   position:relative;
   display:flex;
   align-items:flex-start;
   justify-content:center;
-  padding:0 10px 4px;
+  padding:0 8px 4px;
+  width:100%;
 }
 .hands-svg{width:100%;height:100%;}
 
@@ -313,8 +370,8 @@ body{display:flex;flex-direction:column;}
     </div>
 
     <!-- KEYBOARD ROWS -->
-    <div class="kb-wrap" id="kbwrap">
-      <div id="kb"></div>
+    <div class="kb-wrap" id="kbwrap" style="width:100%;">
+      <div id="kb" style="width:100%;"></div>
 
       <!-- AKRUTI FOOTER LABEL -->
       <div class="kb-footer">Keyboard Layout — Akruti English Phonetic &nbsp;·&nbsp; Halant = f &nbsp;·&nbsp; Nukta = ]</div>
