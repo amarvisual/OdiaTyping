@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Setup Google Analytics & Search Console | odiatyping.in Admin Guide</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--bg:#0b0e1a;--surface:#111827;--border:#1e2d47;--accent:#f59e0b;--green:#10b981;--blue:#3b82f6;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--white:#fff;}
+*{box-sizing:border-box;margin:0;padding:0;}body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:32px 24px;max-width:820px;margin:0 auto;}
+h1{font-size:28px;font-weight:800;color:var(--white);margin-bottom:8px;}
+.subtitle{font-size:14px;color:var(--text2);margin-bottom:36px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+h2{font-size:20px;font-weight:700;color:var(--white);margin:36px 0 12px;display:flex;align-items:center;gap:8px;}
+h3{font-size:16px;font-weight:700;color:var(--white);margin:20px 0 8px;}
+p{font-size:14px;color:var(--text2);margin-bottom:12px;line-height:1.8;}
+ol,ul{margin:10px 0 14px 20px;}
+li{font-size:14px;color:var(--text2);margin-bottom:8px;line-height:1.7;}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px;}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--accent);color:#000;border-radius:50%;font-size:11px;font-weight:800;margin-right:8px;flex-shrink:0;}
+.step-title{font-size:14px;font-weight:700;color:var(--white);display:flex;align-items:center;margin-bottom:8px;}
+.step p{margin-bottom:6px;}
+.code{background:#0f1420;border:1px solid var(--border);border-radius:6px;padding:12px 16px;font-family:monospace;font-size:12px;color:#a5f3fc;margin:10px 0;white-space:pre-wrap;word-break:break-all;}
+.tag{display:inline-block;background:rgba(245,158,11,.12);color:var(--accent);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:0 2px;}
+.url{color:var(--blue);word-break:break-all;}
+.note{background:rgba(16,185,129,.08);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13px;color:var(--text2);}
+.warn{background:rgba(245,158,11,.08);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13px;color:var(--text2);}
+.checklist{list-style:none;margin:12px 0;}
+.checklist li::before{content:'☐ ';color:var(--accent);}
+.checklist li.done::before{content:'✅ ';}
+</style>
+</head>
+<body>
+<h1>🔧 Google Analytics 4 + Search Console Setup Guide</h1>
+<p class="subtitle">Admin guide for odiatyping.in — complete step-by-step setup. This page is noindex.</p>
+
+<h2><i class="fa-brands fa-google" style="color:#4285f4"></i> Part 1: Google Search Console</h2>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">1</span> Go to Search Console</div>
+  <p>Visit <span class="url">https://search.google.com/search-console</span> → Click "Start Now" → Sign in with your Google account.</p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">2</span> Add Your Property</div>
+  <p>Choose <strong>URL prefix</strong> method. Enter: <span class="tag">https://odiatyping.in/</span></p>
+  <p>Click Continue → Choose <strong>HTML tag</strong> verification method.</p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">3</span> Get Your Verification Meta Tag</div>
+  <p>Google will give you a meta tag like:</p>
+  <div class="code">&lt;meta name="google-site-verification" content="YOUR_CODE_HERE"/&gt;</div>
+  <p>Copy this and paste it inside the <span class="tag">&lt;head&gt;</span> of your <strong>index.html</strong>, <strong>learn.html</strong>, and <strong>guide.html</strong>.</p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">4</span> Upload & Verify</div>
+  <p>Upload your updated files to the server → Go back to Search Console → Click <strong>Verify</strong>. You should see "Ownership verified".</p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">5</span> Submit Your Sitemap</div>
+  <p>In Search Console left menu → <strong>Sitemaps</strong> → Enter: <span class="tag">sitemap.xml</span> → Click Submit.</p>
+  <p>Your sitemap URL is: <span class="url">https://odiatyping.in/sitemap.xml</span></p>
+  <div class="note">✅ Your sitemap has 14 URLs. Google will start crawling within 1-7 days.</div>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">6</span> Request Indexing for Key Pages</div>
+  <p>In Search Console → <strong>URL Inspection</strong> → Enter each URL → Click <strong>"Request Indexing"</strong>:</p>
+  <ol>
+    <li><span class="url">https://odiatyping.in/</span></li>
+    <li><span class="url">https://odiatyping.in/learn</span></li>
+    <li><span class="url">https://odiatyping.in/guide</span></li>
+    <li><span class="url">https://odiatyping.in/odia-typing-government-exam</span></li>
+  </ol>
+</div>
+
+<h2><i class="fa-brands fa-google" style="color:#fbbc04"></i> Part 2: Google Analytics 4 (GA4)</h2>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">1</span> Create GA4 Property</div>
+  <p>Visit <span class="url">https://analytics.google.com</span> → Click <strong>Start Measuring</strong> → Enter account name: <span class="tag">Odia Typing Shiksha</span> → Next.</p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">2</span> Set Up Property</div>
+  <p>Property name: <span class="tag">odiatyping.in</span> → Reporting time zone: <span class="tag">India (GMT+5:30)</span> → Currency: <span class="tag">Indian Rupee (INR)</span> → Next → Select industry: <span class="tag">Education</span> → Create.</p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">3</span> Get Your Measurement ID</div>
+  <p>Platform: <strong>Web</strong> → Enter URL: <span class="tag">odiatyping.in</span> → Stream name: <span class="tag">Odia Typing Website</span> → Create stream.</p>
+  <p>Copy your <strong>Measurement ID</strong> — it looks like: <span class="tag">G-XXXXXXXXXX</span></p>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">4</span> Add Tracking Code to Your Pages</div>
+  <p>Paste this code inside <span class="tag">&lt;head&gt;</span> of ALL your HTML pages (index, learn, guide, about, contact, blog pages, government exam page):</p>
+  <div class="code">&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+&lt;/script&gt;</div>
+  <p>Replace <span class="tag">G-XXXXXXXXXX</span> with your actual Measurement ID from Step 3.</p>
+  <div class="warn">⚠️ Add this to every page — not just the homepage. Otherwise you won't see traffic from /learn, /guide etc.</div>
+</div>
+
+<div class="step">
+  <div class="step-title"><span class="step-num">5</span> Verify Tracking is Working</div>
+  <p>In GA4 → <strong>Reports → Realtime</strong> → Open your website in another tab → You should see "1 user in last 30 min". If you see this, tracking is working.</p>
+</div>
+
+<h2><i class="fa-solid fa-list-check" style="color:var(--accent)"></i> Complete SEO Checklist</h2>
+<ul class="checklist">
+  <li class="done">Canonical tag on /learn fixed → https://odiatyping.in/learn</li>
+  <li class="done">Canonical tag added to /guide → https://odiatyping.in/guide</li>
+  <li class="done">Bilingual intro text added to /learn page</li>
+  <li class="done">FAQPage JSON-LD schema on homepage</li>
+  <li class="done">Internal links from /about → /guide</li>
+  <li class="done">Government exam page built → /odia-typing-government-exam</li>
+  <li class="done">Sitemap updated with 14 URLs</li>
+  <li>Add GA4 tracking code to all pages (use your Measurement ID)</li>
+  <li>Add Google Search Console verification meta tag</li>
+  <li>Submit sitemap in Search Console</li>
+  <li>Request indexing for homepage, /learn, /guide, /odia-typing-government-exam</li>
+  <li>Check Search Console after 7 days for coverage issues</li>
+</ul>
+
+<h2><i class="fa-solid fa-magnifying-glass-chart" style="color:var(--accent)"></i> What to Monitor After Launch</h2>
+<p>Check Search Console weekly for:</p>
+<ul>
+  <li><strong>Coverage report</strong> — Are all 14 pages indexed? Any errors?</li>
+  <li><strong>Performance report</strong> — Which keywords are showing impressions? Click "Odia typing" related queries.</li>
+  <li><strong>Core Web Vitals</strong> — Page speed scores for mobile and desktop.</li>
+</ul>
+<p>Target keywords to track in Search Console: "Odia typing", "Akruti keyboard", "OSSC Odia typing test", "learn Odia typing online free"</p>
+</body>
+</html>
